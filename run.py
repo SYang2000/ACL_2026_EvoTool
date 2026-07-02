@@ -1,10 +1,10 @@
 """Single entry point.
 
     python run.py --config configs/evotool.yaml --benchmark dummy
-    python run.py --config configs/baselines/static.yaml --benchmark bfcl --override evolve.generations=4
+    python run.py --config configs/evotool.yaml --benchmark bfcl --override evolve.selection=greedy
 
-Layers the chosen config on top of configs/base.yaml, evolves a policy (a no-op
-for static), evaluates it on the eval split, and writes a result JSON.
+Layers the chosen config on top of configs/base.yaml, evolves a policy,
+evaluates it on the held-out split, and writes a result JSON.
 """
 
 from __future__ import annotations

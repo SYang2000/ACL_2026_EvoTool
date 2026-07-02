@@ -1,5 +1,0 @@
-# Blame mutation + top-k parent selection (paper Table 4 "Top-k").
-evolve:
-  mutation_target: blame
-  selection: topk
-  topk: 2

@@ -1,6 +1,0 @@
-# EvoTool with neither tau nor F (unguided mutation).
-evolve:
-  mutation_target: blame
-  selection: diversity
-  use_trajectory: false
-  use_feedback: false

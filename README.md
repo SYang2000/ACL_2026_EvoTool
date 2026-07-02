@@ -2,7 +2,10 @@
 
 # EvoTool: Self-Evolving Tool-Use Policy Optimization in LLM Agents<br>via Blame-Aware Mutation and Diversity-Aware Selection
 
-_Shuo Yang, Soyeon Caren Han, Xueqi Ma, Yan Li, Mohammad Reza Ghasemi Madani, Eduard Hovy_ (The University of Melbourne)
+_Shuo Yang, Soyeon Caren Han, Xueqi Ma_<br>
+_Yan Li, Mohammad Reza Ghasemi Madani, Eduard Hovy_
+
+The University of Melbourne
 
 **ACL 2026 · Official Implementation**
 
@@ -87,33 +90,21 @@ python run.py --config configs/evotool.yaml --benchmark bfcl --override evolve.e
 
 Each run writes a result JSON to `results/<benchmark>__<preset>.json`, a human-readable log, and a structured per-generation run log (`results/logs/<benchmark>__<preset>.runlog.jsonl`) with blame diagnoses, prompt diffs, and learning-curve arrays — the same format that powers the [interactive replay](docs/replay.html).
 
-## Baselines & ablations = config presets
+## Configuration
 
-Every paper baseline/ablation is a config preset layered on top of `configs/base.yaml`. One command pattern covers all of them:
+The shipped preset is the full method:
 
 ```bash
-python run.py --config configs/<preset>.yaml --benchmark {bfcl,restbench,toolbench,taubench}
+python run.py --config configs/evotool.yaml --benchmark {bfcl,restbench,toolbench,taubench}
 ```
 
-| Preset | `mutation_target` | `selection` | Notes |
-|---|---|---|---|
-| `configs/evotool.yaml` | `blame` | `diversity` | **EvoTool (full method)** |
-| `configs/baselines/static.yaml` | `none` | `static` | no evolution (Table 2 "Static") |
-| `configs/baselines/random.yaml` | `random` | `diversity` | random module target (Table 2 "Random") |
-| `configs/baselines/single_plan.yaml` | `fixed:planner` | `diversity` | single-aspect: planner only |
-| `configs/baselines/single_sel.yaml` | `fixed:selector` | `diversity` | single-aspect: selector only |
-| `configs/baselines/single_call.yaml` | `fixed:caller` | `diversity` | single-aspect: caller only |
-| `configs/baselines/single_syn.yaml` | `fixed:synthesizer` | `diversity` | single-aspect: synthesizer only |
-| `configs/baselines/monolithic.yaml` | `all` | `greedy` | monolithic: mutate all modules as one prompt |
-| `configs/ablations/evotool_wo_tau.yaml` | `blame` | `diversity` | `use_trajectory=false` (mutator gets no trajectory evidence τ) |
-| `configs/ablations/evotool_wo_F.yaml` | `blame` | `diversity` | `use_feedback=false` (no natural-language critique F) |
-| `configs/ablations/evotool_wo_both.yaml` | `blame` | `diversity` | `use_trajectory=false, use_feedback=false` (unguided mutation) |
-| `configs/ablations/sel_greedy.yaml` | `blame` | `greedy` | selection ablation (Table 4 "Greedy") |
-| `configs/ablations/sel_topk.yaml` | `blame` | `topk` (k=2) | selection ablation (Table 4 "Top-k") |
+Every run uses the same data-derived budget — 3 epochs over the 90 train instances, inherited from `configs/base.yaml` — and any config field can be overridden from the CLI, e.g. `--override evolve.epochs=1 llm.model_name=Qwen3-8B`.
 
-All presets share the same data-derived budget — 3 epochs over the 90 train instances, inherited from `configs/base.yaml` — so comparisons are budget-matched by default. Any field can be overridden from the CLI, e.g. `--override evolve.epochs=1 llm.model_name=Qwen3-8B`.
+The config also exposes the two mechanism axes behind the paper's ablations (Tables 2–4) as plain switches on `EvolveConfig` (`src/config.py`): `evolve.mutation_target` (`blame` | `random` | `fixed:<module>` | `all` | `none`) × `evolve.selection` (`diversity` | `greedy` | `topk` | `static`), plus the mutation-guidance toggles `evolve.use_trajectory` / `evolve.use_feedback`. For example, a greedy-selection ablation is just:
 
-These presets implement the paper's mechanism-level comparisons (Tables 2–4): each preset isolates one design axis — what gets mutated × how the population is selected. The paper's named external baselines in Table 1 (ReAct, CoT, Plan-and-Solve, OPRO, PromptBreeder, EvoPrompt, AdaPlanner, EasyTool, DRAFT, AnyTool) are separate methods evaluated in the paper, not shipped here; the single-aspect / monolithic presets are structural proxies for those families (monolithic ≈ global-prompt optimizers like OPRO/PromptBreeder/EvoPrompt; single-aspect ≈ one-module methods like AdaPlanner/EasyTool/DRAFT/AnyTool), not line-by-line reimplementations.
+```bash
+python run.py --config configs/evotool.yaml --benchmark bfcl --override evolve.selection=greedy
+```
 
 ## Results (from the paper)
 
@@ -184,7 +175,7 @@ To see the mechanism at work on real run logs:
 
 ```
 run.py                  # single entry point (--config, --benchmark, --override, --out)
-configs/                # base.yaml + evotool.yaml + baselines/ + ablations/ presets
+configs/                # base.yaml (shared defaults) + evotool.yaml
 data/                   # curated demo subsets (see DATA.md)
 scripts/
   launch_vllm.sh        # OpenAI-compatible vLLM server for the backbone

@@ -2,7 +2,7 @@
 
 A single config object drives everything. Each baseline / ablation in the paper
 is just a different setting of `evolve.mutation_target` x `evolve.selection`
-(see configs/baselines/*.yaml), so we never branch on "which baseline" anywhere
+(overridable from the CLI), so we never branch on "which baseline" anywhere
 else in the code.
 """
 

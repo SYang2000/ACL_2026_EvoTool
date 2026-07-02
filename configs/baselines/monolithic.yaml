@@ -1,8 +1,0 @@
-# Monolithic optimization: mutate every module together (OPRO/PromptBreeder/EvoPrompt stream).
-# A canonical global-prompt optimizer keeps a SINGLE evolving prompt, so it uses greedy
-# selection (keep the single best) -- NOT EvoTool's instance-wise diversity population.
-# (Using diversity here would hand the baseline EvoTool's own machinery and confound the
-# EvoTool-vs-monolithic comparison.)
-evolve:
-  mutation_target: all
-  selection: greedy

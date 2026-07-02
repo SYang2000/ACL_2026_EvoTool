@@ -3,7 +3,7 @@ episode cache never leaks across runs), and emit a Markdown results table.
 
 Examples:
   python scripts/run_matrix.py --table main --benchmarks toolbench restbench taubench bfcl
-  python scripts/run_matrix.py --table ablation_blame --benchmarks dummy
+  python scripts/run_matrix.py --table main --benchmarks dummy
 """
 
 from __future__ import annotations
@@ -20,33 +20,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # preset path (relative to configs/, without .yaml) -> display label
 TABLES = {
     "main": [
-        ("baselines/static", "Hand-crafted (Static)"),
-        ("baselines/monolithic", "Monolithic"),
-        ("baselines/single_call", "Single-aspect (Caller)"),
-        ("baselines/single_plan", "Single-aspect (Planner)"),
-        ("evotool", "EvoTool (ours)"),
-    ],
-    "ablation_blame": [  # Table 2
-        ("baselines/static", "Static"),
-        ("baselines/random", "Random"),
-        ("baselines/single_plan", "Plan-only"),
-        ("baselines/single_sel", "Sel-only"),
-        ("baselines/single_call", "Call-only"),
-        ("baselines/single_syn", "Syn-only"),
-        ("baselines/monolithic", "Monolithic"),
         ("evotool", "EvoTool"),
-    ],
-    "ablation_mutation": [  # Table 3
-        ("ablations/evotool_wo_both", "w/o tau & F"),
-        ("ablations/evotool_wo_F", "w/o F"),
-        ("ablations/evotool_wo_tau", "w/o tau"),
-        ("evotool", "EvoTool (full)"),
-    ],
-    "ablation_selection": [  # Table 4
-        ("baselines/static", "Static"),
-        ("ablations/sel_greedy", "Greedy"),
-        ("ablations/sel_topk", "Top-k"),
-        ("evotool", "EvoTool (diversity)"),
     ],
 }
 

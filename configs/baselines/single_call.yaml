@@ -1,4 +1,0 @@
-# Single-aspect optimization: always mutate the caller module.
-evolve:
-  mutation_target: "fixed:caller"
-  selection: diversity

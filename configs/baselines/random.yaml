@@ -1,4 +1,0 @@
-# Random module target (paper Table 2 "Random").
-evolve:
-  mutation_target: random
-  selection: diversity

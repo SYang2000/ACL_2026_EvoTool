@@ -1,5 +1,5 @@
-# Shared defaults. Every preset in this dir and baselines/ is layered ON TOP of
-# this file by run.py, so presets only need to specify what differs.
+# Shared defaults. The evotool.yaml preset is layered ON TOP of this file by
+# run.py, so the preset only needs to specify what differs.
 # Paper backbone. Point base_url at any OpenAI-compatible server; override
 # llm.model_name to match your served model (e.g. --override llm.model_name=Qwen3-4B).
 llm:

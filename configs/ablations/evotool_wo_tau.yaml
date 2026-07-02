@@ -1,6 +1,0 @@
-# EvoTool without trajectory evidence tau given to the mutator.
-evolve:
-  mutation_target: blame
-  selection: diversity
-  use_trajectory: false
-  use_feedback: true
