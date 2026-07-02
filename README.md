@@ -10,7 +10,7 @@ The University of Melbourne
 **ACL 2026 · Official Implementation**
 
 <p>
-  <a href="https://arxiv.org/abs/2603.04900"><img src="https://img.shields.io/badge/arXiv-2603.04900-B31B1B?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white" alt="Paper on arXiv"></a>
+  <a href="https://aclanthology.org/2026.acl-long.2016/"><img src="https://img.shields.io/badge/ACL_2026-Paper-B31B1B?style=for-the-badge" alt="Paper (ACL 2026)"></a>
   <a href="https://syang2000.github.io/ACL_2026_EvoTool/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Project_Page-2563EB?style=for-the-badge" alt="Project Page"></a>
   <a href="https://syang2000.github.io/ACL_2026_EvoTool/replay.html"><img src="https://img.shields.io/badge/%E2%96%B6_Interactive_Replay-6D28D9?style=for-the-badge" alt="Interactive Replay"></a>
 </p>
@@ -203,14 +203,27 @@ docs/                   # project page, replay.html, static assets
 ## Citation
 
 ```bibtex
-@misc{yang2026evotool,
-  title   = {EvoTool: Self-Evolving Tool-Use Policy Optimization in LLM Agents via Blame-Aware Mutation and Diversity-Aware Selection},
-  author  = {Shuo Yang and Soyeon Caren Han and Xueqi Ma and Yan Li and Mohammad Reza {Ghasemi Madani} and Eduard Hovy},
-  year    = {2026},
-  eprint  = {2603.04900},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AI},
-  url     = {https://arxiv.org/abs/2603.04900}
+@inproceedings{yang-etal-2026-evotool,
+    title = "{EVOTOOL}: Self-Evolving Tool-Use Policy Optimization in {LLM} Agents via Blame-Aware Mutation and Diversity-Aware Selection",
+    author = "Yang, Shuo  and
+      Han, Caren  and
+      Ma, Xueqi  and
+      Li, Yan  and
+      Ghasemi Madani, Mohammad Reza  and
+      Hovy, Eduard",
+    editor = "Liakata, Maria  and
+      Moreira, Viviane P.  and
+      Zhang, Jiajun  and
+      Jurgens, David",
+    booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2026",
+    address = "San Diego, California, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.acl-long.2016/",
+    doi = "10.18653/v1/2026.acl-long.2016",
+    pages = "43553--43572",
+    ISBN = "979-8-89176-390-6"
 }
 ```
 

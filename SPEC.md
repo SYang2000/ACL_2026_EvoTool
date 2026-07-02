@@ -2,7 +2,7 @@
 
 Design contract for this implementation of **EvoTool: Self-Evolving Tool-Use Policy
 Optimization in LLM Agents via Blame-Aware Mutation and Diversity-Aware Selection**
-(arXiv 2603.04900). Source files reference the section numbers below (`SPEC.md §n`)
+(ACL 2026, https://aclanthology.org/2026.acl-long.2016/). Source files reference the section numbers below (`SPEC.md §n`)
 wherever a design decision is enforced in code.
 
 Conventions:
