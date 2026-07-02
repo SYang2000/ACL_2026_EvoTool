@@ -343,11 +343,12 @@ html.js .reveal.stagger.revealed > :nth-child(3) {
 /* ---------- Teaser (the architecture figure under the hero) ---------- */
 
 .teaser { padding: 40px 0 44px; }
+.teaser .container { max-width: 1220px; }
 .teaser figure.paper-figure { margin-top: 0; }
 
 /* showcase treatment for the architecture figure */
 figure.paper-figure.figure-hero img {
-  max-width: 1000px;
+  max-width: 1160px;
   padding: 14px;
   border-radius: 18px;
   border-color: #e2e8f0;
