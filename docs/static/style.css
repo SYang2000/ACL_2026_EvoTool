@@ -340,10 +340,24 @@ html.js .reveal.stagger.revealed > :nth-child(3) {
   color: var(--muted);
 }
 
-/* ---------- Teaser (Figure 1 under the hero) ---------- */
+/* ---------- Teaser (the architecture figure under the hero) ---------- */
 
-.teaser { padding: 34px 0 38px; }
+.teaser { padding: 40px 0 44px; }
 .teaser figure.paper-figure { margin-top: 0; }
+
+/* showcase treatment for the architecture figure */
+figure.paper-figure.figure-hero img {
+  max-width: 1000px;
+  padding: 14px;
+  border-radius: 18px;
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 32px rgba(15, 23, 42, 0.10), 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+figure.paper-figure.figure-hero img:hover {
+  box-shadow: 0 14px 40px rgba(109, 40, 217, 0.16), 0 3px 10px rgba(15, 23, 42, 0.08);
+  border-color: #c4b5fd;
+}
+figure.paper-figure.figure-hero figcaption { max-width: 900px; }
 
 /* ---------- Abstract ---------- */
 
