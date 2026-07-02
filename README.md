@@ -15,12 +15,12 @@ The University of Melbourne
   <a href="https://syang2000.github.io/ACL_2026_EvoTool/replay.html"><img src="https://img.shields.io/badge/%E2%96%B6_Interactive_Replay-6D28D9?style=for-the-badge" alt="Interactive Replay"></a>
 </p>
 <p>
-  <a href="CASE_STUDY.md"><img src="https://img.shields.io/badge/Case_Study-475569?style=flat-square" alt="Case Study"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square" alt="License: MIT"></a>
+  <a href="https://syang2000.github.io/ACL_2026_EvoTool/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Project_Page-Results_%C2%B7_Figures_%C2%B7_Interactive_Replay-2563EB?style=for-the-badge" alt="Project Page: results, figures, interactive replay"></a>
 </p>
 
 <p>
-  <a href="https://syang2000.github.io/ACL_2026_EvoTool/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Project_Page-Results_%C2%B7_Figures_%C2%B7_Interactive_Replay-2563EB?style=for-the-badge" alt="Project Page: results, figures, interactive replay"></a>
+  <a href="CASE_STUDY.md"><img src="https://img.shields.io/badge/Case_Study-475569?style=flat-square" alt="Case Study"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square" alt="License: MIT"></a>
 </p>
 
 </div>
