@@ -19,9 +19,9 @@ The University of Melbourne
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square" alt="License: MIT"></a>
 </p>
 
-### &#127760; [Project Page &#8594; syang2000.github.io/ACL_2026_EvoTool](https://syang2000.github.io/ACL_2026_EvoTool/)
-
-_Full results &amp; ablation tables &#183; all paper figures &#183; interactive generation-by-generation replay_
+<p>
+  <a href="https://syang2000.github.io/ACL_2026_EvoTool/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Project_Page-Results_%C2%B7_Figures_%C2%B7_Interactive_Replay-2563EB?style=for-the-badge" alt="Project Page: results, figures, interactive replay"></a>
+</p>
 
 </div>
 
