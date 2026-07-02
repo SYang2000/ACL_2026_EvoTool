@@ -1,0 +1,5 @@
+# Single-aspect optimization: always mutate the synthesizer module.
+evolve:
+  mutation_target: "fixed:synthesizer"
+  selection: diversity
+  epochs: 1            # reduced budget: 1 epoch = 30 generations

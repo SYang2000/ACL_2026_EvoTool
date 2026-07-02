@@ -1,0 +1,5 @@
+# Single-aspect optimization: always mutate the selector module.
+evolve:
+  mutation_target: "fixed:selector"
+  selection: diversity
+  epochs: 1            # reduced budget: 1 epoch = 30 generations

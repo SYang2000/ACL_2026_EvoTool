@@ -1,0 +1,3209 @@
+{
+  "tb_1": [
+    {
+      "tool": "racecards_for_greyhound_racing_uk",
+      "args": {},
+      "output": "[]",
+      "error": null
+    },
+    {
+      "tool": "race_detail_info_for_greyhound_racing_uk",
+      "args": {
+        "id_race": "53128"
+      },
+      "output": "{'greyhounds': []}",
+      "error": null
+    },
+    {
+      "tool": "results_for_greyhound_racing_uk",
+      "args": {},
+      "output": "{'messages': 'The request to the API has timed out. Please try again later, or if the issue persists, please contact the API provider', 'info': 'Your Client (working) ---> Gateway (working) ---> API (took too long to respond)'}",
+      "error": null
+    },
+    {
+      "tool": "racecards_for_greyhound_racing_uk",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_2": [
+    {
+      "tool": "latest_coupons_for_get_27coupons",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"\\\"<html>\\\\n\\\\n<head>\\\\n<title>27coupons.com</title>\\\\n<script type=\\\\\\\"text/javascript\\\\\\\" src=\\\\\\\"/js/general.js\\\\\\\"></script>\\\\n<script type=\\\\\\\"text/javascript\\\\\\\">ChkRequestEnc('YTozNjp7aTowO3M6MTk6IjIwMjMtMDYtMjUgMTk6NTU6MzYiO2k6MTtzOjg6IjQ4NjMzODY3IjtpOjI7czowOiIiO2k6MztzOjIyOiJweXRob24tcmVxdWVzdHMvMi4zMC4wIjtpOjQ7czoyNzoiL3YxLjAvZGF0YS9jb3Vwb25zL2xhdGVzdC8/IjtpOjU7czoxMjoiNTIuMzguMjguMjQxIjtpOjY7czoyOiIxMSI7aTo3O3M6MToiYiI7aTo4O047aTo5O3M6MjoiVVMiO2k6MTA7czoxMDoiQ2FsaWZvcm5pYSI7aToxMTtzOjExOiJTYW50YSBDbGFyYSI7aToxMjtpOjQwMDU7aToxMztzOjEzOiIyN2NvdXBvbnMuY29tIjtpOjE0O3M6NzoiRGVmYXVsdCI7aToxNTtzOjA6IiI7aToxNjtzOjA6IiI7aToxNztzOjA6IiI7aToxODtzOjA6IiI7aToxOTtzOjA6IiI7aToyMDtzOjA6IiI7aToyMTtzOjA6IiI7aToyMjtpOjA7aToyMztzOjE6ImEiO2k6MjQ7czoxOiJ0IjtpOjI1O3M6MToidSI7aToyNjtzOjE6ImkiO2k6Mjc7czoyODoiNDcuMjUxLjEzLjIwNCwgNDcuMjUxLjEzLjIwNCI7aToyODtzOjE4OiIxNjg3Njg2OTM2LjgwNTU0NzciO2k6Mjk7czozOiIqLyoiO2k6MzA7czowOiIiO2k6MzE7czowOiIiO2k6MzI7czozNjoiMjAyMzA2MjUtMTk1NS0zNjY2LTliM2EtN2Q4OGRiMjE...",
+      "error": null
+    },
+    {
+      "tool": "trending_coupons_for_get_27coupons",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"<html>\\n\\n<head>\\n<title>27coupons.com</title>\\n<script type=\\\"text/javascript\\\" src=\\\"/js/general.js\\\"></script>\\n<script type=\\\"text/javascript\\\">ChkRequestEnc('YTozNjp7aTowO3M6MTk6IjIwMjMtMDctMDEgMDU6NTE6MTQiO2k6MTtzOjg6IjQ4NjMzODY3IjtpOjI7czowOiIiO2k6MztzOjIyOiJweXRob24tcmVxdWVzdHMvMi4zMC4wIjtpOjQ7czoyOToiL3YxLjAvZGF0YS9jb3Vwb25zL3RyZW5kaW5nLz8iO2k6NTtzOjE0OiIzNS4xNjIuMTUyLjE4MyI7aTo2O3M6MjoiMTEiO2k6NztzOjE6ImIiO2k6ODtOO2k6OTtzOjI6IlVTIjtpOjEwO3M6MTA6IkNhbGlmb3JuaWEiO2k6MTE7czoxMToiU2FudGEgQ2xhcmEiO2k6MTI7aTo0MDA1O2k6MTM7czoxMzoiMjdjb3Vwb25zLmNvbSI7aToxNDtzOjc6IkRlZmF1bHQiO2k6MTU7czowOiIiO2k6MTY7czowOiIiO2k6MTc7czowOiIiO2k6MTg7czowOiIiO2k6MTk7czowOiIiO2k6MjA7czowOiIiO2k6MjE7czowOiIiO2k6MjI7aTowO2k6MjM7czoxOiJhIjtpOjI0O3M6MToidCI7aToyNTtzOjE6InUiO2k6MjY7czoxOiJpIjtpOjI3O3M6Mjg6IjQ3LjI1MS4xMy4yMDQsIDQ3LjI1MS4xMy4yMDQiO2k6Mjg7czoxODoiMTY4ODE1NDY3NC43Mjg3ODU2IjtpOjI5O3M6MzoiKi8qIjtpOjMwO3M6MDoiIjtpOjMxO3M6MDoiIjtpOjMyO3M6MzY6IjIwMjMwNzAxLTA1NTEtMTRkMC05NTM1LTI1MTM0YWNmNWFhMyI7aTozMz...",
+      "error": null
+    },
+    {
+      "tool": "sortproductsmaster_for_tokopedia_super_api",
+      "args": {},
+      "output": "{'data': ['LOWEST_PRICE', 'HIGHEST_PRICE', 'RELEVANT', 'REVIEW', 'LATEST']}",
+      "error": null
+    }
+  ],
+  "tb_3": [
+    {
+      "tool": "ultimateoscillator_for_qvantana",
+      "args": {
+        "exchange": "binance",
+        "interval": "1d",
+        "market": "spot",
+        "symbol": "btcusdt",
+        "backtracks": 30
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'value': 44.06581204475873, 'shortPeriodLength': 7, 'mediumPeriodLength': 14, 'longPeriodLength': 28, 'timeFormat': '2023-05-12 00:00:00', 'timestamp': '1683849600'}, {'value': 42.459429361857666, 'shortPeriodLength': 7, 'mediumPeriodLength': 14, 'longPeriodLength': 28, 'timeFormat': '2023-05-11 00:00:00', 'timestamp': '1683763200'}, {'value': 43.70010527958434, 'shortPeriodLength': 7, 'mediumPeriodLength': 14, 'longPeriodLength': 28, 'timeFormat': '2023-05-10 00:00:00', 'timestamp': '1683676800'}, {'value': 45.291847888698946, 'shortPeriodLength': 7, 'mediumPeriodLength': 14, 'longPeriodLength': 28, 'timeFormat': '2023-05-09 00:00:00', 'timestamp': '1683590400'}, {'value': 48.354689046196924, 'shortPeriodLength': 7, 'mediumPeriodLength': 14, 'longPeriodLength': 28, 'timeFormat': '2023-05-08 00:00:00', 'timestamp': '1683504000'}, {'value': 48.23011448143167, 'shortPeriodLength': 7, 'mediumPeriodLength': 14, 'longPeriodLength': 28, 'timeFormat': '2023-05-07 00:00:00', 'timestamp': ...",
+      "error": null
+    },
+    {
+      "tool": "typical_price_for_qvantana",
+      "args": {
+        "exchange": "binance",
+        "market": "spot",
+        "symbol": "btcusdt",
+        "interval": "1d",
+        "backtracks": 30
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'value': 26565.86333333333, 'timeFormat': '2023-05-12 00:00:00', 'timestamp': '1683849600'}, {'value': 27100.27, 'timeFormat': '2023-05-11 00:00:00', 'timestamp': '1683763200'}, {'value': 27569.056666666667, 'timeFormat': '2023-05-10 00:00:00', 'timestamp': '1683676800'}, {'value': 27599.756666666668, 'timeFormat': '2023-05-09 00:00:00', 'timestamp': '1683590400'}, {'value': 27853.93333333333, 'timeFormat': '2023-05-08 00:00:00', 'timestamp': '1683504000'}, {'value': 28654.539999999997, 'timeFormat': '2023-05-07 00:00:00', 'timestamp': '1683417600'}, {'value': 28989.399999999998, 'timeFormat': '2023-05-06 00:00:00', 'timestamp': '1683331200'}, {'value': 29327.536666666667, 'timeFormat': '2023-05-05 00:00:00', 'timestamp': '1683244800'}, {'value': 28960.543333333335, 'timeFormat': '2023-05-04 00:00:00', 'timestamp': '1683158400'}, {'value': 28802.17, 'timeFormat': '2023-05-03 00:00:00', 'timestamp': '1683072000'}, {'value': 28473.913333333334, 'timeFormat': '2023-05-02 00:00:00', '...",
+      "error": null
+    },
+    {
+      "tool": "trix_for_qvantana",
+      "args": {
+        "exchange": "binance",
+        "market": "spot",
+        "symbol": "btcusdt",
+        "interval": "1d",
+        "backtracks": 30
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'value': 0.0, 'length': 18, 'timeFormat': '2023-05-12 00:00:00', 'timestamp': '1683849600'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-11 00:00:00', 'timestamp': '1683763200'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-10 00:00:00', 'timestamp': '1683676800'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-09 00:00:00', 'timestamp': '1683590400'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-08 00:00:00', 'timestamp': '1683504000'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-07 00:00:00', 'timestamp': '1683417600'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-06 00:00:00', 'timestamp': '1683331200'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-05 00:00:00', 'timestamp': '1683244800'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-04 00:00:00', 'timestamp': '1683158400'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-03 00:00:00', 'timestamp': '1683072000'}, {'value': 0.0, 'length': 18, 'timeFormat': '2023-05-02 0...",
+      "error": null
+    },
+    {
+      "tool": "stochastic_for_qvantana",
+      "args": {
+        "exchange": "binance",
+        "symbol": "btcusdt",
+        "interval": "1d",
+        "market": "spot",
+        "backtracks": 30
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_4": [
+    {
+      "tool": "maxindex_for_twelve_data",
+      "args": {
+        "interval": "1day",
+        "symbol": "AAPL",
+        "series_type": "close",
+        "outputsize": 100
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'meta': {'symbol': 'AAPL', 'interval': '1day', 'currency': 'USD', 'exchange_timezone': 'America/New_York', 'exchange': 'NASDAQ', 'mic_code': 'XNGS', 'type': 'Common Stock', 'indicator': {'name': 'MAXINDEX - Index of highest value over period', 'series_type': 'close', 'time_period': 9}}, 'values': [{'datetime': '2023-08-25', 'maxidx': '106.00000'}, {'datetime': '2023-08-24', 'maxidx': '106.00000'}, {'datetime': '2023-08-23', 'maxidx': '106.00000'}, {'datetime': '2023-08-22', 'maxidx': '99.00000'}, {'datetime': '2023-08-21', 'maxidx': '99.00000'}, {'datetime': '2023-08-18', 'maxidx': '95.00000'}, {'datetime': '2023-08-17', 'maxidx': '95.00000'}, {'datetime': '2023-08-16', 'maxidx': '93.00000'}, {'datetime': '2023-08-15', 'maxidx': '92.00000'}, {'datetime': '2023-08-14', 'maxidx': '91.00000'}, {'datetime': '2023-08-11', 'maxidx': '90.00000'}, {'datetime': '2023-08-10', 'maxidx': '89.00000'}, {'datetime': '2023-08-09', 'maxidx': '89.00000'}, {'datetime': '2023-08-08', 'maxidx': '89.000...",
+      "error": null
+    },
+    {
+      "tool": "minmax_for_twelve_data",
+      "args": {
+        "interval": "1day",
+        "symbol": "AAPL",
+        "series_type": "close",
+        "outputsize": 100
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'meta': {'symbol': 'AAPL', 'interval': '1day', 'currency': 'USD', 'exchange_timezone': 'America/New_York', 'exchange': 'NASDAQ', 'mic_code': 'XNGS', 'type': 'Common Stock', 'indicator': {'name': 'MINMAX - Lowest and highest values over period', 'series_type': 'close', 'time_period': 9}}, 'values': [{'datetime': '2023-08-25', 'min': '174.00000', 'max': '181.12000'}, {'datetime': '2023-08-24', 'min': '174.00000', 'max': '181.12000'}, {'datetime': '2023-08-23', 'min': '174.00000', 'max': '181.12000'}, {'datetime': '2023-08-22', 'min': '174.00000', 'max': '179.46001'}, {'datetime': '2023-08-21', 'min': '174.00000', 'max': '179.46001'}, {'datetime': '2023-08-18', 'min': '174.00000', 'max': '179.80000'}, {'datetime': '2023-08-17', 'min': '174.00000', 'max': '179.80000'}, {'datetime': '2023-08-16', 'min': '176.57001', 'max': '181.99001'}, {'datetime': '2023-08-15', 'min': '177.45000', 'max': '191.17000'}, {'datetime': '2023-08-14', 'min': '177.78999', 'max': '192.58000'}, {'datetime': '20...",
+      "error": null
+    },
+    {
+      "tool": "tema_for_twelve_data",
+      "args": {
+        "interval": "1day",
+        "symbol": "AAPL",
+        "series_type": "close",
+        "outputsize": 100,
+        "time_period": 14
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'meta': {'symbol': 'AAPL', 'interval': '1day', 'currency': 'USD', 'exchange_timezone': 'America/New_York', 'exchange': 'NASDAQ', 'mic_code': 'XNGS', 'type': 'Common Stock', 'indicator': {'name': 'TEMA - Triple Exponential Moving Average', 'series_type': 'close', 'time_period': 14}}, 'values': [{'datetime': '2023-08-25', 'tema': '176.00913'}, {'datetime': '2023-08-24', 'tema': '175.26246'}, {'datetime': '2023-08-23', 'tema': '175.38913'}, {'datetime': '2023-08-22', 'tema': '173.46052'}, {'datetime': '2023-08-21', 'tema': '172.83460'}, {'datetime': '2023-08-18', 'tema': '172.79863'}, {'datetime': '2023-08-17', 'tema': '173.53844'}, {'datetime': '2023-08-16', 'tema': '174.91094'}, {'datetime': '2023-08-15', 'tema': '175.70233'}, {'datetime': '2023-08-14', 'tema': '176.50777'}, {'datetime': '2023-08-11', 'tema': '176.81244'}, {'datetime': '2023-08-10', 'tema': '178.16286'}, {'datetime': '2023-08-09', 'tema': '180.03686'}, {'datetime': '2023-08-08', 'tema': '182.57096'}, {'datetime': '2...",
+      "error": null
+    },
+    {
+      "tool": "ln_for_twelve_data",
+      "args": {
+        "interval": "1day",
+        "symbol": "AAPL",
+        "series_type": "close",
+        "outputsize": 100
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_5": [
+    {
+      "tool": "getproductbycategory_for_cartify",
+      "args": {
+        "category": "personalized gifts"
+      },
+      "output": "{'message': 'No products found for personalized gifts'}",
+      "error": null
+    },
+    {
+      "tool": "getproducts_for_cartify",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_6": [
+    {
+      "tool": "random_for_typography",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "random_for_typography",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "random_for_typography",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "random_for_typography",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    }
+  ],
+  "tb_7": [
+    {
+      "tool": "browserobject_api_for_browserobject",
+      "args": {
+        "useragentstring": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+        "license": "YOUR_LICENSE_KEY"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.22.112.1', port=7890): Read timed out. (read timeout=30)"
+    },
+    {
+      "tool": "price_for_apfelpreise",
+      "args": {
+        "manufacturernumbase64encoded": "TVdQNzJEL0E=",
+        "condition": "USED"
+      },
+      "output": "{'messages': 'The API is unreachable, please contact the API provider', 'info': 'Your Client (working) ---> Gateway (working) ---> API (not working)'}",
+      "error": "API not working error..."
+    }
+  ],
+  "tb_8": [
+    {
+      "tool": "listoforders_for_sandbox_ecombr_com_04_orders",
+      "args": {
+        "status": "all",
+        "action": "get"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "getthelistofcountriesregistered_for_sandbox_ecombr_com_04_orders",
+      "args": {
+        "action": "get",
+        "content_type": "application/json",
+        "cache_control": "no-cache",
+        "secret": "my_secret_key",
+        "token": "my_token",
+        "e_mail": "my_email@example.com"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    },
+    {
+      "tool": "listoforders_for_sandbox_ecombr_com_04_orders",
+      "args": {
+        "status": "all",
+        "action": "get"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    }
+  ],
+  "tb_9": [
+    {
+      "tool": "parser_get_for_scraper_s_proxy",
+      "args": {
+        "url": "https://example.com",
+        "auto_detect": true
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_10": [
+    {
+      "tool": "etthelistofcountriesregistered_for_sandbox_mktplace_eu_04_orders",
+      "args": {
+        "action": "list_of_countries"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_11": [
+    {
+      "tool": "languages_for_microsoft_translator_text",
+      "args": {
+        "api_version": "3.0"
+      },
+      "output": "{\"error\": \"\", \"response\": \"\\u001f\\ufffd\\b\\u0000\\u0000\\u0000\\u0000\\u0000\\u0004\\u0000\\ufffd][o\\u001bG\\ufffd\\ufffd+\\ufffd\\ufffd\\ufffd\\ufffd\\ufffd\\u0007\\ufffd-\\ufffd\\ufffd\\ufffd\\ufffdK<\\ufffd\\ufffd\\ufffd\\ufffdE\\u001e\\ufffdb\\ufffdl\\ufffd\\ufffd-\\ufffdE\\u001a*0 Y\\u001e\\u0271\\ufffd\\u001d;\\u0019K\\ufffdmX\\ufffd\\ufffd\\u000b\\ufffd\\ufffdBQ\\ufffd%K\\ufffd\\ufffd@\\ufffda\\ufffd\\ufffd\\ufffd\\ufffd\\ufffd\\ufffdR\\f\\u0018E$cg&\\ufffd\\ufffda\\ufffd\\ufffdl\\ufffd\\ufffdO5\\ufffd\\ufffd\\u0005\\u0006v\\u0010\\ufffd\\ufffd\\ufffdy\\ufffd\\ufffd\\ua72aS\\ufffdTWW}\\u06a2\\ufffdH\\ufffd$\\ufffd\\ufffd\\ufffd\\ufffd\\ufffdO[P\\ufffd\\ufffd)\\ufffd\\ufffd\\ufffd\\ufffd\\ufffd\\ufffdU1\\ufffd\\ufffd\\ufffd\\ufffd\\ufffdH\\u0017\\ufffd\\ufffd\\ufffd\\ufffdBBTI\\ufffd\\ufffd\\ufffd-\\ufffd\\ufffd\\ufffd\\ufffd\\f-\\ufffdI!U\\ufffdr\\nW\\ufffdOU\\ufffd\\u076b\\\\[\\ufffd\\\\\\ufffd\\u0007\\ufffdUZ^Eq(~0\\u007fx\\ufffd\\ufffd\\ufffd\\ufffd\\ufffdA\\ufffd\\ufffd\\ufffd\\ufffd\\ufffd:\\ufffd\\ufffdK\\u0016\\ufffdF\\u0003h\\u001a\\ufffd\\ufffd\\tN\\b<\\ufffd{<\\ufffd\\ufffd\\ufffd\\ufffd\\ufffd \\ufffd[\\ufffdsO\\ufffd\\ufffd\\u001e\\ufffd2@#\\...",
+      "error": null
+    },
+    {
+      "tool": "numbers_translator_for_numbers_translator",
+      "args": {},
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "shakespeare_for_shakespeare_translator",
+      "args": {
+        "text": "What is your name?"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_12": [
+    {
+      "tool": "v1_holidays_for_holidays_by_api_ninjas",
+      "args": {
+        "year": 2023,
+        "country": "US"
+      },
+      "output": "[{'country': 'United States', 'iso': 'US', 'year': 2023, 'date': '2023-01-02', 'day': 'Monday', 'name': \"Day off for New Year's Day\", 'type': 'FEDERAL_HOLIDAY'}, {'country': 'United States', 'iso': 'US', 'year': 2023, 'date': '2023-01-01', 'day': 'Sunday', 'name': \"New Year's Day\", 'type': 'FEDERAL_HOLIDAY'}, {'country': 'United States', 'iso': 'US', 'year': 2023, 'date': '2023-11-23', 'day': 'Thursday', 'name': 'Thanksgiving Day', 'type': 'FEDERAL_HOLIDAY'}]",
+      "error": null
+    },
+    {
+      "tool": "contests_for_contests",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_13": [
+    {
+      "tool": "get_a_list_of_domains_for_url_link_shortener",
+      "args": {},
+      "output": "Unauthorized",
+      "error": "Unauthorized error..."
+    },
+    {
+      "tool": "create_a_new_link_for_url_link_shortener",
+      "args": {
+        "destination": "https://example.com",
+        "domain_fullname": "example.com"
+      },
+      "output": "Unauthorized",
+      "error": "Unauthorized error..."
+    }
+  ],
+  "tb_14": [
+    {
+      "tool": "languages_for_microsoft_translator_text",
+      "args": {
+        "api_version": "3.0",
+        "scope": "translation,transliteration"
+      },
+      "output": "{\"error\": \"\", \"response\": \"\\u001f\\ufffd\\b\\u0000\\u0000\\u0000\\u0000\\u0000\\u0004\\u0000\\ufffd\\\\[o\\u001bG\\ufffd\\ufffd+\\ufffd\\ufffd\\ufffd@\\ufffd\\u0007\\ufffd-\\ufffd\\ufffd\\ufffd\\ufffdK\\ufffd\\ufffd\\ufffd\\ufffd\\ufffdE\\u001e\\ufffdb\\ufffdl\\ufffd\\ufffdM\\ufffdE\\u001e*\\b \\ufffd\\u001eI\\ufffd\\ufffd\\u001d;\\u0019K\\ufffdmX\\ufffdCQ\\ufffd\\ufffd\\u000bEI\\u0016\\ufffd\\ufffd\\u0003\\ufffd\\ufffd\\u0005\\u0016\\ufffd\\ufffd,\\ufffd\\ufffdb\\ufffd\\ufffdF2vv3\\ufffd\\u001f\\ufffd\\ufffd)JU}\\ufffd\\u0019\\ufffd\\ufffd\\u001dx\\ufffdA\\u0010\\ufffd\\ufffd\\ufffd\\ufffd\\ufffd\\ufffds\\ufffd\\u03a5\\ufffd\\u029f\\ufffd\\ufffd*\\ufffd5\\t\\ufffd\\\"\\ufffd\\ufffd\\ufffd6t\\ufffd\\ufffd\\ufffdQZh\\ufffdM\\u06fb\\ufffdU1\\ufffdH\\u007f\\ufffd;\\ufffdI\\u0017{\\ufffd\\u000b\\ufffd#.\\ufffd\\ufffdE\\ufffd\\u0576O\\ufffdiCi\\u001a\\ufffdN\\\"U\\ufffdv\\ufffd\\ufffd\\u001b\\ufffd\\ufffd\\ufffd=kx\\ufffd\\ufffdq\\u000f\\ufffdU\\u001a\\ufffd\\ufffd\\u0018\\ufffd\\ufffd\\ufffd\\ufffd_\\ufffd{\\ufffd\\ufffd\\ufffdW\\u073f\\ufffd7{H\\ufffd\\ufffdC\\ufffd\\ufffd\\u0004\\ufffdF\\ufffdh\\ufffd\\ufffd\\u0002\\u0017\\ufffd\\ufffd\\u000b\\u0015\\\\X\\ufffd3\\ufffd...",
+      "error": null
+    },
+    {
+      "tool": "trending_for_bing_image_search",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'_type': 'TrendingImages', 'instrumentation': {'_type': 'ResponseInstrumentation'}, 'categories': [{'title': 'Popular people searches', 'tiles': [{'query': {'text': 'Ice Spice', 'displayText': 'Ice Spice', 'webSearchUrl': 'https://www.bing.com/images/search?q=Ice+Spice&FORM=ISTRTH&id=ABB3F7E4976AE903F542D1CAAA8E89112E86B07C&cat=Popular%20people%20searches&lpversion=&disoverlay=1'}, 'image': {'thumbnailUrl': 'https://tse1.mm.bing.net/th?id=OET.7055c4f87a7543a2b596c62a45f19535&pid=Api', 'contentUrl': 'https://www.thewikifeed.com/wp-content/uploads/2022/10/ice-spice-1.jpg', 'width': 474, 'height': 517, 'thumbnail': {'width': 474, 'height': 517}, 'imageId': 'ABB3F7E4976AE903F542D1CAAA8E89112E86B07C'}}, {'query': {'text': 'Michael J. Fox', 'displayText': 'Michael J. Fox', 'webSearchUrl': 'https://www.bing.com/images/search?q=Michael+J.+Fox&FORM=ISTRTH&id=E4B0C3A24EB5DE3EB60E3A0D5D08727DD55D553C&cat=Popular%20people%20searches&lpversion=&disoverlay=1'}, 'image': {'thumbnailUrl': 'https:/...",
+      "error": null
+    },
+    {
+      "tool": "image_search_for_bing_image_search",
+      "args": {
+        "q": "birthday celebrations",
+        "count": 5
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    },
+    {
+      "tool": "supported_countries_for_bing_web_search",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_15": [
+    {
+      "tool": "details_for_patreon",
+      "args": {
+        "creator_id": 123456789
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.22.112.1', port=7890): Read timed out. (read timeout=30)"
+    },
+    {
+      "tool": "search_for_creators_for_patreon",
+      "args": {
+        "search_query": "unique gifts"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_16": [
+    {
+      "tool": "anikuendpoint_for_aniku",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Storage.aniku.api import anikuendpoint error...\nHTTPSConnectionPool(host='aniku.p.rapidapi.comstorage', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdf7aea5060>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    },
+    {
+      "tool": "get_history_for_web_image_storage",
+      "args": {
+        "pagesize": 10,
+        "page": 6
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    }
+  ],
+  "tb_17": [
+    {
+      "tool": "get_history_for_web_image_storage",
+      "args": {
+        "pagesize": 50,
+        "page": 1
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    },
+    {
+      "tool": "show_history_for_image_cdn",
+      "args": {
+        "pagesize": 20,
+        "page": 0
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "get_history_for_web_image_storage",
+      "args": {
+        "pagesize": 20,
+        "page": 0
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    },
+    {
+      "tool": "show_history_for_image_cdn",
+      "args": {
+        "pagesize": 20,
+        "page": 0
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    }
+  ],
+  "tb_18": [
+    {
+      "tool": "gettrendinglistings_for_etsy",
+      "args": {},
+      "output": "\"API request missing api_key or valid OAuth parameters\"",
+      "error": null
+    },
+    {
+      "tool": "getinterestinglistings_for_etsy",
+      "args": {},
+      "output": "\"API request missing api_key or valid OAuth parameters\"",
+      "error": null
+    },
+    {
+      "tool": "search_on_ebay_for_ebay_search_result",
+      "args": {
+        "searchquery": "birthday decorations"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'results': [{'title': 'Shop on eBay', 'price': '$20.00', 'shipping': '', 'location': '', 'rating': '', 'image': 'https://ir.ebaystatic.com/rs/v/fxxj3ttftm5ltcqnto1o4baovyl.png', 'url': 'https://ebay.com/itm/123456?hash=item28caef0a3a:g:E3kAAOSwlGJiMikD&amdata=enc%3AAQAHAAAAsJoWXGf0hxNZspTmhb8%2FTJCCurAWCHuXJ2Xi3S9cwXL6BX04zSEiVaDMCvsUbApftgXEAHGJU1ZGugZO%2FnW1U7Gb6vgoL%2BmXlqCbLkwoZfF3AUAK8YvJ5B4%2BnhFA7ID4dxpYs4jjExEnN5SR2g1mQe7QtLkmGt%2FZ%2FbH2W62cXPuKbf550ExbnBPO2QJyZTXYCuw5KVkMdFMDuoB4p3FwJKcSPzez5kyQyVjyiIq6PB2q%7Ctkp%3ABlBMULq7kqyXYA'}, {'title': '50Pack 12in Metallic Chrome Latex Balloons Party Decoration', 'price': '$10.99', 'shipping': '+$14.18 shipping', 'location': 'from United States', 'rating': '', 'image': 'https://i.ebayimg.com/thumbs/images/g/B6IAAOSwQLhiz65d/s-l300.jpg', 'url': 'https://www.ebay.com/itm/225073944964?hash=item346773d984:g:B6IAAOSwQLhiz65d&amdata=enc%3AAQAIAAAAwJzo1eKhVYro2nYkRkqcL5uK7QFHubt0P2GKpnMqWL%2FLGGkPelzz5IbF1qSd%2F3jytYxqpKETL9CSuCoOJyVRccZ...",
+      "error": null
+    }
+  ],
+  "tb_19": [
+    {
+      "tool": "get_current_status_for_given_flag_for_flag_status",
+      "args": {
+        "code": "NY"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_20": [
+    {
+      "tool": "endpoint1_for_api1",
+      "args": {},
+      "output": "{'message': \"Endpoint '/showreview/productdetail/1' does not exist\"}",
+      "error": null
+    },
+    {
+      "tool": "product_id_for_aliexpress_unofficial",
+      "args": {
+        "is_id": 12345,
+        "locale": "en",
+        "currency": "USD"
+      },
+      "output": "{'error': 'Invalid locale. Valid: EN_US, RU_RU, PT_BR, ES_ES, FR_FR, PL_PL, IW_IL, IT_IT, TR_TR, DE_DE, KO_KR, AR_MA'}",
+      "error": "Message error..."
+    },
+    {
+      "tool": "product_id_for_aliexpress_unofficial",
+      "args": {
+        "is_id": 12345,
+        "locale": "en_US",
+        "currency": "USD"
+      },
+      "output": "{'error': 'Error happened while handling AliExpress response. Try again later'}",
+      "error": "Message error..."
+    },
+    {
+      "tool": "endpoint1_for_api1",
+      "args": {},
+      "output": "{'message': \"Endpoint '/showreview/productdetail/1' does not exist\"}",
+      "error": null
+    }
+  ],
+  "tb_21": [
+    {
+      "tool": "accurate_language_detection_for_translate_v3",
+      "args": {
+        "text": "How are you?"
+      },
+      "output": "{'message': 'This endpoint is disabled for your subscription'}",
+      "error": null
+    },
+    {
+      "tool": "fast_language_detection_for_translate_v3",
+      "args": {
+        "text": "How are you?"
+      },
+      "output": "{'lang': 'ron', 'confidence': 0.19156381201833417, 'script': 'Latin', 'is_reliable': False}",
+      "error": null
+    },
+    {
+      "tool": "translate_for_translate_v3",
+      "args": {
+        "text": "How are you?",
+        "dest": "es"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_22": [
+    {
+      "tool": "mailcheck_for_e_mail_check_invalid_or_disposable_domain_v2",
+      "args": {
+        "domain": "travelagency.eu"
+      },
+      "output": "{'valid': True, 'block': True, 'disposable': False, 'domain': 'travelagency.eu', 'text': 'Should be blocked', 'reason': 'Heuristics: BM1', 'risk': 95, 'mx_host': 'mail.h-email.net', 'possible_typo': [], 'mx_ip': '167.235.143.33', 'mx_info': 'Using MX pointer mail.h-email.net from DNS with priority: 5', 'last_changed_at': '2023-07-15T14:28:35+02:00'}",
+      "error": null
+    },
+    {
+      "tool": "etthelistofcountriesregistered_for_sandbox_mktplace_eu_04_orders",
+      "args": {
+        "action": "get_countries"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_23": [
+    {
+      "tool": "etthelistofcountriesregistered_for_sandbox_mktplace_eu_04_orders",
+      "args": {
+        "action": "list_of_countries"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    },
+    {
+      "tool": "disclaimer_for_mrautoparts",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Commerce.mrautoparts.api import disclaimer error...\nHTTPSConnectionPool(host='mrautoparts.p.rapidapi.comhttp', port=443): Max retries exceeded with url: //mrauto.parts (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe05e015de0>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    },
+    {
+      "tool": "subscribe_for_mrautoparts",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_24": [
+    {
+      "tool": "current_weather_data_of_a_location_for_weather",
+      "args": {
+        "lat": 35.5,
+        "lon": -78.5,
+        "units": "M",
+        "lang": "en"
+      },
+      "output": "{'count': 1, 'data': [{'app_temp': 35.8, 'aqi': 123, 'city_name': 'Four Oaks', 'clouds': 3, 'country_code': 'US', 'datetime': '2023-07-18:17', 'dewpt': 22.9, 'dhi': 123.77, 'dni': 925.18, 'elev_angle': 74.68, 'ghi': 1007.38, 'gust': 2.578125, 'h_angle': 0, 'lat': 35.5, 'lon': -78.5, 'ob_time': '2023-07-18 17:28', 'pod': 'd', 'precip': 0, 'pres': 1008, 'rh': 58, 'slp': 1014.9045, 'snow': 0, 'solar_rad': 1007.4, 'sources': ['rtma', 'radar', 'satellite'], 'state_code': 'NC', 'station': 'F4286', 'sunrise': '10:12', 'sunset': '00:28', 'temp': 31.7, 'timezone': 'America/New_York', 'ts': 1689701299, 'uv': 10.6039295, 'vis': 13, 'weather': {'description': 'Clear sky', 'icon': 'c01d', 'code': 800}, 'wind_cdir': 'W', 'wind_cdir_full': 'west', 'wind_dir': 274, 'wind_spd': 2.21875}]}",
+      "error": null
+    },
+    {
+      "tool": "get_5_day_forecast_for_weather",
+      "args": {
+        "lat": 35.5,
+        "lon": -78.5,
+        "units": "M",
+        "lang": "en"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    },
+    {
+      "tool": "severe_weather_alerts_for_weather",
+      "args": {
+        "lat": 35.5,
+        "lon": -78.5
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'alerts': [{'description': 'The North Carolina Department of Environmental Quality in Raleigh NC\\\\nhas issued a Code Orange Air Quality Action Day for Fine\\\\nParticulates, until midnight EDT tonight.\\\\n\\\\nAn Air Quality Action Day means that Fine Particulates\\\\nconcentrations within the region may approach or exceed unhealthy\\\\nstandards. For additional information, please visit the North\\\\nCarolina Division of Air Quality Web site at\\\\nhttps://airquality.climate.ncsu.edu', 'effective_local': '2023-07-18T02:54:00', 'effective_utc': '2023-07-18T06:54:00', 'ends_local': None, 'ends_utc': None, 'expires_local': '2023-07-19T03:00:00', 'expires_utc': '2023-07-19T07:00:00', 'onset_local': '2023-07-18T02:54:00', 'onset_utc': '2023-07-18T06:54:00', 'regions': ['Person', ' Granville', ' Vance', ' Warren', ' Halifax', ' Orange', ' Durham', ' Franklin', ' Nash', ' Edgecombe', ' Chatham', ' Wake', ' Johnston', ' Wilson', ' Stanly', ' Montgomery', ' Moore', ' Lee', ' Harnett', ' Anson', ' Richm...",
+      "error": null
+    },
+    {
+      "tool": "current_weather_data_of_a_location_for_weather",
+      "args": {
+        "lat": 35.5,
+        "lon": -78.5,
+        "units": "M",
+        "lang": "en"
+      },
+      "output": "{'count': 1, 'data': [{'app_temp': 35.8, 'aqi': 123, 'city_name': 'Four Oaks', 'clouds': 3, 'country_code': 'US', 'datetime': '2023-07-18:17', 'dewpt': 22.9, 'dhi': 123.77, 'dni': 925.18, 'elev_angle': 74.68, 'ghi': 1007.38, 'gust': 2.578125, 'h_angle': 0, 'lat': 35.5, 'lon': -78.5, 'ob_time': '2023-07-18 17:28', 'pod': 'd', 'precip': 0, 'pres': 1008, 'rh': 58, 'slp': 1014.9045, 'snow': 0, 'solar_rad': 1007.4, 'sources': ['rtma', 'radar', 'satellite'], 'state_code': 'NC', 'station': 'F4286', 'sunrise': '10:12', 'sunset': '00:28', 'temp': 31.7, 'timezone': 'America/New_York', 'ts': 1689701299, 'uv': 10.6039295, 'vis': 13, 'weather': {'description': 'Clear sky', 'icon': 'c01d', 'code': 800}, 'wind_cdir': 'W', 'wind_cdir_full': 'west', 'wind_dir': 274, 'wind_spd': 2.21875}]}",
+      "error": null
+    },
+    {
+      "tool": "severe_weather_alerts_for_weather",
+      "args": {
+        "lat": 35.5,
+        "lon": -78.5
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_25": [
+    {
+      "tool": "past_1_week_for_the_sandbox_sand",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_26": [
+    {
+      "tool": "jects_as_modified_image_by_image_url_for_mantis_object_detection",
+      "args": {
+        "url": "https://example.com/image.jpg"
+      },
+      "output": "",
+      "error": null
+    },
+    {
+      "tool": "tection_objects_as_json_by_image_url_for_mantis_object_detection",
+      "args": {
+        "url": "https://example.com/image.jpg"
+      },
+      "output": "",
+      "error": null
+    }
+  ],
+  "tb_27": [
+    {
+      "tool": "getgroups_for_maytapi_whatsapp",
+      "args": {
+        "phone_id": "PHONE_ID"
+      },
+      "output": "{'success': False, 'message': '[PHONE_ID] is not a valid phone instance id. You can find your phones from /api/rapidapi-free6/listPhones'}",
+      "error": null
+    },
+    {
+      "tool": "replies_for_sms77io",
+      "args": {
+        "p": "API_KEY",
+        "date_from": "START_DATE",
+        "date_to": "END_DATE"
+      },
+      "output": "{'message': \"Endpoint '/journal' does not exist\"}",
+      "error": null
+    },
+    {
+      "tool": "outbound_for_sms77io",
+      "args": {
+        "p": "API_KEY",
+        "date_from": "START_DATE",
+        "date_to": "END_DATE"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_28": [
+    {
+      "tool": "show_history_for_image_cdn",
+      "args": {
+        "pagesize": 10,
+        "page": 0
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    },
+    {
+      "tool": "get_history_for_web_image_storage",
+      "args": {
+        "pagesize": 10,
+        "page": 0
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "get_for_simple_file_storage",
+      "args": {
+        "file_id": "e2ab50b6-0252-468b-8e76-700f60926b05"
+      },
+      "output": "{'err': 'file does not exist'}",
+      "error": null
+    },
+    {
+      "tool": "anikuendpoint_for_aniku",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Storage.aniku.api import anikuendpoint error...\nHTTPSConnectionPool(host='aniku.p.rapidapi.comstorage', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe1d05501c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    }
+  ],
+  "tb_29": [
+    {
+      "tool": "exchange_rates_for_currency_v2",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "free_convert_for_currency_v2",
+      "args": {
+        "is_from": "USD",
+        "amount": 100,
+        "to": "AUD"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "free_convert_for_currency_v2",
+      "args": {
+        "is_from": "USD",
+        "amount": 100,
+        "to": "AUD"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "convert_for_currency_v2",
+      "args": {
+        "is_from": "USD",
+        "amount": "100",
+        "to": "AUD"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    }
+  ],
+  "tb_30": [
+    {
+      "tool": "get_event_for_today_in_history",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_31": [
+    {
+      "tool": "similar_for_comparable_companies",
+      "args": {
+        "domain": "ibm.com",
+        "limit": 50
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_32": [
+    {
+      "tool": "get_call_detail_for_calltrackingmetrics",
+      "args": {
+        "account_id": "abc123",
+        "callid": "xyz789"
+      },
+      "output": "{'authentication': 'failed'}",
+      "error": null
+    },
+    {
+      "tool": "list_numbers_for_calltrackingmetrics",
+      "args": {
+        "aid": "abc123"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_33": [
+    {
+      "tool": "editorial_for_deezer",
+      "args": {
+        "is_id": "eminem"
+      },
+      "output": "{'id': 0, 'name': 'All', 'picture': 'https://e-cdns-images.dzcdn.net/images/misc//180x180-000000-80-0-0.jpg', 'picture_small': 'https://e-cdns-images.dzcdn.net/images/misc//56x56-000000-80-0-0.jpg', 'picture_medium': 'https://e-cdns-images.dzcdn.net/images/misc//250x250-000000-80-0-0.jpg', 'picture_big': 'https://e-cdns-images.dzcdn.net/images/misc//500x500-000000-80-0-0.jpg', 'picture_xl': 'https://e-cdns-images.dzcdn.net/images/misc//1000x1000-000000-80-0-0.jpg', 'type': 'editorial'}",
+      "error": null
+    },
+    {
+      "tool": "search_for_deezer",
+      "args": {
+        "q": "Eminem"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    },
+    {
+      "tool": "jokes_random_for_chuck_norris",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_34": [
+    {
+      "tool": "getinterestinglistings_for_etsy",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_35": [
+    {
+      "tool": "get_antonyms_for_dicolink",
+      "args": {
+        "mot": "happy"
+      },
+      "output": "{'error': 'pas de résultats'}",
+      "error": "Message error..."
+    },
+    {
+      "tool": "get_antonyms_for_dicolink",
+      "args": {
+        "mot": "sad"
+      },
+      "output": "{'error': 'pas de résultats'}",
+      "error": "Message error..."
+    },
+    {
+      "tool": "search_translations_for_mymemory_translation_memory",
+      "args": {
+        "langpair": "en|fr",
+        "q": "exciting"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'responseData': {'translatedText': 'excitant', 'match': 1}, 'quotaFinished': False, 'mtLangSupported': None, 'responseDetails': '', 'responseStatus': 200, 'responderId': None, 'exception_code': None, 'matches': [{'id': '795893199', 'segment': 'exciting', 'translation': 'excitant', 'source': 'en-GB', 'target': 'fr-FR', 'quality': '74', 'reference': None, 'usage-count': 2, 'subject': 'All', 'created-by': 'MateCat', 'last-updated-by': 'MateCat', 'create-date': '2021-06-05 23:28:59', 'last-update-date': '2021-06-05 23:28:59', 'match': 1}, {'id': '807601999', 'segment': 'exciting', 'translation': \\\"d'opportunit\\u00e9s\\\", 'source': 'en-US', 'target': 'fr-FR', 'quality': '74', 'reference': None, 'usage-count': 2, 'subject': 'All', 'created-by': 'MateCat', 'last-updated-by': 'MateCat', 'create-date': '2021-10-06 16:04:38', 'last-update-date': '2021-10-06 16:04:38', 'match': 0.99}, {'id': '928512274', 'segment': 'exciting;', 'translation': 'passionnant, excitant;', 'source': 'en-GB', 'targe...",
+      "error": null
+    },
+    {
+      "tool": "set_contribution_for_mymemory_translation_memory",
+      "args": {
+        "seg": "adventure",
+        "tra": "aventure",
+        "langpair": "en|fr"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_36": [
+    {
+      "tool": "getbooks_for_feku_json",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{\\\"content\\\":[{\\\"id\\\":1,\\\"title\\\":\\\"Tiger! Tiger!\\\",\\\"author\\\":\\\"Mrs. Kristofer Beatty\\\",\\\"genre\\\":\\\"Mystery\\\",\\\"publisher\\\":\\\"Boydell & Brewer\\\"},{\\\"id\\\":2,\\\"title\\\":\\\"All the King's Men\\\",\\\"author\\\":\\\"Nicol Heller\\\",\\\"genre\\\":\\\"Tall tale\\\",\\\"publisher\\\":\\\"Caister Academic Press\\\"},{\\\"id\\\":3,\\\"title\\\":\\\"A Summer Bird-Cage\\\",\\\"author\\\":\\\"Chrystal Maggio\\\",\\\"genre\\\":\\\"Fiction in verse\\\",\\\"publisher\\\":\\\"Harvest House\\\"},{\\\"id\\\":4,\\\"title\\\":\\\"The Line of Beauty\\\",\\\"author\\\":\\\"Albert Murray IV\\\",\\\"genre\\\":\\\"Mythopoeia\\\",\\\"publisher\\\":\\\"Carcanet Press\\\"},{\\\"id\\\":5,\\\"title\\\":\\\"The Far-Distant Oxus\\\",\\\"author\\\":\\\"Reuben Rau\\\",\\\"genre\\\":\\\"Mythopoeia\\\",\\\"publisher\\\":\\\"Orion Books\\\"},{\\\"id\\\":6,\\\"title\\\":\\\"The Doors of Perception\\\",\\\"author\\\":\\\"Lindy Schuster\\\",\\\"genre\\\":\\\"Essay\\\",\\\"publisher\\\":\\\"Victor Gollancz Ltd\\\"},{\\\"id\\\":7,\\\"title\\\":\\\"Surprised by Joy\\\",\\\"author\\\":\\\"Kenya Cole\\\",\\\"genre\\\":\\\"Western\\\",\\\"publisher\\\":\\\"SAGE Publications\\\"},{\\\"id\\\":8,\\\"title\\\":\\\"Eyeless in Gaza\\\",\\\"author\\\":...",
+      "error": null
+    },
+    {
+      "tool": "getbookbyid_for_feku_json",
+      "args": {
+        "is_id": "7"
+      },
+      "output": "{\"error\": \"Message error...\", \"response\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\" />\\n    <meta charset=\\\"utf-8\\\" />\\n    <title>Server Error</title>\\n    <style media=\\\"screen\\\">\\n      :root {\\n        --bg: hsl(250, 24%, 9%);\\n        --fg: hsl(0, 0%, 100%);\\n        --pink: hsl(270, 60%, 52%);\\n      }\\n\\n      html,\\n      body {\\n        margin: 0;\\n        padding: 0;\\n        height: 100%;\\n        overflow: hidden;\\n        background-color: var(--bg);\\n        color: var(--fg);\\n        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,\\n          Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif,\\n          Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;\\n      }\\n\\n      main {\\n        display: flex;\\n        flex-direction: column;\\n        align-items: center;\\n        justify-content: center;\\n        padding: 16px;\\n        height: 100%;\\n      }\\n\\n      .logo {\\n        width: 160px;\\n       ...",
+      "error": null
+    },
+    {
+      "tool": "getbooks_for_feku_json",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{\\\"content\\\":[{\\\"id\\\":1,\\\"title\\\":\\\"Tiger! Tiger!\\\",\\\"author\\\":\\\"Mrs. Kristofer Beatty\\\",\\\"genre\\\":\\\"Mystery\\\",\\\"publisher\\\":\\\"Boydell & Brewer\\\"},{\\\"id\\\":2,\\\"title\\\":\\\"All the King's Men\\\",\\\"author\\\":\\\"Nicol Heller\\\",\\\"genre\\\":\\\"Tall tale\\\",\\\"publisher\\\":\\\"Caister Academic Press\\\"},{\\\"id\\\":3,\\\"title\\\":\\\"A Summer Bird-Cage\\\",\\\"author\\\":\\\"Chrystal Maggio\\\",\\\"genre\\\":\\\"Fiction in verse\\\",\\\"publisher\\\":\\\"Harvest House\\\"},{\\\"id\\\":4,\\\"title\\\":\\\"The Line of Beauty\\\",\\\"author\\\":\\\"Albert Murray IV\\\",\\\"genre\\\":\\\"Mythopoeia\\\",\\\"publisher\\\":\\\"Carcanet Press\\\"},{\\\"id\\\":5,\\\"title\\\":\\\"The Far-Distant Oxus\\\",\\\"author\\\":\\\"Reuben Rau\\\",\\\"genre\\\":\\\"Mythopoeia\\\",\\\"publisher\\\":\\\"Orion Books\\\"},{\\\"id\\\":6,\\\"title\\\":\\\"The Doors of Perception\\\",\\\"author\\\":\\\"Lindy Schuster\\\",\\\"genre\\\":\\\"Essay\\\",\\\"publisher\\\":\\\"Victor Gollancz Ltd\\\"},{\\\"id\\\":7,\\\"title\\\":\\\"Surprised by Joy\\\",\\\"author\\\":\\\"Kenya Cole\\\",\\\"genre\\\":\\\"Western\\\",\\\"publisher\\\":\\\"SAGE Publications\\\"},{\\\"id\\\":8,\\\"title\\\":\\\"Eyeless in Gaza\\\",\\\"author\\\":...",
+      "error": null
+    },
+    {
+      "tool": "getbooks_for_feku_json",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{\\\"content\\\":[{\\\"id\\\":1,\\\"title\\\":\\\"Tiger! Tiger!\\\",\\\"author\\\":\\\"Mrs. Kristofer Beatty\\\",\\\"genre\\\":\\\"Mystery\\\",\\\"publisher\\\":\\\"Boydell & Brewer\\\"},{\\\"id\\\":2,\\\"title\\\":\\\"All the King's Men\\\",\\\"author\\\":\\\"Nicol Heller\\\",\\\"genre\\\":\\\"Tall tale\\\",\\\"publisher\\\":\\\"Caister Academic Press\\\"},{\\\"id\\\":3,\\\"title\\\":\\\"A Summer Bird-Cage\\\",\\\"author\\\":\\\"Chrystal Maggio\\\",\\\"genre\\\":\\\"Fiction in verse\\\",\\\"publisher\\\":\\\"Harvest House\\\"},{\\\"id\\\":4,\\\"title\\\":\\\"The Line of Beauty\\\",\\\"author\\\":\\\"Albert Murray IV\\\",\\\"genre\\\":\\\"Mythopoeia\\\",\\\"publisher\\\":\\\"Carcanet Press\\\"},{\\\"id\\\":5,\\\"title\\\":\\\"The Far-Distant Oxus\\\",\\\"author\\\":\\\"Reuben Rau\\\",\\\"genre\\\":\\\"Mythopoeia\\\",\\\"publisher\\\":\\\"Orion Books\\\"},{\\\"id\\\":6,\\\"title\\\":\\\"The Doors of Perception\\\",\\\"author\\\":\\\"Lindy Schuster\\\",\\\"genre\\\":\\\"Essay\\\",\\\"publisher\\\":\\\"Victor Gollancz Ltd\\\"},{\\\"id\\\":7,\\\"title\\\":\\\"Surprised by Joy\\\",\\\"author\\\":\\\"Kenya Cole\\\",\\\"genre\\\":\\\"Western\\\",\\\"publisher\\\":\\\"SAGE Publications\\\"},{\\\"id\\\":8,\\\"title\\\":\\\"Eyeless in Gaza\\\",\\\"author\\\":...",
+      "error": null
+    }
+  ],
+  "tb_37": [
+    {
+      "tool": "country_details_level_2_for_countries_population",
+      "args": {
+        "param": "Tuvalu"
+      },
+      "output": "{'message': 'This endpoint is disabled for your subscription'}",
+      "error": null
+    },
+    {
+      "tool": "total_population_for_countries_population",
+      "args": {},
+      "output": "{'message': 'This endpoint is disabled for your subscription'}",
+      "error": null
+    },
+    {
+      "tool": "all_countries_names_for_countries_population",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_38": [
+    {
+      "tool": "search_for_deezer",
+      "args": {
+        "q": "popular albums"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "search_for_deezer",
+      "args": {
+        "q": "popular playlists"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "album_for_deezer",
+      "args": {
+        "is_id": "12345678"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "get_trivia_fact_for_numbers",
+      "args": {
+        "number": "500",
+        "fragment": "true"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    }
+  ],
+  "tb_39": [
+    {
+      "tool": "all_for_getguidelines",
+      "args": {},
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "api_nutrition_data_for_edamam_nutrition_analysis",
+      "args": {
+        "ingr": "spinach"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_40": [
+    {
+      "tool": "languages_for_popular_languages",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_41": [
+    {
+      "tool": "get_asin_for_amazon_live_data",
+      "args": {
+        "asin": "B07WDSD7G7",
+        "locale": "us"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_42": [
+    {
+      "tool": "istofattributeandvalueoptions_for_sandbox_ecombr_com_01_products",
+      "args": {
+        "action": "getCategoriesAndSubCategories"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    },
+    {
+      "tool": "stcategoriesandsub_categories_for_sandbox_ecombr_com_01_products",
+      "args": {
+        "action": "getCategoriesAndSubCategories"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    },
+    {
+      "tool": "check_holiday_for_azaprime",
+      "args": {},
+      "output": "{'message': 'Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.'}",
+      "error": null
+    },
+    {
+      "tool": "check_holiday_for_azaprime",
+      "args": {},
+      "output": "{'message': 'Invalid API key. Go to https://docs.rapidapi.com/docs/keys for more info.'}",
+      "error": null
+    }
+  ],
+  "tb_43": [
+    {
+      "tool": "search_for_shopify_stores_info",
+      "args": {
+        "search": "books"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='127.0.0.1', port=15236): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "search_for_shopify_stores_info",
+      "args": {
+        "search": "bookstore",
+        "page": "1"
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'storeName': 'gorjana', 'storeTitle': \\\"Women's Jewelry Inspired by Laguna Beach | gorjana\\\", 'storeUrl': 'https://www.gorjana.com', 'image': 'https://www.gorjana.com/cdn/shop/files/URL-Thumbnail-2_2cbf68d9-fefa-40ca-96f9-5dad1fbe5222.jpg?v=1683302077&width=1200', 'storeDescription': 'Looking for 14k gold necklaces, hoop earrings, stacking rings & more? Shop thoughtfully designed jewelry made to mix, style, and layer.', 'emails': [], 'phoneNumber': ['8668290030'], 'socialMedia': {'facebook': 'https://facebook.com/gorjanabrand', 'twitter': 'https://twitter.com/gorjana_brand', 'pinterest': '', 'instagram': 'http://instagram.com/gorjana', 'snapchat': '', 'youtube': 'https://www.youtube.com/@gorjanabrand'}, 'physicalAddress': []}, {'storeName': 'Hammer Museum Store', 'storeTitle': 'Hammer Store', 'storeUrl': 'https://store.hammer.ucla.edu', 'image': '', 'storeDescription': 'Shop books, housewares, jewelry, kids toys and books, and more in the online store for the Hammer Museum.', 'ema...",
+      "error": null
+    },
+    {
+      "tool": "search_for_shopify_stores_info",
+      "args": {
+        "search": "bookshop",
+        "page": "1"
+      },
+      "output": "[{'storeName': 'gorjana', 'storeTitle': \"Women's Jewelry Inspired by Laguna Beach | gorjana\", 'storeUrl': 'https://www.gorjana.com', 'image': 'https://www.gorjana.com/cdn/shop/files/URL-Thumbnail-2_2cbf68d9-fefa-40ca-96f9-5dad1fbe5222.jpg?v=1683302077&width=1200', 'storeDescription': 'Looking for 14k gold necklaces, hoop earrings, stacking rings & more? Shop thoughtfully designed jewelry made to mix, style, and layer.', 'emails': [], 'phoneNumber': ['8668290030'], 'socialMedia': {'facebook': 'https://facebook.com/gorjanabrand', 'twitter': 'https://twitter.com/gorjana_brand', 'pinterest': '', 'instagram': 'http://instagram.com/gorjana', 'snapchat': '', 'youtube': 'https://www.youtube.com/@gorjanabrand'}, 'physicalAddress': []}]",
+      "error": null
+    },
+    {
+      "tool": "get_store_info_for_shopify_stores_info",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'storeName': 'Uncle Bekah\\u2019s Inappropriate Trucker Hats', 'storeTitle': \\\"Uncle Bekah's Inappropriate Trucker Hats\\\", 'storeUrl': 'https://unclebekah.com', 'image': '', 'storeDescription': \\\"Uncle Bekah's Inappropriate Trucker Hats is everything you ever wanted to say - on a trucker hat.\\\", 'emails': [], 'phoneNumber': [], 'socialMedia': {'facebook': 'https://www.facebook.com/inappropriatetruckerhats/', 'twitter': '', 'pinterest': '', 'instagram': 'https://www.instagram.com/inappropriatetruckerhats/', 'snapchat': '', 'youtube': ''}, 'physicalAddress': []}, {'storeName': 'Jakke', 'storeTitle': 'jakke | Fashion brand with a conscience', 'storeUrl': 'https://jakke.co.uk', 'image': 'https://cdn.shopify.com/s/files/1/0247/1487/0864/files/Jakke_Logotype_Black.jpg?v=1675693898', 'storeDescription': 'Explore the official jakke site. Shop the newest cruelty free, sustainable and responsible styles. Enjoy fast Worldwide Delivery and FREE UK Returns.', 'emails': [], 'phoneNumber': [], 's...",
+      "error": null
+    }
+  ],
+  "tb_44": [
+    {
+      "tool": "leaguepowerrankingrounds_for_footapi",
+      "args": {
+        "tournamentid": 16,
+        "seasonid": 41087
+      },
+      "output": "{'powerRankingRounds': [{'id': 82, 'round': {'cupRoundType': 2, 'name': 'Semifinal', 'round': 2, 'slug': 'semifinal'}}, {'id': 81, 'round': {'cupRoundType': 4, 'name': 'Quarterfinal', 'round': 4, 'slug': 'quarterfinal'}}, {'id': 80, 'round': {'cupRoundType': 8, 'name': 'Round of 16', 'round': 8, 'slug': 'round-of-16'}}, {'id': 79, 'round': {'round': 3}}, {'id': 78, 'round': {'round': 2}}, {'id': 77, 'round': {'round': 1}}]}",
+      "error": null
+    },
+    {
+      "tool": "leaguemedia_for_footapi",
+      "args": {
+        "tournamentid": 7
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_45": [
+    {
+      "tool": "coinmill_for_coinmill_currency",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"var currency_data='ADA,0.212004210703875,0.001|ADP,0.00491752,1|AED,0.20406,0.25|AFA,8.709e-06,1|AFN,0.008709,1|ALL,0.008,0.1|AMD,0.0019119,0.2|ANC,0.0398876564134743,0.0001|ANG,0.41435,0.01|AOA,0.0014575,0.1|ARDR,0.0519906218157515,0.0001|ARG,3.6901051658097,0.001|ARS,0.0031055,0.01|ATS,0.0594614,1|AUD,0.500532,0.05|AUR,0.035998211981,0.00001|AWG,0.423,0.01|AZM,8.884e-05,10|AZN,0.4442,0.01|BAM,0.4118,0.5|BBD,0.37682,0.01|BCH,173.252501728562,0.0000001|BCN,0.0001694845261576,10|BDT,0.0069799,0.01|BEF,0.0202828,0.5|BET,0.0123306644402,0.01|BGL,0.00041182,10|BGN,0.41182,0.01|BHD,2,0.05|BIF,0.00026887,1|BLC,0.04907987460308,0.01|BMD,0.748338,0.01|BNB,178.86873791241,0.00001|BND,0.554503,0.01|BOB,0.11,0.1|BRC,5.71404e-05,0.01|BRL,0.157136,0.01|BSD,0.8,0.01|BTB,0.0847669629357117,0.00001|BTC,22909.5446434804,0.00001|BTG,10.360739189179,0.000001|BTN,0.0090412,0.20|BTS,0.00631179111710523,0.001|BWP,0.0557562,0.01|BYN,0.29901,0.01|BYR,0.00029901,1|BZD,0.3768,0.01|CAD,0.569851,0.01|CDF,0.000...",
+      "error": null
+    },
+    {
+      "tool": "rates_for_currencyapi_net",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'valid': True, 'updated': 1688277605, 'base': 'USD', 'rates': {'AED': 3.67321, 'AFN': 87.505, 'ALL': 97.37985, 'AMD': 386.0795, 'ANG': 1.80253, 'AOA': 825.54, 'ARS': 256.46753, 'AUD': 1.50093, 'AWG': 1.80259, 'AZN': 1.7, 'BAM': 1.80224, 'BBD': 2.01934, 'BCH': 0.0033262926804929565, 'BDT': 108.19151, 'BGN': 1.79264, 'BHD': 0.37664, 'BIF': 2842.15, 'BMD': 1, 'BND': 1.35688, 'BOB': 6.9112, 'BRL': 4.79004, 'BSD': 1.00009, 'BTC': 3.282655694718273e-05, 'BTG': 0.06230529595015576, 'BWP': 13.57058, 'BZD': 2.01593, 'CAD': 1.32428, 'CDF': 2410.1, 'CHF': 0.8945, 'CLP': 802.22, 'CNH': 7.26778, 'CNY': 7.2656, 'COP': 4168.2, 'CRC': 542.94355, 'CUC': 1, 'CUP': 25.75, 'CVE': 101.38005, 'CZK': 21.77669, 'DASH': 0.027122321670735017, 'DJF': 177.729, 'DKK': 6.8216, 'DOP': 55.353, 'DZD': 135.8158, 'EGP': 30.86895, 'EOS': 1.335113484646195, 'ETB': 54.605, 'ETH': 0.0005190491020450534, 'EUR': 0.9161, 'FJD': 2.22781, 'GBP': 0.78704, 'GEL': 2.61, 'GHS': 11.4505, 'GIP': 0.78704, 'GMD': 59.553, 'GNF': 8650...",
+      "error": null
+    },
+    {
+      "tool": "get_coin_price_history_for_coinranking",
+      "args": {
+        "uuid": "bitcoin",
+        "timeperiod": "30d"
+      },
+      "output": "{'status': 'fail', 'type': 'COIN_NOT_FOUND', 'message': 'Coin not found'}",
+      "error": null
+    },
+    {
+      "tool": "dailyohlcv_for_bravenewcoin",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_46": [
+    {
+      "tool": "latest_coupons_for_get_27coupons",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"\\\"<html>\\\\n\\\\n<head>\\\\n<title>27coupons.com</title>\\\\n<script type=\\\\\\\"text/javascript\\\\\\\" src=\\\\\\\"/js/general.js\\\\\\\"></script>\\\\n<script type=\\\\\\\"text/javascript\\\\\\\">ChkRequestEnc('YTozNjp7aTowO3M6MTk6IjIwMjMtMDYtMjUgMTk6NTU6MzYiO2k6MTtzOjg6IjQ4NjMzODY3IjtpOjI7czowOiIiO2k6MztzOjIyOiJweXRob24tcmVxdWVzdHMvMi4zMC4wIjtpOjQ7czoyNzoiL3YxLjAvZGF0YS9jb3Vwb25zL2xhdGVzdC8/IjtpOjU7czoxMjoiNTIuMzguMjguMjQxIjtpOjY7czoyOiIxMSI7aTo3O3M6MToiYiI7aTo4O047aTo5O3M6MjoiVVMiO2k6MTA7czoxMDoiQ2FsaWZvcm5pYSI7aToxMTtzOjExOiJTYW50YSBDbGFyYSI7aToxMjtpOjQwMDU7aToxMztzOjEzOiIyN2NvdXBvbnMuY29tIjtpOjE0O3M6NzoiRGVmYXVsdCI7aToxNTtzOjA6IiI7aToxNjtzOjA6IiI7aToxNztzOjA6IiI7aToxODtzOjA6IiI7aToxOTtzOjA6IiI7aToyMDtzOjA6IiI7aToyMTtzOjA6IiI7aToyMjtpOjA7aToyMztzOjE6ImEiO2k6MjQ7czoxOiJ0IjtpOjI1O3M6MToidSI7aToyNjtzOjE6ImkiO2k6Mjc7czoyODoiNDcuMjUxLjEzLjIwNCwgNDcuMjUxLjEzLjIwNCI7aToyODtzOjE4OiIxNjg3Njg2OTM2LjgwNTU0NzciO2k6Mjk7czozOiIqLyoiO2k6MzA7czowOiIiO2k6MzE7czowOiIiO2k6MzI7czozNjoiMjAyMzA2MjUtMTk1NS0zNjY2LTliM2EtN2Q4OGRiMjE...",
+      "error": null
+    },
+    {
+      "tool": "trending_coupons_for_get_27coupons",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_47": [
+    {
+      "tool": "search_products_for_shopeeapi",
+      "args": {
+        "region": "en",
+        "q": "venue in New York City"
+      },
+      "output": "{'message': 'Unexpected token \\'<\\', \"<!DOCTYPE \"... is not valid JSON', 'code': 400}",
+      "error": null
+    },
+    {
+      "tool": "search_products_for_shopeeapi",
+      "args": {
+        "region": "us",
+        "q": "venue in New York City"
+      },
+      "output": "{'message': 'Invalid region', 'code': 400}",
+      "error": null
+    },
+    {
+      "tool": "search_products_for_shopeeapi",
+      "args": {
+        "region": "us",
+        "q": "event venue in New York City"
+      },
+      "output": "{'message': 'Invalid region', 'code': 400}",
+      "error": null
+    },
+    {
+      "tool": "search_products_for_shopeeapi",
+      "args": {
+        "region": "en",
+        "q": "event venue in New York City"
+      },
+      "output": "{'message': 'Unexpected token \\'<\\', \"<!DOCTYPE \"... is not valid JSON', 'code': 400}",
+      "error": null
+    }
+  ],
+  "tb_48": [
+    {
+      "tool": "countries_for_geography_v2",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'countries': [{'id': 1, 'code': 'AF', 'name': 'Afghanistan', 'native': '\\u0627\\u0641\\u063a\\u0627\\u0646\\u0633\\u062a\\u0627\\u0646', 'phone': '93', 'capital': 'Kabul', 'currency': 'AFN', 'emoji': '\\ud83c\\udde6\\ud83c\\uddeb', 'continentId': 6}, {'id': 2, 'code': 'AL', 'name': 'Albania', 'native': 'Shqip\\u00ebria', 'phone': '355', 'capital': 'Tirana', 'currency': 'ALL', 'emoji': '\\ud83c\\udde6\\ud83c\\uddf1', 'continentId': 5}, {'id': 3, 'code': 'DZ', 'name': 'Algeria', 'native': '\\u0627\\u0644\\u062c\\u0632\\u0627\\u0626\\u0631', 'phone': '213', 'capital': 'Algiers', 'currency': 'DZD', 'emoji': '\\ud83c\\udde9\\ud83c\\uddff', 'continentId': 1}, {'id': 4, 'code': 'AS', 'name': 'American Samoa', 'native': 'American Samoa', 'phone': '1684', 'capital': 'Pago Pago', 'currency': 'USD', 'emoji': '\\ud83c\\udde6\\ud83c\\uddf8', 'continentId': 3}, {'id': 5, 'code': 'AD', 'name': 'Andorra', 'native': 'Andorra', 'phone': '376', 'capital': 'Andorra la Vella', 'currency': 'EUR', 'emoji': '\\ud83c\\udde6\\ud83c\\udde9', '...",
+      "error": null
+    },
+    {
+      "tool": "countries_for_geography_v2",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'countries': [{'id': 1, 'code': 'AF', 'name': 'Afghanistan', 'native': '\\u0627\\u0641\\u063a\\u0627\\u0646\\u0633\\u062a\\u0627\\u0646', 'phone': '93', 'capital': 'Kabul', 'currency': 'AFN', 'emoji': '\\ud83c\\udde6\\ud83c\\uddeb', 'continentId': 6}, {'id': 2, 'code': 'AL', 'name': 'Albania', 'native': 'Shqip\\u00ebria', 'phone': '355', 'capital': 'Tirana', 'currency': 'ALL', 'emoji': '\\ud83c\\udde6\\ud83c\\uddf1', 'continentId': 5}, {'id': 3, 'code': 'DZ', 'name': 'Algeria', 'native': '\\u0627\\u0644\\u062c\\u0632\\u0627\\u0626\\u0631', 'phone': '213', 'capital': 'Algiers', 'currency': 'DZD', 'emoji': '\\ud83c\\udde9\\ud83c\\uddff', 'continentId': 1}, {'id': 4, 'code': 'AS', 'name': 'American Samoa', 'native': 'American Samoa', 'phone': '1684', 'capital': 'Pago Pago', 'currency': 'USD', 'emoji': '\\ud83c\\udde6\\ud83c\\uddf8', 'continentId': 3}, {'id': 5, 'code': 'AD', 'name': 'Andorra', 'native': 'Andorra', 'phone': '376', 'capital': 'Andorra la Vella', 'currency': 'EUR', 'emoji': '\\ud83c\\udde6\\ud83c\\udde9', '...",
+      "error": null
+    },
+    {
+      "tool": "countries_for_geography_v2",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'countries': [{'id': 1, 'code': 'AF', 'name': 'Afghanistan', 'native': '\\u0627\\u0641\\u063a\\u0627\\u0646\\u0633\\u062a\\u0627\\u0646', 'phone': '93', 'capital': 'Kabul', 'currency': 'AFN', 'emoji': '\\ud83c\\udde6\\ud83c\\uddeb', 'continentId': 6}, {'id': 2, 'code': 'AL', 'name': 'Albania', 'native': 'Shqip\\u00ebria', 'phone': '355', 'capital': 'Tirana', 'currency': 'ALL', 'emoji': '\\ud83c\\udde6\\ud83c\\uddf1', 'continentId': 5}, {'id': 3, 'code': 'DZ', 'name': 'Algeria', 'native': '\\u0627\\u0644\\u062c\\u0632\\u0627\\u0626\\u0631', 'phone': '213', 'capital': 'Algiers', 'currency': 'DZD', 'emoji': '\\ud83c\\udde9\\ud83c\\uddff', 'continentId': 1}, {'id': 4, 'code': 'AS', 'name': 'American Samoa', 'native': 'American Samoa', 'phone': '1684', 'capital': 'Pago Pago', 'currency': 'USD', 'emoji': '\\ud83c\\udde6\\ud83c\\uddf8', 'continentId': 3}, {'id': 5, 'code': 'AD', 'name': 'Andorra', 'native': 'Andorra', 'phone': '376', 'capital': 'Andorra la Vella', 'currency': 'EUR', 'emoji': '\\ud83c\\udde6\\ud83c\\udde9', '...",
+      "error": null
+    }
+  ],
+  "tb_49": [
+    {
+      "tool": "get_word_of_the_day_from_multiple_sources_for_word_of_the_day",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'info': \\\"Note: This API doesn't gaurantee latest data by date.\\\"}, {'source': '#1', 'date': 'Friday, June 30, 2023', 'word': 'miasma', 'type': 'unvailable', 'mean': 'a poisonous cloud of vapor produced by decaying organic matter.'}, {'source': '#2', 'date': 'June 30, 2023', 'word': '', 'type': 'verb', 'mean': 'To facilitate something is to help bring it about, as in \\\"her rise to power was facilitated by her influential friends.'}, {'source': '#3', 'date': 'June 29, 2023', 'word': '', 'type': 'unvailable', 'mean': 'Petrichor, the name for the smell of rain on dry ground, is from oils given off by vegetation and absorbed onto neighboring surfaces, and released into the air after a first rain.'}, {'source': '#4', 'date': '18-Apr-2023', 'word': 'Shell', 'type': 'noun, verb', 'mean': 'Noun: A hard rigid usually large covering of an animal'}, {'source': '#5', 'date': 'June 30, 2023', 'word': 'malleable', 'type': 'adjective', 'mean': '1 technical : capable of being stretched or bent in...",
+      "error": null
+    },
+    {
+      "tool": "recent_word_of_the_day_from_dc_for_word_of_the_day",
+      "args": {},
+      "output": "[{'date': 'Sunday, July 02, 2023', 'word': 'Stygian', 'type': 'unvailable', 'mean': 'dark or gloomy.'}, {'date': 'Saturday, July 01, 2023', 'word': 'sewellel', 'type': 'unvailable', 'mean': 'a small, burrowing rodent of the Pacific coastal region of North America, also known as the mountain beaver.'}, {'date': 'Friday, June 30, 2023', 'word': 'miasma', 'type': 'unvailable', 'mean': 'a poisonous cloud of vapor produced by decaying organic matter.'}]",
+      "error": null
+    }
+  ],
+  "tb_50": [
+    {
+      "tool": "patreon_for_check_username",
+      "args": {
+        "username": "devgirl"
+      },
+      "output": "{'message': 'You have exceeded the rate limit per minute for your plan, BASIC, by the API provider'}",
+      "error": "Rate limit error..."
+    },
+    {
+      "tool": "etsy_for_check_username",
+      "args": {
+        "username": "devgirl"
+      },
+      "output": "{'message': 'You have exceeded the rate limit per minute for your plan, BASIC, by the API provider'}",
+      "error": "Rate limit error..."
+    },
+    {
+      "tool": "dribbble_for_check_username",
+      "args": {
+        "username": "hacker"
+      },
+      "output": "{'success': True, 'username': 'hacker', 'available': False}",
+      "error": null
+    }
+  ],
+  "tb_51": [
+    {
+      "tool": "list_of_countries_with_income_level_for_world_bank_gdp",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_52": [
+    {
+      "tool": "subscribe_for_mrautoparts",
+      "args": {},
+      "output": "Error code 500. You can try (1) Change your input (2) Call another function. (If the same error code is produced more than 4 times, please use Thought: I can not use these APIs, so I will stop. Final Answer: No Answer, please check the APIs.)",
+      "error": "Message error..."
+    },
+    {
+      "tool": "price_for_apfelpreise",
+      "args": {
+        "manufacturernumbase64encoded": "TVdQNzJEL0E=",
+        "condition": "USED"
+      },
+      "output": "{'messages': 'The API is unreachable, please contact the API provider', 'info': 'Your Client (working) ---> Gateway (working) ---> API (not working)'}",
+      "error": "API not working error..."
+    },
+    {
+      "tool": "http_mrauto_parts_for_mrautoparts",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Commerce.mrautoparts.api import http_mrauto_parts error...\nHTTPSConnectionPool(host='mrautoparts.p.rapidapi.comhttps', port=443): Max retries exceeded with url: //mrauto.parts (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe036654e20>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    },
+    {
+      "tool": "get_all_the_shoes_for_shoes_collections",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{\\\"id\\\":1,\\\"name\\\":\\\"Wild Rider Layers Unisex Sneakers\\\",\\\"price\\\":121,\\\"image\\\":\\\"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/380697/02/sv01/fnd/IND/fmt/png/,Wild-Rider-Layers-Unisex-Sneakers\\\",\\\"description\\\":\\\"With design elements inspired by the movement and motion of city life, the Wild Rider Layers Unisex Sneakers brings a fresh new dimension to the iconic Rider family. We've layered a rich mix of premium leather, suede and hairy suede onto a nylon upper to create texture and a raw edgy look that is pure street. The IMEVA midsole and rubber outsole ensure combined lightweight comfort and great traction to take you forward, further and faster through your day and beyond.\\\",\\\"quantity\\\":1,\\\"rating\\\":{\\\"rate\\\":3.9,\\\"count\\\":120}},{\\\"id\\\":2,\\\"name\\\":\\\"Mercedes Kart Cat-X Tech Unisex Sneakers\\\",\\\"price\\\":151,\\\"image\\\":\\\"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/306557/01/sv01/fnd/IND/fmt/png/Mercedes-K...",
+      "error": null
+    }
+  ],
+  "tb_53": [
+    {
+      "tool": "fixtures_for_msport",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "livescores_for_msport",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "results_for_msport",
+      "args": {
+        "date": "today",
+        "page": 1
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "match_for_msport",
+      "args": {
+        "is_id": "12345"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    }
+  ],
+  "tb_54": [
+    {
+      "tool": "product_id_for_flance_aliexpress",
+      "args": {
+        "product_id": "32656173352"
+      },
+      "output": "<br />\n<b>Notice</b>:  Undefined property: stdClass::$result in <b>/home/proga100/aliapi.flance.info/wp-content/plugins/fl_al_dropship_api/helpers/ali_routes.php</b> on line <b>167</b><br />\n<br />\n<b>Notice</b>:  Trying to get property 'productUrl' of non-object in <b>/home/proga100/aliapi.flance.info/wp-content/plugins/fl_al_dropship_api/helpers/ali_routes.php</b> on line <b>167</b><br />\n<br />\n<b>Warning</b>:  Creating default object from empty value in <b>/home/proga100/aliapi.flance.info/wp-content/plugins/fl_al_dropship_api/helpers/ali_routes.php</b> on line <b>167</b><br />\n{\"code\":\"code\",\"message\":\"message: \",\"data\":null}",
+      "error": null
+    },
+    {
+      "tool": "stofattributeandvalueoptions_for_sandbox_mktplace_eu_01_products",
+      "args": {
+        "action": "fetch_attribute_and_value_options_data"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    }
+  ],
+  "tb_55": [
+    {
+      "tool": "enneagram_personality_test_questionnaire_for_personality_quest",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{\\\"personality_test_id\\\":5,\\\"title\\\":\\\"Enneagram Personality test\\\",\\\"description\\\":\\\"A nine-sided figure used in a particular system of analysis to represent the spectrum of possible personality types.\\\",\\\"lowest_range\\\":1,\\\"heighest_range\\\":5,\\\"lowest_range_name\\\":\\\"That's not me\\\",\\\"heighest_range_name\\\":\\\"That's me\\\",\\\"personality_test_type\\\":\\\"Enneagram\\\",\\\"created_at\\\":\\\"2023-05-18T11:05:43.683Z\\\",\\\"updated_at\\\":\\\"2023-05-18T11:05:43.683Z\\\",\\\"personality_test_questions\\\":[{\\\"personality_test_id\\\":5,\\\"question\\\":\\\"I have very good judgement and am extremely prudent: in fact, good judgement is one of my deepest strengths.\\\",\\\"personality_test_question_id\\\":105},{\\\"personality_test_id\\\":5,\\\"question\\\":\\\"I have a strong conscience and a clear sense of right and wrong.\\\",\\\"personality_test_question_id\\\":106},{\\\"personality_test_id\\\":5,\\\"question\\\":\\\"I tolerate others, their beliefs and actions, even though I dont necessarily agree with them or think that they are right.\\\",\\\"person...",
+      "error": null
+    },
+    {
+      "tool": "big_five_personality_test_for_personality_quest",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'personality_test_id': 3, 'title': 'The Big 5 Personality test', 'description': 'These are incredibly helpful for understanding yourself. When you understand your own personality, you can ask for your needs, connect more easily, and optimize your behavior', 'lowest_range': 0, 'heighest_range': 5, 'lowest_range_name': 'disagree', 'heighest_range_name': 'agree', 'personality_test_type': 'big_five_personality', 'created_at': '2023-05-13T05:37:15.633Z', 'updated_at': '2023-05-13T05:37:15.633Z', 'personality_test_questions': [{'personality_test_id': 3, 'question': 'I see myself as someone who is original, unique, and comes up with new ideas.', 'personality_test_question_id': 42}, {'personality_test_id': 3, 'question': 'I see myself as someone who is sophisticated in art, music, or literature..', 'personality_test_question_id': 43}, {'personality_test_id': 3, 'question': 'I see myself as someone who has a lot of artistic interests.', 'personality_test_question_id': 44}, {'personality_te...",
+      "error": null
+    },
+    {
+      "tool": "disc_personality_test_questionnaire_for_personality_quest",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'personality_test_id': 4, 'title': 'DISC Personality test', 'description': 'DiSC is an acronym that stands for the four main personality profiles described in the DiSC model: (D)ominance, (i)nfluence, (S)teadiness and (C)onscientiousness.', 'lowest_range': 1, 'heighest_range': 5, 'lowest_range_name': 'never', 'heighest_range_name': 'always', 'personality_test_type': 'disc', 'created_at': '2023-05-17T07:33:26.652Z', 'updated_at': '2023-05-17T07:33:26.652Z', 'personality_test_questions': [{'personality_test_id': 4, 'question': 'I am assertive, demanding, and decisive.', 'personality_test_question_id': 85}, {'personality_test_id': 4, 'question': 'I enjoy doing multiple tasks at once.', 'personality_test_question_id': 86}, {'personality_test_id': 4, 'question': 'I thrive in a challenge-based environment.', 'personality_test_question_id': 87}, {'personality_test_id': 4, 'question': 'I think about tasks above others or myself.', 'personality_test_question_id': 88}, {'personality_test_id...",
+      "error": null
+    }
+  ],
+  "tb_56": [
+    {
+      "tool": "getbooks_for_feku_json",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "getbookbyid_for_feku_json",
+      "args": {
+        "is_id": "456"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_57": [
+    {
+      "tool": "album_for_deezer",
+      "args": {
+        "is_id": "12345678"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'id': 12345678, 'title': 'Two Wrongs Make A Right', 'upc': '820997246126', 'link': 'https://www.deezer.com/album/12345678', 'share': 'https://www.deezer.com/album/12345678?utm_source=deezer&utm_content=album-12345678&utm_term=0_1688563674&utm_medium=web', 'cover': 'https://api.deezer.com/album/12345678/image', 'cover_small': 'https://e-cdns-images.dzcdn.net/images/cover/0bee7e7588b0d1cc7cc0b5be49f17f22/56x56-000000-80-0-0.jpg', 'cover_medium': 'https://e-cdns-images.dzcdn.net/images/cover/0bee7e7588b0d1cc7cc0b5be49f17f22/250x250-000000-80-0-0.jpg', 'cover_big': 'https://e-cdns-images.dzcdn.net/images/cover/0bee7e7588b0d1cc7cc0b5be49f17f22/500x500-000000-80-0-0.jpg', 'cover_xl': 'https://e-cdns-images.dzcdn.net/images/cover/0bee7e7588b0d1cc7cc0b5be49f17f22/1000x1000-000000-80-0-0.jpg', 'md5_image': '0bee7e7588b0d1cc7cc0b5be49f17f22', 'genre_id': 106, 'genres': {'data': [{'id': 106, 'name': 'Electro', 'picture': 'https://api.deezer.com/genre/106/image', 'type': 'genre'}, {'id': 113, ...",
+      "error": null
+    },
+    {
+      "tool": "radio_for_deezer",
+      "args": {
+        "is_id": "12345678"
+      },
+      "output": "{'error': {'type': 'DataException', 'message': 'no data', 'code': 800}}",
+      "error": "Message error..."
+    },
+    {
+      "tool": "artists_get_details_for_shazam",
+      "args": {
+        "is_id": "87654321"
+      },
+      "output": "{'message': 'You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/apidojo/api/shazam'}",
+      "error": "Rate limit error..."
+    }
+  ],
+  "tb_58": [
+    {
+      "tool": "get_categories_for_demo_project",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_59": [
+    {
+      "tool": "airlinestatistics_for_flightera_flight_data",
+      "args": {},
+      "output": "{'Error': 'At least one of ident, iata, icao, or localID is required'}",
+      "error": null
+    },
+    {
+      "tool": "airlineinfo_for_flightera_flight_data",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_60": [
+    {
+      "tool": "find_all_for_manatee_jokes",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'id': 1, 'setup': 'What is the preferred beverage of British whales?', 'punchline': 'Earl Grey manatea', 'createdAt': '2020-12-23T19:40:08.000Z', 'updatedAt': '2020-12-23T19:40:08.000Z'}, {'id': 2, 'setup': 'What do you call undersea sporting enthusiasts?', 'punchline': 'fanatees', 'createdAt': '2020-12-23T19:40:08.000Z', 'updatedAt': '2020-12-23T19:40:08.000Z'}, {'id': 3, 'setup': 'How do fish unlock their houses?', 'punchline': 'With their manakeys!', 'createdAt': '2020-12-23T19:40:08.000Z', 'updatedAt': '2020-12-23T19:40:08.000Z'}, {'id': 4, 'setup': 'What is the top mobile carrier in the Everglades?', 'punchline': 'Manatee Mobile', 'createdAt': '2020-12-23T19:40:08.000Z', 'updatedAt': '2020-12-23T19:40:08.000Z'}, {'id': 5, 'setup': \\\"What's really grinding the gears of Old Man Sole these days?\\\", 'punchline': 'Manateens', 'createdAt': '2020-12-23T19:40:08.000Z', 'updatedAt': '2020-12-23T19:40:08.000Z'}, {'id': 6, 'setup': 'What is the top dessert in the ocean?', 'punchline': '...",
+      "error": null
+    },
+    {
+      "tool": "get_by_id_for_manatee_jokes",
+      "args": {
+        "is_id": "1"
+      },
+      "output": "{'id': 1, 'setup': 'What is the preferred beverage of British whales?', 'punchline': 'Earl Grey manatea', 'createdAt': '2020-12-23T19:40:08.000Z', 'updatedAt': '2020-12-23T19:40:08.000Z'}",
+      "error": null
+    },
+    {
+      "tool": "random_for_manatee_jokes",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_61": [
+    {
+      "tool": "fetch_events_for_calendars",
+      "args": {
+        "c": "exciting_city",
+        "json": true
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_62": [
+    {
+      "tool": "list_for_tripit",
+      "args": {
+        "object_type": "trip",
+        "filter_parameter": "description",
+        "filter_value": "Hawaii trip"
+      },
+      "output": "<Response><Error><code>401</code><description></description></Error></Response>",
+      "error": null
+    },
+    {
+      "tool": "list_for_tripit",
+      "args": {
+        "object_type": "trip",
+        "filter_parameter": "status",
+        "filter_value": "upcoming"
+      },
+      "output": "<Response><Error><code>401</code><description></description></Error></Response>",
+      "error": null
+    }
+  ],
+  "tb_63": [
+    {
+      "tool": "webcams_map_ne_lat_ne_lng_sw_lat_sw_lng_zoom_for_webcams_travel",
+      "args": {
+        "ne_lat": 90,
+        "ne_lng": 180,
+        "sw_lat": -90,
+        "sw_lng": -180,
+        "zoom": 8,
+        "lang": "en",
+        "show": "webcams"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    },
+    {
+      "tool": "webcams_list_modifier_modifier_for_webcams_travel",
+      "args": {
+        "modifier": "categories"
+      },
+      "output": "We are sorry, but something broke.",
+      "error": null
+    },
+    {
+      "tool": "getstandardmaptile_for_maptiles",
+      "args": {
+        "x": 0,
+        "y": 0,
+        "z": 8
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    }
+  ],
+  "tb_64": [
+    {
+      "tool": "trending_memes_for_reddit_meme",
+      "args": {},
+      "output": "[{\"created_utc\":1643524062,\"title\":\"Sad aliens noises\",\"url\":\"https://i.redd.it/tmd5shz9rre81.gif\",\"subreddit\":\"memes\"},{\"created_utc\":1643530657,\"title\":\"Pro gamer move\",\"url\":\"https://i.redd.it/qqjykysxase81.gif\",\"subreddit\":\"memes\"}]",
+      "error": null
+    },
+    {
+      "tool": "get_all_memes_for_programming_memes_reddit",
+      "args": {},
+      "output": "{'messages': 'The API is unreachable, please contact the API provider', 'info': 'Your Client (working) ---> Gateway (working) ---> API (not working)'}",
+      "error": "API not working error..."
+    },
+    {
+      "tool": "top_memes_for_reddit_meme",
+      "args": {},
+      "output": "[{\"created_utc\":1643475915,\"title\":\"Multiverse is a concept about which we know frighteningly little.\",\"url\":\"https://v.redd.it/856mvli0sne81\",\"subreddit\":\"memes\"},{\"created_utc\":1643467152,\"title\":\"I can predict what's coming\",\"url\":\"https://i.redd.it/eptqjiws1ne81.gif\",\"subreddit\":\"memes\"}]",
+      "error": null
+    },
+    {
+      "tool": "top_posts_by_username_for_reddit",
+      "args": {
+        "username": "GoldenChrysus",
+        "time": "all"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Read timed out. (read timeout=30)"
+    }
+  ],
+  "tb_65": [
+    {
+      "tool": "list_categories_for_famous_quotes",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[\\\"age\\\",\\\"alone\\\",\\\"amazing\\\",\\\"anger\\\",\\\"anniversary\\\",\\\"architecture\\\",\\\"art\\\",\\\"attitude\\\",\\\"beauty\\\",\\\"best\\\",\\\"birthday\\\",\\\"business\\\",\\\"car\\\",\\\"change\\\",\\\"communication\\\",\\\"computers\\\",\\\"cool\\\",\\\"courage\\\",\\\"dad\\\",\\\"dating\\\",\\\"death\\\",\\\"design\\\",\\\"diet\\\",\\\"dreams\\\",\\\"education\\\",\\\"environmental\\\",\\\"equality\\\",\\\"experience\\\",\\\"failure\\\",\\\"faith\\\",\\\"family\\\",\\\"famous\\\",\\\"fear\\\",\\\"finance\\\",\\\"fitness\\\",\\\"food\\\",\\\"forgiveness\\\",\\\"freedom\\\",\\\"friendship\\\",\\\"funny\\\",\\\"future\\\",\\\"gardening\\\",\\\"god\\\",\\\"good\\\",\\\"government\\\",\\\"graduation\\\",\\\"great\\\",\\\"happiness\\\",\\\"health\\\",\\\"history\\\",\\\"home\\\",\\\"hope\\\",\\\"humor\\\",\\\"imagination\\\",\\\"inspirational\\\",\\\"intelligence\\\",\\\"jealousy\\\",\\\"knowledge\\\",\\\"leadership\\\",\\\"learning\\\",\\\"legal\\\",\\\"life\\\",\\\"love\\\",\\\"marriage\\\",\\\"medical\\\",\\\"men\\\",\\\"mom\\\",\\\"money\\\",\\\"morning\\\",\\\"motivational\\\",\\\"movies\\\",\\\"movingon\\\",\\\"music\\\",\\\"nature\\\",\\\"parenting\\\",\\\"patience\\\",\\\"patriotism\\\",\\\"peace\\\",\\\"pet\\\",\\\"poetry\\\",\\\"politics\\\",\\\"positive\\\",\\\"power\\\",\\\"relationsh...",
+      "error": null
+    },
+    {
+      "tool": "get_random_quotes_for_famous_quotes",
+      "args": {
+        "count": 3,
+        "category": "inspirational"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_66": [
+    {
+      "tool": "get_1_3_get_info_day_for_working_days",
+      "args": {
+        "country_code": "CA",
+        "date": "2022-01-01"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_67": [
+    {
+      "tool": "top_posts_by_subreddit_for_reddit",
+      "args": {
+        "time": "day",
+        "subreddit": "anniversary"
+      },
+      "output": "{'message': 'You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/socialminer/api/reddit34'}",
+      "error": "Rate limit error..."
+    },
+    {
+      "tool": "comment_search_for_socialgrep",
+      "args": {
+        "query": "anniversary heartwarming stories"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "top_posts_by_subreddit_for_reddit",
+      "args": {
+        "time": "week",
+        "subreddit": "anniversary"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "post_search_for_socialgrep",
+      "args": {
+        "query": "anniversary party ideas"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "comment_search_for_socialgrep",
+      "args": {
+        "query": "heartwarming anniversary stories"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_68": [
+    {
+      "tool": "getfileslist_for_groupdocs_conversion_cloud",
+      "args": {
+        "path": "/research/documents"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "downloadfile_for_groupdocs_conversion_cloud",
+      "args": {
+        "path": "/research/documents/file1.pdf"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "getdiscusage_for_groupdocs_conversion_cloud",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    }
+  ],
+  "tb_69": [
+    {
+      "tool": "newlyregistereddomains_for_check_disposable_email",
+      "args": {},
+      "output": "{\"error\": \"Message error...\", \"response\": \"\\\"<!DOCTYPE html>\\\\n<!--[if lt IE 7]> <html class=\\\\\\\"no-js ie6 oldie\\\\\\\" lang=\\\\\\\"en-US\\\\\\\"> <![endif]-->\\\\n<!--[if IE 7]>    <html class=\\\\\\\"no-js ie7 oldie\\\\\\\" lang=\\\\\\\"en-US\\\\\\\"> <![endif]-->\\\\n<!--[if IE 8]>    <html class=\\\\\\\"no-js ie8 oldie\\\\\\\" lang=\\\\\\\"en-US\\\\\\\"> <![endif]-->\\\\n<!--[if gt IE 8]><!--> <html class=\\\\\\\"no-js\\\\\\\" lang=\\\\\\\"en-US\\\\\\\"> <!--<![endif]-->\\\\n<head>\\\\n\\\\n\\\\n<title>peekdomain.com | 520: Web server is returning an unknown error</title>\\\\n<meta charset=\\\\\\\"UTF-8\\\\\\\" />\\\\n<meta http-equiv=\\\\\\\"Content-Type\\\\\\\" content=\\\\\\\"text/html; charset=UTF-8\\\\\\\" />\\\\n<meta http-equiv=\\\\\\\"X-UA-Compatible\\\\\\\" content=\\\\\\\"IE=Edge\\\\\\\" />\\\\n<meta name=\\\\\\\"robots\\\\\\\" content=\\\\\\\"noindex, nofollow\\\\\\\" />\\\\n<meta name=\\\\\\\"viewport\\\\\\\" content=\\\\\\\"width=device-width,initial-scale=1\\\\\\\" />\\\\n<link rel=\\\\\\\"stylesheet\\\\\\\" id=\\\\\\\"cf_styles-css\\\\\\\" href=\\\\\\\"/cdn-cgi/styles/main.css\\\\\\\" />\\\\n\\\\n\\\\n</head>\\\\n<body>\\\\n<div id=\\\\\\\"cf-wrapper\\\\\\\">\\\\n\\\\n    \\\\n\\\\n    <div i...",
+      "error": null
+    },
+    {
+      "tool": "get_prices_for_used_gpu_pricing",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'gpu': 'RTX 2060', 'date': '2022.07.01 14:29:39', 'min': '114.99', 'max': '365', 'mean': '241.04934497816583', 'numSales': '240'}, {'gpu': 'GTX 1070', 'date': '2022.07.01 14:30:08', 'min': '97', 'max': '242', 'mean': '169.67528138528144', 'numSales': '240'}, {'gpu': 'RTX 3080 Ti', 'date': '2022.07.01 14:28:51', 'min': '720', 'max': '1100', 'mean': '908.7957142857142', 'numSales': '240'}, {'gpu': 'RTX 2070 Super', 'date': '2022.07.01 14:29:28', 'min': '241', 'max': '455', 'mean': '342.3302242152467', 'numSales': '239'}, {'gpu': 'RX 470 8GB', 'date': '2022.07.01 14:31:18', 'min': '56', 'max': '325', 'mean': '179.67311764705886', 'numSales': '171'}, {'gpu': 'RX Vega 64', 'date': '2022.07.01 14:30:56', 'min': '190', 'max': '589.99', 'mean': '373.1477227722771', 'numSales': '205'}, {'gpu': 'RX 5700 XT', 'date': '2022.07.01 14:30:41', 'min': '214.49', 'max': '375', 'mean': '293.7590990990991', 'numSales': '240'}, {'gpu': 'RX Vega 56', 'date': '2022.07.01 14:31:00', 'min': '192.5', 'max'...",
+      "error": null
+    },
+    {
+      "tool": "emailvalidation_for_check_disposable_email",
+      "args": {
+        "email": "example@example.com"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_70": [
+    {
+      "tool": "matchstatistics_for_icehockeyapi",
+      "args": {
+        "is_id": 10745680
+      },
+      "output": "{'statistics': [{'groups': [{'groupName': 'Attacking', 'statisticsItems': [{'away': '2', 'compareCode': 3, 'home': '2', 'name': 'Goals'}, {'away': '23', 'compareCode': 1, 'home': '32', 'name': 'Shots'}, {'away': '1/2 (50%)', 'compareCode': 2, 'home': '1/4 (25%)', 'name': 'Goals in powerplay'}, {'away': '0', 'compareCode': 3, 'home': '0', 'name': 'Shorthanded goals'}, {'away': '22/51 (43%)', 'compareCode': 1, 'home': '29/51 (56%)', 'name': 'Faceoffs won'}, {'away': '15', 'compareCode': 2, 'home': '12', 'name': 'Blocked'}, {'away': '12', 'compareCode': 1, 'home': '15', 'name': 'Takeaways'}, {'away': '6', 'compareCode': 1, 'home': '15', 'name': 'Giveaways'}, {'away': '13', 'compareCode': 1, 'home': '23', 'name': 'Hits'}, {'away': '8', 'compareCode': 2, 'home': '4', 'name': 'Penalty minutes'}]}], 'period': 'ALL'}]}",
+      "error": null
+    },
+    {
+      "tool": "matchhighlights_for_icehockeyapi",
+      "args": {
+        "is_id": 10745680
+      },
+      "output": "",
+      "error": null
+    }
+  ],
+  "tb_71": [
+    {
+      "tool": "trending_memes_for_reddit_meme",
+      "args": {},
+      "output": "[{\"created_utc\":1643524062,\"title\":\"Sad aliens noises\",\"url\":\"https://i.redd.it/tmd5shz9rre81.gif\",\"subreddit\":\"memes\"},{\"created_utc\":1643530657,\"title\":\"Pro gamer move\",\"url\":\"https://i.redd.it/qqjykysxase81.gif\",\"subreddit\":\"memes\"}]",
+      "error": null
+    },
+    {
+      "tool": "top_memes_for_reddit_meme",
+      "args": {},
+      "output": "[{\"created_utc\":1643475915,\"title\":\"Multiverse is a concept about which we know frighteningly little.\",\"url\":\"https://v.redd.it/856mvli0sne81\",\"subreddit\":\"memes\"},{\"created_utc\":1643467152,\"title\":\"I can predict what's coming\",\"url\":\"https://i.redd.it/eptqjiws1ne81.gif\",\"subreddit\":\"memes\"}]",
+      "error": null
+    },
+    {
+      "tool": "rising_popular_posts_for_reddit",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'success': True, 'data': {'cursor': 't3_14kg5q5', 'posts': [{'id': 't3_14kftve', 'numComments': 30, 'created': 1687877458000, 'score': 0, 'distinguishType': None, 'isLocked': False, 'isStickied': False, 'thumbnail': {'url': 'https://external-preview.redd.it/b3o0ODZ1ZDhxazhiMXmDTpvVpMME6fltIvbbkzCRHlgFXtyxcLIi7LeddEmE.png?width=140&height=93&crop=140:93,smart&format=jpg&v=enabled&lthumb=true&s=0154cb87e8d70a1385b457386d2fef7b2ae4c65a', 'width': 140, 'height': 93}, 'title': 'we found him', 'author': 'splashk1ll', 'authorId': 't2_rvyh90uy', 'authorIsBlocked': False, 'domain': 'v.redd.it', 'postId': 't3_14kftve', 'upvoteRatio': 0.98, 'numDuplicates': None, 'discussionType': None, 'viewCount': 0, 'goldCount': 0, 'isArchived': False, 'contestMode': False, 'gildings': None, 'postCategories': None, 'suggestedSort': None, 'belongsTo': {'id': 't5_2cxozx', 'type': 'subreddit'}, 'flair': [{'richtext': [{'e': 'text', 't': 'LOOOOOOOOOOOOOOOOOOOOOOOOOOOONG Post'}], 'type': 'richtext', 'textColor'...",
+      "error": null
+    }
+  ],
+  "tb_72": [
+    {
+      "tool": "lication_s_news_about_climate_change_for_climate_change_live_api",
+      "args": {
+        "newspaperid": "The Guardian"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_73": [
+    {
+      "tool": "gettag_for_sms_receive",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_74": [
+    {
+      "tool": "events_detail_for_art_openings_italy",
+      "args": {
+        "is_id": "55daa408-d224-4b68-8b70-8800424d3e88"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_75": [
+    {
+      "tool": "hello_for_hello_world_v2",
+      "args": {},
+      "output": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta charset=\"utf-8\">\n    <title>Heroku | Application Error</title>\n    <style media=\"screen\">\n      html,body,iframe {\n        margin: 0;\n        padding: 0;\n      }\n      html,body {\n        height: 100%;\n        overflow: hidden;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"//www.herokucdn.com/error-pages/no-such-app.html\"></iframe>\n  </body>\n</html>\n",
+      "error": "Message error..."
+    },
+    {
+      "tool": "hello_for_hello_world_v2",
+      "args": {},
+      "output": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta charset=\"utf-8\">\n    <title>Heroku | Application Error</title>\n    <style media=\"screen\">\n      html,body,iframe {\n        margin: 0;\n        padding: 0;\n      }\n      html,body {\n        height: 100%;\n        overflow: hidden;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src=\"//www.herokucdn.com/error-pages/no-such-app.html\"></iframe>\n  </body>\n</html>\n",
+      "error": "Message error..."
+    },
+    {
+      "tool": "hello_for_hello_world_v2",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_76": [
+    {
+      "tool": "get_all_genres_for_art_openings_italy",
+      "args": {},
+      "output": "['arte contemporanea', 'inaugurazione', 'festival', 'personale', 'architettura', 'incontro – conferenza', 'collettiva', 'documentaria', 'archeologia', 'arte etnica', 'new media', 'serata – evento', 'arte antica', 'arte moderna', 'fotografia', 'doppia personale', 'design', 'disegno e grafica', 'video', 'cinema', 'performance – happening', 'teatro', 'danza', 'musica', 'fumetti', 'fashion', 'urban art', 'didattica', 'arte moderna e contemporanea', 'presentazione', 'fiera', 'arti decorative e industriali', 'arte', 'moda', 'artigianato', '', 'mercato', 'asta', 'etnografica', 'editoria', 'street art', 'muralism']",
+      "error": null
+    },
+    {
+      "tool": "live_events_for_art_openings_italy",
+      "args": {},
+      "output": "[]",
+      "error": null
+    },
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {
+        "month": 9,
+        "day": null,
+        "year": null,
+        "text": null
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'year': '1145', 'month': '09', 'day': '01', 'event': 'The main altar of Lund Cathedral, at the time seat of the archiepiscopal see of all the Nordic countries, is consecrated.'}, {'year': '1173', 'month': '09', 'day': '01', 'event': 'The widow Stamira sacrifices herself in order to raise the siege of Ancona by the forces of Emperor Frederick Barbarossa.'}, {'year': '1355', 'month': '09', 'day': '01', 'event': 'King Tvrtko I of Bosnia writes In castro nostro Vizoka vocatum from the Old town of Visoki.'}, {'year': '1420', 'month': '09', 'day': '01', 'event': \\\"A 9.4 MS-strong earthquake shakes Chile's Atacama Region causing tsunamis in Chile as well as Hawaii and Japan.\\\"}, {'year': '1449', 'month': '09', 'day': '01', 'event': 'Tumu Crisis: The Mongols capture the Emperor of China.'}, {'year': '1529', 'month': '09', 'day': '01', 'event': 'The Spanish fort of Sancti Spiritu, the first one built in modern Argentina, is destroyed by natives.'}, {'year': '1532', 'month': '09', 'day': '0...",
+      "error": null
+    },
+    {
+      "tool": "contests_for_contests",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'name': 'ProjectEuler+', 'url': 'https://hackerrank.com/contests/projecteuler', 'start_time': '2014-07-07T15:38:00.000Z', 'end_time': '2024-07-30T18:30:00.000Z', 'duration': '317616720.0', 'site': 'HackerRank', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': '1v1 Games by CodeChef', 'url': 'https://www.codechef.com/GAMES', 'start_time': '2022-10-10 06:30:00 UTC', 'end_time': '2032-10-10 06:30:00 UTC', 'duration': '315619200.0', 'site': 'CodeChef', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Sui x KuCoin Labs Summer Hackathon', 'url': 'https://sui-kucoin.hackerearth.com/de/', 'start_time': '2023-05-29T07:01:00.000Z', 'end_time': '2023-07-06T06:55:00.000Z', 'duration': '3282840.0', 'site': 'HackerEarth', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Build with the simple bear necessities \\u0295 \\u2022\\u1d25\\u2022\\u0294', 'url': 'https://moonbeam.hackerearth.com/de/', 'start_time': '2023-05-30T13:00:00.000Z', 'end_time': '2023-06-28T00:00:00.000Z', 'duration': '24588...",
+      "error": null
+    }
+  ],
+  "tb_77": [
+    {
+      "tool": "artist_for_deezer",
+      "args": {
+        "is_id": ""
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_78": [
+    {
+      "tool": "search_for_shopify_stores_info",
+      "args": {
+        "search": "fashion"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "search_for_shopify_stores_info",
+      "args": {
+        "search": "home decor"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "get_store_info_for_shopify_stores_info",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_79": [
+    {
+      "tool": "random_for_typography",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "type_for_typography",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "font_for_typography",
+      "args": {},
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    }
+  ],
+  "tb_80": [
+    {
+      "tool": "estimate_market_value_for_car_utils",
+      "args": {
+        "vin": "5N3AA08D68N901917"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    },
+    {
+      "tool": "decode_vin_for_car_utils",
+      "args": {
+        "vin": "5N3AA08D68N901917"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=503"
+    }
+  ],
+  "tb_81": [
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {
+        "month": "June"
+      },
+      "output": "[]",
+      "error": null
+    },
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {
+        "month": "August"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.22.112.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "get_all_locations_for_art_openings_italy",
+      "args": {},
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.22.112.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    }
+  ],
+  "tb_82": [
+    {
+      "tool": "chlyricdirect_artist_michael_20jackson_song_bad_for_chart_lyrics",
+      "args": {},
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "auto_complete_for_shazam",
+      "args": {
+        "term": "Michael Jackson Bad"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "search_for_soundcloud",
+      "args": {
+        "type": "track",
+        "query": "Michael Jackson Bad"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_83": [
+    {
+      "tool": "anikuendpoint_for_aniku",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Storage.aniku.api import anikuendpoint error...\nHTTPSConnectionPool(host='aniku.p.rapidapi.comstorage', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f4b928b3fd0>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    }
+  ],
+  "tb_84": [
+    {
+      "tool": "contests_for_contests",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'name': 'ProjectEuler+', 'url': 'https://hackerrank.com/contests/projecteuler', 'start_time': '2014-07-07T15:38:00.000Z', 'end_time': '2024-07-30T18:30:00.000Z', 'duration': '317616720.0', 'site': 'HackerRank', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': '1v1 Games by CodeChef', 'url': 'https://www.codechef.com/GAMES', 'start_time': '2022-10-10 06:30:00 UTC', 'end_time': '2032-10-10 06:30:00 UTC', 'duration': '315619200.0', 'site': 'CodeChef', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Sui x KuCoin Labs Summer Hackathon', 'url': 'https://sui-kucoin.hackerearth.com/de/', 'start_time': '2023-05-29T07:01:00.000Z', 'end_time': '2023-07-06T06:55:00.000Z', 'duration': '3282840.0', 'site': 'HackerEarth', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Build with the simple bear necessities \\u0295 \\u2022\\u1d25\\u2022\\u0294', 'url': 'https://moonbeam.hackerearth.com/de/', 'start_time': '2023-05-30T13:00:00.000Z', 'end_time': '2023-06-28T00:00:00.000Z', 'duration': '24588...",
+      "error": null
+    }
+  ],
+  "tb_85": [
+    {
+      "tool": "jokes_categories_for_chuck_norris",
+      "args": {},
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "praise_for_humor_jokes_and_memes",
+      "args": {
+        "reason": "hard work",
+        "name": "employees"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    }
+  ],
+  "tb_86": [
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {
+        "text": "Roman Empire"
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'year': '-45', 'month': '01', 'day': '01', 'event': 'The Julian calendar takes effect as the civil calendar of the Roman Empire, establishing January 1 as the new date of the new year.'}, {'year': '366', 'month': '01', 'day': '02', 'event': 'The Alemanni cross the frozen Rhine in large numbers, invading the Roman Empire.'}, {'year': '250', 'month': '01', 'day': '03', 'event': 'Emperor Decius orders everyone in the Roman Empire (except Jews) to make sacrifices to the Roman gods.'}, {'year': '-27', 'month': '01', 'day': '16', 'event': 'Gaius Julius Caesar Octavianus is granted the title Augustus by the Roman Senate, marking the beginning of the Roman Empire.'}, {'year': '379', 'month': '01', 'day': '19', 'event': 'Emperor Gratian elevates Flavius Theodosius at Sirmium to Augustus, and gives him authority over all the eastern provinces of the Roman Empire.'}, {'year': '1719', 'month': '01', 'day': '23', 'event': 'The Principality of Liechtenstein is created within the Holy Roman Empi...",
+      "error": null
+    },
+    {
+      "tool": "fetch_events_for_calendars",
+      "args": {
+        "c": "Roman Empire Calendar",
+        "json": true
+      },
+      "output": "{'validCalendarsRead': [], 'events': []}",
+      "error": null
+    },
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {
+        "text": "Roman Empire"
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'year': '-45', 'month': '01', 'day': '01', 'event': 'The Julian calendar takes effect as the civil calendar of the Roman Empire, establishing January 1 as the new date of the new year.'}, {'year': '366', 'month': '01', 'day': '02', 'event': 'The Alemanni cross the frozen Rhine in large numbers, invading the Roman Empire.'}, {'year': '250', 'month': '01', 'day': '03', 'event': 'Emperor Decius orders everyone in the Roman Empire (except Jews) to make sacrifices to the Roman gods.'}, {'year': '-27', 'month': '01', 'day': '16', 'event': 'Gaius Julius Caesar Octavianus is granted the title Augustus by the Roman Senate, marking the beginning of the Roman Empire.'}, {'year': '379', 'month': '01', 'day': '19', 'event': 'Emperor Gratian elevates Flavius Theodosius at Sirmium to Augustus, and gives him authority over all the eastern provinces of the Roman Empire.'}, {'year': '1719', 'month': '01', 'day': '23', 'event': 'The Principality of Liechtenstein is created within the Holy Roman Empi...",
+      "error": null
+    }
+  ],
+  "tb_87": [
+    {
+      "tool": "get_trivia_fact_for_numbers",
+      "args": {
+        "number": "42"
+      },
+      "output": "{'text': 'the number of spots (or pips, circular patches or pits) on a pair of standard six-sided dice', 'number': 42, 'found': True, 'type': 'trivia'}",
+      "error": null
+    },
+    {
+      "tool": "jokes_search_for_chuck_norris",
+      "args": {
+        "query": "movies"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'total': 33, 'result': [{'categories': ['movie'], 'created_at': '2020-01-05 13:42:18.823766', 'icon_url': 'https://assets.chucknorris.host/img/avatar/chuck-norris.png', 'id': 'etu5stytromsxrgybafqca', 'updated_at': '2020-01-05 13:42:18.823766', 'url': 'https://api.chucknorris.io/jokes/etu5stytromsxrgybafqca', 'value': 'In the X-Men movies, none of the X-Men super-powers are done with special effects. Chuck Norris is the stuntman for every character.'}, {'categories': [], 'created_at': '2020-01-05 13:42:19.576875', 'icon_url': 'https://assets.chucknorris.host/img/avatar/chuck-norris.png', 'id': 'ltH4LFy5SdKlw7Qb799rOw', 'updated_at': '2020-01-05 13:42:19.576875', 'url': 'https://api.chucknorris.io/jokes/ltH4LFy5SdKlw7Qb799rOw', 'value': 'Chuck Norris is a 75 year old red neck ginger who only did B-rated movies and has been memed dry already. The only real fact about him on here....'}, {'categories': [], 'created_at': '2020-01-05 13:42:19.576875', 'icon_url': 'https://assets.chucknor...",
+      "error": null
+    },
+    {
+      "tool": "get_math_fact_for_numbers",
+      "args": {
+        "number": "42"
+      },
+      "output": "{'text': 'conjectured to be the scaling factor in the leading order term of the \"sixth moment of the Riemann zeta function\"', 'number': 42, 'found': True, 'type': 'math'}",
+      "error": null
+    },
+    {
+      "tool": "jokes_random_for_chuck_norris",
+      "args": {},
+      "output": "{\"categories\":[],\"created_at\":\"2020-01-05 13:42:28.143137\",\"icon_url\":\"https://assets.chucknorris.host/img/avatar/chuck-norris.png\",\"id\":\"w1QcOOGdStm9Wz27-AKCIw\",\"updated_at\":\"2020-01-05 13:42:28.143137\",\"url\":\"https://api.chucknorris.io/jokes/w1QcOOGdStm9Wz27-AKCIw\",\"value\":\"Chuck Norris doesn't clip his fingernails... he rips them out with his bare hands and regrows new ones immediately.\"}",
+      "error": null
+    }
+  ],
+  "tb_88": [
+    {
+      "tool": "1_3_list_non_working_days_for_working_days",
+      "args": {
+        "start_date": "2022-09-01",
+        "end_date": "2022-11-30",
+        "country_code": "US"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'non_working_days': [{'date': '2022-09-03', 'description': 'weekend day', 'type': 1}, {'date': '2022-09-04', 'description': 'weekend day', 'type': 1}, {'date': '2022-09-05', 'description': 'Labor Day', 'type': 2}, {'date': '2022-09-10', 'description': 'weekend day', 'type': 1}, {'date': '2022-09-11', 'description': 'weekend day', 'type': 1}, {'date': '2022-09-17', 'description': 'weekend day', 'type': 1}, {'date': '2022-09-18', 'description': 'weekend day', 'type': 1}, {'date': '2022-09-24', 'description': 'weekend day', 'type': 1}, {'date': '2022-09-25', 'description': 'weekend day', 'type': 1}, {'date': '2022-10-01', 'description': 'weekend day', 'type': 1}, {'date': '2022-10-02', 'description': 'weekend day', 'type': 1}, {'date': '2022-10-08', 'description': 'weekend day', 'type': 1}, {'date': '2022-10-09', 'description': 'weekend day', 'type': 1}, {'date': '2022-10-10', 'description': 'Columbus Day', 'type': 2}, {'date': '2022-10-15', 'description': 'weekend day', 'type': 1}, {...",
+      "error": null
+    },
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'year': '-45', 'month': '01', 'day': '01', 'event': 'The Julian calendar takes effect as the civil calendar of the Roman Empire, establishing January 1 as the new date of the new year.'}, {'year': '366', 'month': '01', 'day': '02', 'event': 'The Alemanni cross the frozen Rhine in large numbers, invading the Roman Empire.'}, {'year': '250', 'month': '01', 'day': '03', 'event': 'Emperor Decius orders everyone in the Roman Empire (except Jews) to make sacrifices to the Roman gods.'}, {'year': '-27', 'month': '01', 'day': '16', 'event': 'Gaius Julius Caesar Octavianus is granted the title Augustus by the Roman Senate, marking the beginning of the Roman Empire.'}, {'year': '379', 'month': '01', 'day': '19', 'event': 'Emperor Gratian elevates Flavius Theodosius at Sirmium to Augustus, and gives him authority over all the eastern provinces of the Roman Empire.'}, {'year': '1719', 'month': '01', 'day': '23', 'event': 'The Principality of Liechtenstein is created within the Holy Roman Empi...",
+      "error": null
+    },
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'year': '-45', 'month': '01', 'day': '01', 'event': 'The Julian calendar takes effect as the civil calendar of the Roman Empire, establishing January 1 as the new date of the new year.'}, {'year': '366', 'month': '01', 'day': '02', 'event': 'The Alemanni cross the frozen Rhine in large numbers, invading the Roman Empire.'}, {'year': '250', 'month': '01', 'day': '03', 'event': 'Emperor Decius orders everyone in the Roman Empire (except Jews) to make sacrifices to the Roman gods.'}, {'year': '-27', 'month': '01', 'day': '16', 'event': 'Gaius Julius Caesar Octavianus is granted the title Augustus by the Roman Senate, marking the beginning of the Roman Empire.'}, {'year': '379', 'month': '01', 'day': '19', 'event': 'Emperor Gratian elevates Flavius Theodosius at Sirmium to Augustus, and gives him authority over all the eastern provinces of the Roman Empire.'}, {'year': '1719', 'month': '01', 'day': '23', 'event': 'The Principality of Liechtenstein is created within the Holy Roman Empi...",
+      "error": null
+    }
+  ],
+  "tb_89": [
+    {
+      "tool": "get_all_memes_for_programming_memes_reddit",
+      "args": {},
+      "output": "{'messages': 'The API is unreachable, please contact the API provider', 'info': 'Your Client (working) ---> Gateway (working) ---> API (not working)'}",
+      "error": "API not working error..."
+    },
+    {
+      "tool": "check_usernames_on_all_platforms_for_check_username",
+      "args": {
+        "username": "PromotionKing"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_90": [
+    {
+      "tool": "search_products_for_ebay",
+      "args": {
+        "search_query": "iPhones"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'products': [{'seller': None, 'thumbnail': 'https://ir.ebaystatic.com/rs/v/fxxj3ttftm5ltcqnto1o4baovyl.png', 'bidding': {'bid_amount': None, 'end_time': None, 'remaining_time': None}, 'instant_buy': False, 'condition': 'Brand New', 'title': 'F#f_0', 'logistics_cost': None, 'url': 'https://ebay.com/itm/123456', 'product_id': 123456, 'location': None, 'price': {'value': 2000, 'currency': '$'}}, {'seller': {'rating_amount': 533, 'user_name': 'baderw', 'rating': 100}, 'thumbnail': 'https://i.ebayimg.com/thumbs/images/g/DtgAAOSw4fdksPOA/s-l300.jpg', 'bidding': {'bid_amount': 0, 'end_time': '(24/07, 00:05)', 'remaining_time': {'days': 8, 'hours': 1}}, 'instant_buy': False, 'condition': 'Used', 'title': 'F#f_0', 'logistics_cost': {'value': 20, 'currency': 'EUR'}, 'url': 'https://www.ebay.de/itm/235089053875', 'product_id': 235089053875, 'location': '\\u00d6sterreich', 'price': {'value': 1, 'currency': 'EUR'}}, {'seller': {'rating_amount': 7, 'user_name': 'ramon1406', 'rating': 100}, 'thumb...",
+      "error": null
+    },
+    {
+      "tool": "search_products_for_ebay",
+      "args": {
+        "search_query": "iPhones",
+        "country": "Germany"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'products': [{'seller': None, 'thumbnail': 'https://ir.ebaystatic.com/rs/v/fxxj3ttftm5ltcqnto1o4baovyl.png', 'bidding': {'bid_amount': None, 'end_time': None, 'remaining_time': None}, 'instant_buy': False, 'condition': 'Brand New', 'title': 'F#f_0', 'logistics_cost': None, 'url': 'https://ebay.com/itm/123456', 'product_id': 123456, 'location': None, 'price': {'value': 2000, 'currency': '$'}}, {'seller': {'rating_amount': 533, 'user_name': 'baderw', 'rating': 100}, 'thumbnail': 'https://i.ebayimg.com/thumbs/images/g/DtgAAOSw4fdksPOA/s-l300.jpg', 'bidding': {'bid_amount': 0, 'end_time': '(24/07, 00:05)', 'remaining_time': {'days': 8, 'hours': 1}}, 'instant_buy': False, 'condition': 'Used', 'title': 'F#f_0', 'logistics_cost': {'value': 20, 'currency': 'EUR'}, 'url': 'https://www.ebay.de/itm/235089053875', 'product_id': 235089053875, 'location': '\\u00d6sterreich', 'price': {'value': 1, 'currency': 'EUR'}}, {'seller': {'rating_amount': 7, 'user_name': 'ramon1406', 'rating': 100}, 'thumb...",
+      "error": null
+    },
+    {
+      "tool": "product_details_for_ebay",
+      "args": {
+        "product_id": 195499451557,
+        "country": "Germany"
+      },
+      "output": "{'seller': {'url': 'https://www.ebay.de/usr/okluge?_trksid=p2047675.m3561.l2559', 'user_name': 'okluge', 'rating_amount': '1394224'}, 'images': ['https://i.ebayimg.com/images/g/p~sAAOSwyeRkiDm7/s-l500.jpg', 'https://i.ebayimg.com/images/g/-4cAAOSwG0hkiDm7/s-l1600.jpg', 'https://i.ebayimg.com/images/g/yAsAAOSwYkVkiDm7/s-l1600.jpg', 'https://i.ebayimg.com/images/g/RtEAAOSwOX5kiDm7/s-l1600.jpg', 'https://i.ebayimg.com/images/g/p14AAOSwvC1kiDm7/s-l1600.jpg'], 'bidding': {'remaining_time': None, 'bid_amount': None}, 'instant_buy': True, 'payment_methods': ['PayPal', 'Visa', 'MasterCard', 'American Express', 'Sofort', 'Apple Pay'], 'quantity': 1, 'title': 'ASUS VA279HAE 68,58cm 27 Zoll Eye-Care-Monitor Full HD HDMI VGA 60Hz 6ms HDCP', 'return_policy': 'Keine Rückgabe', 'logistics_cost': None, 'why2buy': {}, 'condition': 'Neu', 'location': 'Dresden, Deutschland', 'price': {'value': 128.68, 'currency': 'EUR'}}",
+      "error": null
+    },
+    {
+      "tool": "product_details_for_ebay",
+      "args": {
+        "product_id": 195499451557,
+        "country": "Germany"
+      },
+      "output": "{'seller': {'url': 'https://www.ebay.de/usr/okluge?_trksid=p2047675.m3561.l2559', 'user_name': 'okluge', 'rating_amount': '1394224'}, 'images': ['https://i.ebayimg.com/images/g/p~sAAOSwyeRkiDm7/s-l500.jpg', 'https://i.ebayimg.com/images/g/-4cAAOSwG0hkiDm7/s-l1600.jpg', 'https://i.ebayimg.com/images/g/yAsAAOSwYkVkiDm7/s-l1600.jpg', 'https://i.ebayimg.com/images/g/RtEAAOSwOX5kiDm7/s-l1600.jpg', 'https://i.ebayimg.com/images/g/p14AAOSwvC1kiDm7/s-l1600.jpg'], 'bidding': {'remaining_time': None, 'bid_amount': None}, 'instant_buy': True, 'payment_methods': ['PayPal', 'Visa', 'MasterCard', 'American Express', 'Sofort', 'Apple Pay'], 'quantity': 1, 'title': 'ASUS VA279HAE 68,58cm 27 Zoll Eye-Care-Monitor Full HD HDMI VGA 60Hz 6ms HDCP', 'return_policy': 'Keine Rückgabe', 'logistics_cost': None, 'why2buy': {}, 'condition': 'Neu', 'location': 'Dresden, Deutschland', 'price': {'value': 128.68, 'currency': 'EUR'}}",
+      "error": null
+    },
+    {
+      "tool": "get_main_campaigns_for_vouchery_io",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Commerce.vouchery_io.api import get_main_campaigns error...\nHTTPSConnectionPool(host='vouchery-io.p.rapidapi.comhttps', port=443): Max retries exceeded with url: //preview.vouchery.io/api/v2.0/campaigns (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdf992904c0>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    }
+  ],
+  "tb_91": [
+    {
+      "tool": "brazil_songs_for_billboard_api",
+      "args": {
+        "date": "2022-08-01",
+        "range": "10"
+      },
+      "output": "{'message': 'You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/LDVIN/api/billboard-api'}",
+      "error": "Rate limit error..."
+    },
+    {
+      "tool": "lyrics_get_for_songmeanings",
+      "args": {
+        "sm_lid": "",
+        "lyric_title": "Happy",
+        "artist_name": "Pharrell Williams",
+        "format": "json"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_92": [
+    {
+      "tool": "get_history_for_web_image_storage",
+      "args": {
+        "pagesize": 10,
+        "page": 0
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_93": [
+    {
+      "tool": "v1_historicalevents_for_historical_events_by_api_ninjas",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_94": [
+    {
+      "tool": "halobiru_for_halobiru_store",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Commerce.halobiru_store.api import halobiru error...\nHTTPSConnectionPool(host='halobiru-store.p.rapidapi.comadmin', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fe04f2c3cd0>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    },
+    {
+      "tool": "get_products_in_category_for_my_store",
+      "args": {
+        "skip": 0,
+        "limit": 5,
+        "category": "fitness"
+      },
+      "output": "{'products': [], 'summary': {'count': 0}}",
+      "error": null
+    },
+    {
+      "tool": "get_products_for_my_store",
+      "args": {},
+      "output": "{'products': [{'id': 882104, 'name': 'Pen', 'category': ''}, {'id': 882107, 'name': 'Pen', 'category': ''}, {'id': 882111, 'name': 'Ergonomic Plastic Bike', 'category': 'fruits'}, {'id': 882114, 'name': 'Refined Steel Pizza', 'category': 'fruits'}, {'id': 882115, 'name': 'Gorgeous Metal Shirt', 'category': 'fruits'}, {'id': 882116, 'name': 'Fantastic Metal Chair', 'category': 'fruits'}, {'id': 882117, 'name': 'Ergonomic Concrete Tuna', 'category': 'fruits'}, {'id': 882118, 'name': 'Practical Cotton Table', 'category': 'fruits'}, {'id': 882119, 'name': 'Intelligent Plastic Shoes', 'category': 'fruits'}, {'id': 882130, 'name': 'Keyboard', 'category': None}], 'summary': {'count': 89460}}",
+      "error": null
+    },
+    {
+      "tool": "get_products_for_my_store",
+      "args": {},
+      "output": "{'products': [{'id': 882104, 'name': 'Pen', 'category': ''}, {'id': 882107, 'name': 'Pen', 'category': ''}, {'id': 882111, 'name': 'Ergonomic Plastic Bike', 'category': 'fruits'}, {'id': 882114, 'name': 'Refined Steel Pizza', 'category': 'fruits'}, {'id': 882115, 'name': 'Gorgeous Metal Shirt', 'category': 'fruits'}, {'id': 882116, 'name': 'Fantastic Metal Chair', 'category': 'fruits'}, {'id': 882117, 'name': 'Ergonomic Concrete Tuna', 'category': 'fruits'}, {'id': 882118, 'name': 'Practical Cotton Table', 'category': 'fruits'}, {'id': 882119, 'name': 'Intelligent Plastic Shoes', 'category': 'fruits'}, {'id': 882130, 'name': 'Keyboard', 'category': None}], 'summary': {'count': 89460}}",
+      "error": null
+    }
+  ],
+  "tb_95": [
+    {
+      "tool": "table_for_football_v2",
+      "args": {
+        "championship": ""
+      },
+      "output": "{'message': \"Endpoint '/table' does not exist\"}",
+      "error": null
+    },
+    {
+      "tool": "competitions_for_football_v2",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_96": [
+    {
+      "tool": "tion_for_inventory_and_ecommerce_hosted_and_self_hosted_solution",
+      "args": {
+        "is_id": "11111"
+      },
+      "output": "<section class=\"vcenter h100\"><div class=\"container\"><h1 class=\"b\">404 Not Found</h1><h3>The page you requested has either been moved or deleted.</h3></div></section>",
+      "error": null
+    },
+    {
+      "tool": "item_for_inventory_and_ecommerce_hosted_and_self_hosted_solution",
+      "args": {
+        "is_id": "11111"
+      },
+      "output": "<section class=\"vcenter h100\"><div class=\"container\"><h1 class=\"b\">404 Not Found</h1><h3>The page you requested has either been moved or deleted.</h3></div></section>",
+      "error": null
+    },
+    {
+      "tool": "vice_for_inventory_and_ecommerce_hosted_and_self_hosted_solution",
+      "args": {
+        "is_id": "22222"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_97": [
+    {
+      "tool": "get_categories_for_demo_project",
+      "args": {},
+      "output": "{\"error\": \"Message error...\", \"response\": \"{\\\"categories\\\":[{\\\"category\\\":\\\"\\\"},{\\\"category\\\":\\\"fruits\\\"},{\\\"category\\\":null},{\\\"category\\\":\\\"string\\\"},{\\\"category\\\":\\\"computers\\\"},{\\\"category\\\":\\\"Technology\\\"},{\\\"category\\\":\\\"Sony bravia 8K 50xx\\\"},{\\\"category\\\":\\\"atomoviles\\\"},{\\\"category\\\":\\\"Intelligent Concrete Table\\\"},{\\\"category\\\":\\\"Plastico\\\"},{\\\"category\\\":\\\"Industrial\\\"},{\\\"category\\\":\\\"Furniture\\\"},{\\\"category\\\":\\\"Appliances\\\"},{\\\"category\\\":\\\"Accessories\\\"},{\\\"category\\\":\\\"cursos\\\"},{\\\"category\\\":\\\"televisores\\\"},{\\\"category\\\":\\\"Bike\\\"},{\\\"category\\\":\\\"PRUEBA\\\"},{\\\"category\\\":\\\"Ergonomic Granite Hat\\\"},{\\\"category\\\":\\\"Shoes\\\"},{\\\"category\\\":\\\"Software\\\"},{\\\"category\\\":\\\"Generic Plastic Chair\\\"},{\\\"category\\\":\\\"Grocery\\\"},{\\\"category\\\":\\\"Colombia\\\"},{\\\"category\\\":\\\"Appliance\\\"},{\\\"category\\\":\\\"Licensed Concrete Shirt\\\"},{\\\"category\\\":\\\"LATPOP\\\"},{\\\"category\\\":\\\"Cripto\\\"},{\\\"category\\\":\\\"2023\\\"},{\\\"category\\\":\\\"Computadoras\\\"},{\\\"category\\\":\\\"Practical Plastic Soap\\\"},{\\\"category\\\":\\\"TV\\\"},{\\\"catego...",
+      "error": null
+    },
+    {
+      "tool": "date_and_time_of_last_update_for_wonderboyapi",
+      "args": {},
+      "output": "[{'lastDate': '30-06-2023', 'lastTime': '08:24:19'}]",
+      "error": null
+    }
+  ],
+  "tb_98": [
+    {
+      "tool": "get_all_memes_for_programming_memes_reddit",
+      "args": {},
+      "output": "{'messages': 'The API is unreachable, please contact the API provider', 'info': 'Your Client (working) ---> Gateway (working) ---> API (not working)'}",
+      "error": "API not working error..."
+    },
+    {
+      "tool": "top_posts_by_username_for_reddit",
+      "args": {
+        "username": "companyfun",
+        "time": "all"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "co_for_check_username",
+      "args": {
+        "name": "companyfun.co"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_99": [
+    {
+      "tool": "get_all_games_for_free_nba",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'data': [{'id': 47179, 'date': '2019-01-30T00:00:00.000Z', 'home_team': {'id': 2, 'abbreviation': 'BOS', 'city': 'Boston', 'conference': 'East', 'division': 'Atlantic', 'full_name': 'Boston Celtics', 'name': 'Celtics'}, 'home_team_score': 126, 'period': 4, 'postseason': False, 'season': 2018, 'status': 'Final', 'time': ' ', 'visitor_team': {'id': 4, 'abbreviation': 'CHA', 'city': 'Charlotte', 'conference': 'East', 'division': 'Southeast', 'full_name': 'Charlotte Hornets', 'name': 'Hornets'}, 'visitor_team_score': 94}, {'id': 48751, 'date': '2019-02-09T00:00:00.000Z', 'home_team': {'id': 2, 'abbreviation': 'BOS', 'city': 'Boston', 'conference': 'East', 'division': 'Atlantic', 'full_name': 'Boston Celtics', 'name': 'Celtics'}, 'home_team_score': 112, 'period': 4, 'postseason': False, 'season': 2018, 'status': 'Final', 'time': '     ', 'visitor_team': {'id': 13, 'abbreviation': 'LAC', 'city': 'LA', 'conference': 'West', 'division': 'Pacific', 'full_name': 'LA Clippers', 'name': 'Clipp...",
+      "error": null
+    },
+    {
+      "tool": "get_specific_player_for_free_nba",
+      "args": {
+        "is_id": 2
+      },
+      "output": "{'id': 2, 'first_name': 'Jaylen', 'height_feet': 6, 'height_inches': 2, 'last_name': 'Adams', 'position': 'G', 'team': {'id': 5, 'abbreviation': 'CHI', 'city': 'Chicago', 'conference': 'East', 'division': 'Central', 'full_name': 'Chicago Bulls', 'name': 'Bulls'}, 'weight_pounds': 190}",
+      "error": null
+    },
+    {
+      "tool": "get_year_fact_for_numbers",
+      "args": {
+        "year": "2019"
+      },
+      "output": "{'date': 'December 26', 'text': 'an annular solar eclipse will be visible from South Asia', 'number': 2019, 'found': True, 'type': 'year'}",
+      "error": null
+    }
+  ],
+  "tb_100": [
+    {
+      "tool": "get_support_languages_for_news_content_extraction_live",
+      "args": {},
+      "output": "{\"ar\":\"Arabic\",\"be\":\"Belarusian\",\"bg\":\"Bulgarian\",\"da\":\"Danish\",\"de\":\"German\",\"el\":\"Greek\",\"en\":\"English\",\"es\":\"Spanish\",\"et\":\"Estonian\",\"fa\":\"Persian\",\"fi\":\"Finnish\",\"fr\":\"French\",\"he\":\"Hebrew\",\"hi\":\"Hindi\",\"hr\":\"Croatian\",\"hu\":\"Hungarian\",\"id\":\"Indonesian\",\"it\":\"Italian\",\"ja\":\"Japanese\",\"ko\":\"Korean\",\"lt\":\"Lithuanian\",\"mk\":\"Macedonian\",\"nb\":\"Norwegian (Bokmål)\",\"nl\":\"Dutch\",\"no\":\"Norwegian\",\"pl\":\"Polish\",\"pt\":\"Portuguese\",\"ro\":\"Romanian\",\"ru\":\"Russian\",\"sl\":\"Slovenian\",\"sr\":\"Serbian\",\"sv\":\"Swedish\",\"sw\":\"Swahili\",\"th\":\"Thai\",\"tr\":\"Turkish\",\"uk\":\"Ukrainian\",\"vi\":\"Vietnamese\",\"zh\":\"Chinese\"}",
+      "error": null
+    },
+    {
+      "tool": "get_popular_news_urls_for_news_content_extraction_live",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_101": [
+    {
+      "tool": "hot_100_women_artists_for_billboard_api",
+      "args": {},
+      "output": "{'notice': 'This endpoint is available on the Ultra plan and above. If you want to access this endpoint, please upgrade your plan.'}",
+      "error": null
+    }
+  ],
+  "tb_102": [
+    {
+      "tool": "code_for_barcode_monster",
+      "args": {
+        "code": "9876543210987"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_103": [
+    {
+      "tool": "get_all_teams_for_free_nba",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'data': [{'id': 1, 'abbreviation': 'ATL', 'city': 'Atlanta', 'conference': 'East', 'division': 'Southeast', 'full_name': 'Atlanta Hawks', 'name': 'Hawks'}, {'id': 2, 'abbreviation': 'BOS', 'city': 'Boston', 'conference': 'East', 'division': 'Atlantic', 'full_name': 'Boston Celtics', 'name': 'Celtics'}, {'id': 3, 'abbreviation': 'BKN', 'city': 'Brooklyn', 'conference': 'East', 'division': 'Atlantic', 'full_name': 'Brooklyn Nets', 'name': 'Nets'}, {'id': 4, 'abbreviation': 'CHA', 'city': 'Charlotte', 'conference': 'East', 'division': 'Southeast', 'full_name': 'Charlotte Hornets', 'name': 'Hornets'}, {'id': 5, 'abbreviation': 'CHI', 'city': 'Chicago', 'conference': 'East', 'division': 'Central', 'full_name': 'Chicago Bulls', 'name': 'Bulls'}, {'id': 6, 'abbreviation': 'CLE', 'city': 'Cleveland', 'conference': 'East', 'division': 'Central', 'full_name': 'Cleveland Cavaliers', 'name': 'Cavaliers'}, {'id': 7, 'abbreviation': 'DAL', 'city': 'Dallas', 'conference': 'West', 'division': 'Sou...",
+      "error": null
+    },
+    {
+      "tool": "get_specific_player_for_free_nba",
+      "args": {
+        "is_id": 123
+      },
+      "output": "{'id': 123, 'first_name': 'Matthew', 'height_feet': 6, 'height_inches': 4, 'last_name': 'Dellavedova', 'position': 'G', 'team': {'id': 26, 'abbreviation': 'SAC', 'city': 'Sacramento', 'conference': 'West', 'division': 'Pacific', 'full_name': 'Sacramento Kings', 'name': 'Kings'}, 'weight_pounds': 200}",
+      "error": null
+    },
+    {
+      "tool": "getpercentage_for_love_calculator",
+      "args": {
+        "fname": "John",
+        "sname": "Alice"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_104": [
+    {
+      "tool": "listquotes_for_currency_exchange",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_105": [
+    {
+      "tool": "v1_holidays_for_holidays_by_api_ninjas",
+      "args": {
+        "year": 2022,
+        "country": "California",
+        "type": "public_holiday"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_106": [
+    {
+      "tool": "gameslist_for_steamgames_special_offers",
+      "args": {
+        "region": "us",
+        "start": 0,
+        "count": 10
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_107": [
+    {
+      "tool": "get_airline_data_for_brazilian_airlines_real_flights_data",
+      "args": {
+        "company": "AZU",
+        "date": "2022-04-30"
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'aicraft_type': 'B734', 'arrival_icao': 'SBEG', 'callsign': 'AZU2002', 'code': 'AZU', 'cruise_flight_level': '320', 'cruise_speed': 'N0442', 'departure_icao': 'SBKP', 'enroute_time': '0338', 'eobt': '1225', 'flight_days': {'friday': False, 'monday': False, 'saturday': False, 'sunday': True, 'thursday': False, 'tuesday': False, 'wednesday': False}, 'flight_number': '2002', 'remarks': 'EQPT/SDFGHIRWY/L PBN/B1D1O1S1 EET/SBAZ0135', 'route': 'GERTU UM417 POPTI/N0436F340 DCT LOKEL DCT PUMTU UZ21 ISIPA', 'wake_turbulence': 'M'}, {'aicraft_type': 'B734', 'arrival_icao': 'SBKP', 'callsign': 'AZU2003', 'code': 'AZU', 'cruise_flight_level': '310', 'cruise_speed': 'N0438', 'departure_icao': 'SBEG', 'enroute_time': '0319', 'eobt': '1745', 'flight_days': {'friday': False, 'monday': False, 'saturday': False, 'sunday': True, 'thursday': False, 'tuesday': False, 'wednesday': False}, 'flight_number': '2003', 'remarks': 'EQPT/SDFGHIRWY/L PBN/B1D1O1S1 EET/SBBS0206', 'route': 'POSTU DCT PUMTU/N0444F33...",
+      "error": null
+    }
+  ],
+  "tb_108": [
+    {
+      "tool": "our_catalogue_for_togo420",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_109": [
+    {
+      "tool": "balance_sheet_statement_for_financial_statements",
+      "args": {
+        "ticker": "AAPL"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'9/30/2019': {'Common Stock Equity': '90488000', 'Invested Capital': '198535000', 'Net Debt': '59203000', 'Net Tangible Assets': '90488000', 'Ordinary Shares Number': '17772944', 'Share Issued': '17772944', 'Tangible Book Value': '90488000', 'Total Assets': '338516000', 'Total Capitalization': '182295000', 'Total Debt': '108047000', 'Total Equity Gross Minority Interest': '90488000', 'Total Liabilities Net Minority Interest': '248028000', 'Working Capital': '57101000'}, '9/30/2020': {'Common Stock Equity': '65339000', 'Invested Capital': '177775000', 'Net Debt': '74420000', 'Net Tangible Assets': '65339000', 'Ordinary Shares Number': '16976763', 'Share Issued': '16976763', 'Tangible Book Value': '65339000', 'Total Assets': '323888000', 'Total Capitalization': '164006000', 'Total Debt': '112436000', 'Total Equity Gross Minority Interest': '65339000', 'Total Liabilities Net Minority Interest': '258549000', 'Working Capital': '38321000'}, '9/30/2021': {'Common Stock Equity': '63090000...",
+      "error": null
+    },
+    {
+      "tool": "income_statement_for_financial_statements",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'9/30/2019': {'Basic Average Shares': '18471336', 'Cost of Revenue': '161782000', 'Diluted Average Shares': '18595652', 'Diluted NI Available to Com Stockholders': '55256000', 'EBIT': '63930000', 'Gross Profit': '98392000', 'Interest Expense': '3576000', 'Interest Income': '4961000', 'Net Income Common Stockholders': '55256000', 'Net Income from Continuing & Discontinued Operation': '55256000', 'Net Income from Continuing Operation Net Minority Interest': '55256000', 'Net Interest Income': '1385000', 'Net Non Operating Interest Income Expense': '1385000', 'Normalized EBITDA': '76477000', 'Normalized Income': '55256000', 'Operating Expense': '34462000', 'Operating Income': '63930000', 'Other Income Expense': '1807000', 'Pretax Income': '65737000', 'Reconciled Cost of Revenue': '161782000', 'Reconciled Depreciation': '12547000', 'Tax Effect of Unusual Items': '0', 'Tax Provision': '10481000', 'Tax Rate for Calcs': '0', 'Total Expenses': '196244000', 'Total Operating Income as Reporte...",
+      "error": null
+    },
+    {
+      "tool": "cash_flow_statement_for_financial_statements",
+      "args": {
+        "ticker": "AAPL"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'9/30/2019': {'Capital Expenditure': '-10495000', 'End Cash Position': '50224000', 'Financing Cash Flow': '-90976000', 'Free Cash Flow': '58896000', 'Income Tax Paid Supplemental Data': '15263000', 'Interest Paid Supplemental Data': '3423000', 'Investing Cash Flow': '45896000', 'Issuance of Capital Stock': '781000', 'Issuance of Debt': '6963000', 'Operating Cash Flow': '69391000', 'Repayment of Debt': '-8805000', 'Repurchase of Capital Stock': '-66897000'}, '9/30/2020': {'Capital Expenditure': '-7309000', 'End Cash Position': '39789000', 'Financing Cash Flow': '-86820000', 'Free Cash Flow': '73365000', 'Income Tax Paid Supplemental Data': '9501000', 'Interest Paid Supplemental Data': '3002000', 'Investing Cash Flow': '-4289000', 'Issuance of Capital Stock': '880000', 'Issuance of Debt': '16091000', 'Operating Cash Flow': '80674000', 'Repayment of Debt': '-13592000', 'Repurchase of Capital Stock': '-72358000'}, '9/30/2021': {'Capital Expenditure': '-11085000', 'End Cash Position': '...",
+      "error": null
+    }
+  ],
+  "tb_110": [
+    {
+      "tool": "coinmill_for_coinmill_currency",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"var currency_data='ADA,0.212004210703875,0.001|ADP,0.00491752,1|AED,0.20406,0.25|AFA,8.709e-06,1|AFN,0.008709,1|ALL,0.008,0.1|AMD,0.0019119,0.2|ANC,0.0398876564134743,0.0001|ANG,0.41435,0.01|AOA,0.0014575,0.1|ARDR,0.0519906218157515,0.0001|ARG,3.6901051658097,0.001|ARS,0.0031055,0.01|ATS,0.0594614,1|AUD,0.500532,0.05|AUR,0.035998211981,0.00001|AWG,0.423,0.01|AZM,8.884e-05,10|AZN,0.4442,0.01|BAM,0.4118,0.5|BBD,0.37682,0.01|BCH,173.252501728562,0.0000001|BCN,0.0001694845261576,10|BDT,0.0069799,0.01|BEF,0.0202828,0.5|BET,0.0123306644402,0.01|BGL,0.00041182,10|BGN,0.41182,0.01|BHD,2,0.05|BIF,0.00026887,1|BLC,0.04907987460308,0.01|BMD,0.748338,0.01|BNB,178.86873791241,0.00001|BND,0.554503,0.01|BOB,0.11,0.1|BRC,5.71404e-05,0.01|BRL,0.157136,0.01|BSD,0.8,0.01|BTB,0.0847669629357117,0.00001|BTC,22909.5446434804,0.00001|BTG,10.360739189179,0.000001|BTN,0.0090412,0.20|BTS,0.00631179111710523,0.001|BWP,0.0557562,0.01|BYN,0.29901,0.01|BYR,0.00029901,1|BZD,0.3768,0.01|CAD,0.569851,0.01|CDF,0.000...",
+      "error": null
+    },
+    {
+      "tool": "assetticker_for_bravenewcoin",
+      "args": {
+        "assetid": "USD"
+      },
+      "output": "",
+      "error": null
+    },
+    {
+      "tool": "assetbyid_for_bravenewcoin",
+      "args": {
+        "is_id": "USD"
+      },
+      "output": "{'status': 'BAD_REQUEST', 'timestamp': '2023-07-05T01:49:47.654648Z', 'message': \"Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: USD\"}",
+      "error": null
+    },
+    {
+      "tool": "marketbyid_for_bravenewcoin",
+      "args": {
+        "is_id": "USD"
+      },
+      "output": "{'status': 'BAD_REQUEST', 'timestamp': '2023-07-11T07:35:21.076966Z', 'message': \"Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; nested exception is java.lang.IllegalArgumentException: Invalid UUID string: USD\"}",
+      "error": null
+    }
+  ],
+  "tb_111": [
+    {
+      "tool": "get_a_specific_item_for_shoes_collections",
+      "args": {},
+      "output": "{\"id\":3,\"name\":\"Jako Slip-On Men's Shoes\",\"price\":161,\"image\":\"https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/381374/01/sv01/fnd/IND/fmt/png/Jako-Slip-On-Men's-Shoes\",\"description\":\"The Jako Slip-On Men's Shoes are perfect for a laceless running style. Lightweight and styled for everyday wear, they feature a breathable and durable mesh upper. Layered cushioning adds comfort that goes the distance.\",\"quantity\":1,\"rating\":{\"rate\":4.7,\"count\":500}}",
+      "error": null
+    },
+    {
+      "tool": "api_vcodes_api_php_siteid_siteid_for_free_coupon_codes",
+      "args": {
+        "siteid": "12345"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_112": [
+    {
+      "tool": "getmaptilewithfrenchlabels_for_maptiles",
+      "args": {
+        "x": 6,
+        "y": 3,
+        "z": 3
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "getmaptilewithenglishlabels_for_maptiles",
+      "args": {
+        "x": 6,
+        "y": 3,
+        "z": 3
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_113": [
+    {
+      "tool": "v1_jokes_for_jokes_by_api_ninjas",
+      "args": {},
+      "output": "[{'joke': 'Why Does Snoop Dogg need an umbrella? For drizzle, my nizzle.'}]",
+      "error": null
+    },
+    {
+      "tool": "random_for_daddyjokes",
+      "args": {},
+      "output": "{'success': True, 'joke': 'How does a non-binary samurai kill people? They/Them. '}",
+      "error": null
+    },
+    {
+      "tool": "random_for_manatee_jokes",
+      "args": {},
+      "output": "{\"id\":9,\"setup\":\"What is AC/DC number one hit undersea?\",\"punchline\":\"ManaTNT\",\"createdAt\":\"2020-12-23T19:40:08.000Z\",\"updatedAt\":\"2020-12-23T19:40:08.000Z\"}",
+      "error": null
+    },
+    {
+      "tool": "jokes_random_for_chuck_norris",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_114": [
+    {
+      "tool": "get_all_cities_for_biggest_cities",
+      "args": {},
+      "output": "[{'id': 1}, {'id': 2}, {'id': 3}, {'id': 4}, {'id': 5}, {'id': 6}, {'id': 7}, {'id': 8}, {'id': 9}, {'id': 10}, {'id': 11}, {'id': 12}, {'id': 13}, {'id': 14}, {'id': 15}, {'id': 16}, {'id': 17}, {'id': 18}, {'id': 19}]",
+      "error": null
+    },
+    {
+      "tool": "biggest_cities_for_biggest_cities",
+      "args": {
+        "is_id": 1
+      },
+      "output": "{}",
+      "error": null
+    },
+    {
+      "tool": "biggest_cities_for_biggest_cities",
+      "args": {
+        "is_id": 3
+      },
+      "output": "{}",
+      "error": null
+    }
+  ],
+  "tb_115": [
+    {
+      "tool": "api_vcodes_api_php_siteid_siteid_for_free_coupon_codes",
+      "args": {
+        "siteid": "987654321"
+      },
+      "output": "{'message': \"Endpoint '/api/vcodes-api.php' does not exist\"}",
+      "error": null
+    },
+    {
+      "tool": "stcategoriesandsub_categories_for_sandbox_ecombr_com_01_products",
+      "args": {
+        "action": "list"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_116": [
+    {
+      "tool": "jokes_random_for_chuck_norris",
+      "args": {},
+      "output": "{\"categories\":[],\"created_at\":\"2020-01-05 13:42:28.143137\",\"icon_url\":\"https://assets.chucknorris.host/img/avatar/chuck-norris.png\",\"id\":\"w1QcOOGdStm9Wz27-AKCIw\",\"updated_at\":\"2020-01-05 13:42:28.143137\",\"url\":\"https://api.chucknorris.io/jokes/w1QcOOGdStm9Wz27-AKCIw\",\"value\":\"Chuck Norris doesn't clip his fingernails... he rips them out with his bare hands and regrows new ones immediately.\"}",
+      "error": null
+    },
+    {
+      "tool": "quote_for_quotes",
+      "args": {},
+      "output": "{'quote': 'An Apple a day keeps you busy anyway', 'author': 'Sahil'}",
+      "error": null
+    },
+    {
+      "tool": "random_for_manatee_jokes",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_117": [
+    {
+      "tool": "aljazeera_for_arabic_news_api",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{\\\"results\\\":[{\\\"headline\\\":\\\"\\u0622\\u062e\\u0631 \\u062a\\u0637\\u0648\\u0631\\u0627\\u062a \\u0627\\u0644\\u062a\\u0645\\u0631\\u062f \\u0627\\u0644\\u0645\\u0633\\u0644\\u062d \\u0644\\u0645\\u062c\\u0645\\u0648\\u0639\\u0629 \\u0641\\u0627\\u063a\\u0646\\u0631 \\u0641\\u064a \\u0631\\u0648\\u0633\\u064a\\u0627\\\",\\\"underHeadline\\\":\\\"\\\",\\\"content\\\":\\\"\\u0623\\u0639\\u0644\\u0646 \\u0642\\u0627\\u0626\\u062f \\u0642\\u0648\\u0627\\u062a \\u0645\\u062c\\u0645\\u0648\\u0639\\u0629 \\u0641\\u0627\\u063a\\u0646\\u0631 \\u0627\\u0644\\u0639\\u0633\\u0643\\u0631\\u064a\\u0629 \\u0627\\u0644\\u0631\\u0648\\u0633\\u064a\\u0629 \\u064a\\u0641\\u063a\\u064a\\u0646\\u064a \\u0628\\u0631\\u064a\\u063a\\u0648\\u062c\\u064a\\u0646 \\u0623\\u0646 \\u0642\\u0648\\u0627\\u062a\\u0647 \\u0633\\u064a\\u0637\\u0631\\u062a -\\u0627\\u0644\\u064a\\u0648\\u0645 \\u0627\\u0644\\u0633\\u0628\\u062a- \\u0639\\u0644\\u0649 \\u0627\\u0644\\u0645\\u0646\\u0634\\u0622\\u062a \\u0627\\u0644\\u0639\\u0633\\u0643\\u0631\\u064a\\u0629 \\u0641\\u064a \\u0645\\u0642\\u0627\\u0637\\u0639\\u0629 \\u0631\\u0648\\u0633\\u062a\\u0648\\u0641 (\\u062c\\u0646\\u0648\\u0...",
+      "error": null
+    },
+    {
+      "tool": "bbc_arabic_for_arabic_news_api",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{\\\"results\\\":[{\\\"source\\\":\\\"https://www.bbc.com/arabic/topics/c719d2el19nt\\\",\\\"title\\\":\\\"\\\",\\\"url\\\":\\\"/arabic\\\"},{\\\"source\\\":\\\"https://www.bbc.com/arabic/topics/c719d2el19nt\\\",\\\"title\\\":\\\"\\u0645\\u0627 \\u0627\\u0644\\u0630\\u064a \\u062a\\u0633\\u0639\\u0649 \\u0625\\u0644\\u064a\\u0647 \\u0641\\u0627\\u063a\\u0646\\u0631 \\u0641\\u064a \\u0631\\u0648\\u0633\\u064a\\u0627\\u061f24 \\u064a\\u0648\\u0646\\u064a\\u0648/ \\u062d\\u0632\\u064a\\u0631\\u0627\\u0646 2023\\\",\\\"image\\\":\\\"https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/fc81/live/7976ebb0-12a3-11ee-816c-eb33efffe2a0.png\\\",\\\"url\\\":\\\"https://www.bbc.com/arabic/articles/cx7ew5nzdlvo\\\"},{\\\"source\\\":\\\"https://www.bbc.com/arabic/topics/c719d2el19nt\\\",\\\"title\\\":\\\"\\u0647\\u0644 \\u062a\\u0634\\u0647\\u062f \\u0631\\u0648\\u0633\\u064a\\u0627 \\\\\\\"\\u0627\\u0646\\u0642\\u0644\\u0627\\u0628\\u0627 \\u0639\\u0633\\u0643\\u0631\\u064a\\u0627\\\\\\\" \\u0623\\u0645 \\\\\\\"\\u0645\\u0633\\u064a\\u0631\\u0629 \\u0644\\u0644\\u0639\\u062f\\u0627\\u0644\\u0629\\\\\\\"\\u061f24 \\u064a\\u0648\\u0646\\u064a\\u0648/ \\u062d\\u0632\\u06...",
+      "error": null
+    },
+    {
+      "tool": "youm7_for_arabic_news_api",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'results': [{'title': '\\u0628\\u0631\\u0644\\u0645\\u0627\\u0646\\u0649: \\u0628\\u064a\\u0627\\u0646 3 \\u064a\\u0648\\u0644\\u064a\\u0648 \\u0637\\u0648\\u0642 \\u0627\\u0644\\u0646\\u062c\\u0627\\u0629 \\u0644\\u0644\\u062f\\u0648\\u0644\\u0629 \\u0627\\u0644\\u0645\\u0635\\u0631\\u064a\\u0629 \\u0648\\u064a\\u0648\\u0645 \\u0627\\u0633\\u062a\\u0631\\u062f\\u0627\\u062f \\u0627\\u0644\\u0643\\u0631\\u0627\\u0645\\u0629 \\u0648\\u0627\\u0644\\u062e\\u0644\\u0627\\u0635', 'content': '\\u0642\\u0627\\u0644 \\u0627\\u0644\\u0646\\u0627\\u0626\\u0628 \\u0639\\u0645\\u0631\\u0648 \\u0647\\u0646\\u062f\\u0649\\u060c \\u0639\\u0636\\u0648 \\u0645\\u062c\\u0644\\u0633 \\u0627\\u0644\\u0646\\u0648\\u0627\\u0628\\u060c \\u0625\\u0646 \\u0628\\u064a\\u0627\\u0646 3 \\u064a\\u0648\\u0644\\u064a\\u0648 2013 \\u062c\\u0627\\u0621 \\u0628\\u0645\\u062b\\u0627\\u0628\\u0629 \\u0637\\u0648\\u0642 \\u0627\\u0644\\u0646\\u062c\\u0627\\u0629 \\u0644\\u0644\\u062f\\u0648\\u0644\\u0629 \\u0627\\u0644\\u0645\\u0635\\u0631\\u064a\\u0629 \\u0648\\u0627\\u0633\\u062a\\u062c\\u0627\\u0628\\u0629 \\u0644\\u0645\\u0644\\u0627\\u064a\\u064a\\u0646 \\u0627\\u...",
+      "error": null
+    }
+  ],
+  "tb_118": [
+    {
+      "tool": "downloadfile_for_aspose_tasks_cloud",
+      "args": {
+        "path": "/project_files/project1.mpp"
+      },
+      "output": "{'message': \"Endpoint '/tasks/storage/file/project_files/project1.mpp' does not exist\"}",
+      "error": null
+    },
+    {
+      "tool": "objectexists_for_aspose_tasks_cloud",
+      "args": {
+        "path": "/project_files/project1.mpp"
+      },
+      "output": "{'message': \"Endpoint '/tasks/storage/exist/project_files/project1.mpp' does not exist\"}",
+      "error": null
+    },
+    {
+      "tool": "getdocumentproperties_for_aspose_tasks_cloud",
+      "args": {
+        "name": "project1.mpp"
+      },
+      "output": "",
+      "error": null
+    },
+    {
+      "tool": "getdocumentproperties_for_aspose_tasks_cloud",
+      "args": {
+        "name": "project1.mpp"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_119": [
+    {
+      "tool": "search_for_deezer",
+      "args": {
+        "q": "Eminem"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    },
+    {
+      "tool": "genre_for_deezer",
+      "args": {
+        "is_id": "11698124"
+      },
+      "output": "{'error': {'type': 'DataException', 'message': 'no data', 'code': 800}}",
+      "error": "Message error..."
+    },
+    {
+      "tool": "hot_100_for_billboard_api",
+      "args": {
+        "range": "1-10",
+        "date": "2022-01-01"
+      },
+      "output": "{'message': 'You have exceeded the MONTHLY quota for Requests on your current plan, BASIC. Upgrade your plan at https://rapidapi.com/LDVIN/api/billboard-api'}",
+      "error": "Rate limit error..."
+    },
+    {
+      "tool": "user_info_for_soundcloud",
+      "args": {
+        "profile_url": "https://soundcloud.com/user-977421934"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'urn': 226517465, 'username': 'user-977421934', 'name': 'Fall Out Boy', 'verified': False, 'createdAt': '2016-05-13T07:24:10.000Z', 'avatarURL': 'https://i1.sndcdn.com/avatars-000334710310-rxa5uy-large.jpg', 'profile': 'https://soundcloud.com/user-977421934', 'bannerURL': 'https://i1.sndcdn.com/visuals-000226517465-QthPTU-original.jpg', 'followers': 33825, 'following': 2, 'likesCount': 1, 'tracksCount': 26, 'tracks': [{'title': 'Save Rock And Roll (feat. Elton John)', 'url': 'https://soundcloud.com/user-977421934/save-rock-and-roll-feat-elton-john-1', 'publishedAt': '2017-11-24T05:59:53.000Z', 'genre': 'Alternative Rock', 'author': 'user-977421934', 'duration': 251000}, {'title': 'Miss Missing You', 'url': 'https://soundcloud.com/user-977421934/miss-missing-you-4', 'publishedAt': '2017-11-24T05:49:06.000Z', 'genre': 'Alternative Rock', 'author': 'user-977421934', 'duration': 189000}, {'title': 'Rat A Tat (feat. Courtney Love)', 'url': 'https://soundcloud.com/user-977421934/rat-a-ta...",
+      "error": null
+    }
+  ],
+  "tb_120": [
+    {
+      "tool": "getinterestinglistings_for_etsy",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_121": [
+    {
+      "tool": "getnumbers_for_sms_receive",
+      "args": {},
+      "output": "{\"success\":true,\"numbers\":[\"+447878263244\"]}",
+      "error": null
+    },
+    {
+      "tool": "settag_for_sms_receive",
+      "args": {
+        "tag": "myAppTag"
+      },
+      "output": "{'success': True}",
+      "error": null
+    },
+    {
+      "tool": "getupdates_for_sms_receive",
+      "args": {
+        "start_id": 0
+      },
+      "output": "{'success': True, 'messages': []}",
+      "error": null
+    },
+    {
+      "tool": "getmessage_for_sms_receive",
+      "args": {
+        "message_id": 12345
+      },
+      "output": "{'success': False, 'message': 'Message not found'}",
+      "error": null
+    }
+  ],
+  "tb_122": [
+    {
+      "tool": "comments_get_for_songmeanings",
+      "args": {
+        "artist_name": "Coldplay",
+        "lyric_title": "The Scientist"
+      },
+      "output": "{'rate': {'rate_span': '1 Minute', 'rate_limit': 'Unlimited', 'rate_remaining': 'Unlimited', 'rate_user': 0}, 'status': {'status_code': 401, 'status_message': 'Authentication failed, probably because of invalid/missing API key.', 'source': '8'}}",
+      "error": null
+    },
+    {
+      "tool": "search_for_deezer",
+      "args": {
+        "q": "poetic songs",
+        "limit": 5
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    },
+    {
+      "tool": "artists_for_billboard_api",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_123": [
+    {
+      "tool": "search_property_by_geo_co_ordinates_deprecated_for_airbnb_v2",
+      "args": {
+        "swlat": 37.7397,
+        "swlng": -107.8209,
+        "nelat": 37.9733,
+        "nelng": -107.4617,
+        "pricemin": 100,
+        "minbeds": 3,
+        "minbathrooms": 2
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'status': True, 'message': 'Success', 'timestamp': 1692844621907, 'data': [{'avgRating': 5, 'listingBathroomLabel': '3.5 baths', 'bathrooms': 3.5, 'listingBedLabel': '6 beds', 'bedrooms': 4, 'beds': 6, 'businessHostLabel': None, 'city': 'Durango', 'configurableContent': None, 'contextualPicturesPageInfo': {'hasNextPage': True, 'endCursor': 'NQ=='}, 'emergencyMessage': None, 'listingFloatingMessage': None, 'formattedBadges': [], 'listingGuestLabel': '11 guests', 'id': '755794405960155288', 'isAutoTranslated': False, 'isNewListing': False, 'isSuperhost': False, 'relaxedFilterLabels': None, 'localizedCityName': 'Durango', 'localizedDistanceText': '1,342 miles', 'locationTitle': 'Durango, Colorado', 'locationContext': None, 'listingName': 'Mtn Home Near Purgatory, Hot Tub & Dog Friendly!', 'listingObjType': 'REGULAR', 'neighborhood': None, 'listingPreviewAmenityNames': [], 'previewTags': [], 'publicAddress': 'Durango, CO, United States', 'reviews': [], 'reviewsCount': 12, 'richKickers'...",
+      "error": null
+    },
+    {
+      "tool": "get_amenities_filters_for_airbnb_v2",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_124": [
+    {
+      "tool": "stcategoriesandsub_categories_for_sandbox_ecombr_com_01_products",
+      "args": {
+        "action": "list"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    },
+    {
+      "tool": "get_a_list_of_cement_attribute_groups_for_argaam_data_apis_free",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_125": [
+    {
+      "tool": "v1_holidays_for_holidays_by_api_ninjas",
+      "args": {
+        "year": 2021,
+        "country": "US"
+      },
+      "output": "[{'country': 'United States', 'iso': 'US', 'year': 2021, 'date': '2021-01-20', 'day': 'Wednesday', 'name': 'Inauguration Day', 'type': 'FEDERAL_HOLIDAY'}, {'country': 'United States', 'iso': 'US', 'year': 2021, 'date': '2021-09-06', 'day': 'Monday', 'name': 'Labor Day', 'type': 'FEDERAL_HOLIDAY'}, {'country': 'United States', 'iso': 'US', 'year': 2021, 'date': '2021-01-01', 'day': 'Friday', 'name': \"New Year's Day\", 'type': 'FEDERAL_HOLIDAY'}, {'country': 'United States', 'iso': 'US', 'year': 2021, 'date': '2021-11-25', 'day': 'Thursday', 'name': 'Thanksgiving Day', 'type': 'FEDERAL_HOLIDAY'}, {'country': 'United States', 'iso': 'US', 'year': 2021, 'date': '2021-07-05', 'day': 'Monday', 'name': 'Day off for Independence Day', 'type': 'FEDERAL_HOLIDAY'}]",
+      "error": null
+    },
+    {
+      "tool": "all_belgian_races_for_wonderboyapi",
+      "args": {},
+      "output": "[{'col1': '', 'col2': '', 'col3': '', 'col4': ''}, {'col1': 'AGEN', 'col2': 'zeer mooi, zeer goed zicht, zwakke noord-west', 'col3': '', 'col4': ''}, {'col1': '', 'col2': 'Internationaal', 'col3': '', 'col4': '08:15'}]",
+      "error": null
+    }
+  ],
+  "tb_126": [
+    {
+      "tool": "get_info_for_jsmon",
+      "args": {
+        "site_id": "demo",
+        "session_id": "1380352501-B90e7Cppo2",
+        "user_id": "A1F57492-628D-93B4-8313-3D3143713A1E",
+        "callback_id": "_1380352523030",
+        "action_type": "1"
+      },
+      "output": "",
+      "error": "Function executing from my_tools.Commerce.jsmon.api import get_info error...\nHTTPSConnectionPool(host='jsmon.com', port=443): Max retries exceeded with url: /track/?session_id=1380352501-B90e7Cppo2&action_type=1&site_id=demo&callback_id=_1380352523030&user_id=A1F57492-628D-93B4-8313-3D3143713A1E (Caused by SSLError(CertificateError(\"hostname 'jsmon.com' doesn't match either of 'www.glacern.com', 'glacern.com'\")))"
+    },
+    {
+      "tool": "tool_gstin_verification_online_for_gst_details_api_documentation",
+      "args": {
+        "gst": "24AAKCS0993B2ZF"
+      },
+      "output": "[[], ['GST Number', '24AAKCS0993B2ZF'], ['Trade Name', 'sarita infotech pvt ltd.'], ['State', 'Gujarat'], ['Business Type', 'Private Limited Company'], ['Legal Name', 'SARITA INFOTECH PRIVATE LIMITED'], ['Major Business Nature', 'Supplier of Services, Others'], ['Dealer Type', 'Regular'], ['Registered on', '13/08/2019']]",
+      "error": null
+    },
+    {
+      "tool": "api_vcodes_api_php_siteid_siteid_for_free_coupon_codes",
+      "args": {
+        "siteid": "zi00001"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_127": [
+    {
+      "tool": "companies_for_kargom_nerede",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'value': [{'id': 0, 'name': 'Firmay\\u0131 Tahmin Et', 'image': 'https://api.kargomnerede.co/cargo/question-mark.png', 'info': None, 'additionalDatas': None}, {'id': 1, 'name': 'Aras Kargo', 'image': 'https://api.kargomnerede.co/cargo/aras-logo.png', 'info': None, 'additionalDatas': None}, {'id': 2, 'name': 'Yurti\\u00e7i Kargo', 'image': 'https://api.kargomnerede.co/cargo/yurtici-logo.png', 'info': None, 'additionalDatas': None}, {'id': 6, 'name': 'S\\u00fcrat Kargo', 'image': 'https://api.kargomnerede.co/cargo/surat-logo.png', 'info': None, 'additionalDatas': None}, {'id': 4, 'name': 'PTT Kargo', 'image': 'https://api.kargomnerede.co/cargo/ptt-logo.png', 'info': None, 'additionalDatas': None}, {'id': 3, 'name': 'MNG Kargo', 'image': 'https://api.kargomnerede.co/cargo/mng-logo.png', 'info': None, 'additionalDatas': None}, {'id': 10, 'name': 'HepsiJet', 'image': 'https://api.kargomnerede.co/cargo/hepsijet-logo.png', 'info': None, 'additionalDatas': None}, {'id': 9, 'name': 'Trendyol E...",
+      "error": null
+    },
+    {
+      "tool": "supply_chain_for_corporate_supply_chain",
+      "args": {
+        "ticker": "IBM"
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'Ticker': 'CMPGF', 'Full Name': 'Compass Group PLC', 'Relationship': 'Suppliers'}, {'Ticker': 'HTHIF', 'Full Name': 'Hitachi, Ltd.', 'Relationship': 'Suppliers'}, {'Ticker': 'FJTSF', 'Full Name': 'Fujitsu Limited', 'Relationship': 'Suppliers'}, {'Ticker': 'CAJFF', 'Full Name': 'Canon Inc.', 'Relationship': 'Suppliers'}, {'Ticker': 'SKSBF', 'Full Name': 'Skanska AB (publ)', 'Relationship': 'Suppliers'}, {'Ticker': 'RICOF', 'Full Name': 'Ricoh Company, Ltd.', 'Relationship': 'Suppliers'}, {'Ticker': 'SDXOF', 'Full Name': 'Sodexo S.A.', 'Relationship': 'Suppliers'}, {'Ticker': 'SSNLF', 'Full Name': 'Samsung Electronics Co., Ltd.', 'Relationship': 'Suppliers'}, {'Ticker': '6701.T', 'Full Name': 'NEC Corporation', 'Relationship': 'Suppliers'}, {'Ticker': 'WPPGF', 'Full Name': 'WPP plc', 'Relationship': 'Suppliers'}, {'Ticker': 'VLKPF', 'Full Name': 'Volkswagen AG', 'Relationship': 'Customers'}, {'Ticker': 'PEUGF', 'Full Name': 'Peugeot S.A.', 'Relationship': 'Customers'}, {'Ticker': 'A...",
+      "error": null
+    }
+  ],
+  "tb_128": [
+    {
+      "tool": "search_products_for_shopeeapi",
+      "args": {
+        "region": "en",
+        "q": "music bands"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.22.112.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "getproducts_for_cartify",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_129": [
+    {
+      "tool": "get_markets_for_coinranking",
+      "args": {},
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='172.31.64.1', port=7890): Max retries exceeded with url: http://47.251.13.204:8080/rapidapi (Caused by ProxyError('Cannot connect to proxy.', ConnectionResetError(104, 'Connection reset by peer')))"
+    },
+    {
+      "tool": "get_exchange_markets_for_coinranking",
+      "args": {
+        "uuid": "-zdvbieRdZ",
+        "orderby": "price",
+        "orderdirection": "desc"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_130": [
+    {
+      "tool": "our_catalogue_for_togo420",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_131": [
+    {
+      "tool": "web_search_for_neo_google_search",
+      "args": {
+        "q": "event venues in my city banquet halls outdoor spaces hotels with conference facilities",
+        "num": 10
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "image_search_for_neo_google_search",
+      "args": {
+        "q": "venue interiors outdoor setups event decorations"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "web_search_for_neo_google_search",
+      "args": {
+        "q": "event venues in my city banquet halls outdoor spaces hotels with conference facilities"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'status': 'success', 'items': [{'title': 'Find Meeting Space, Search for Banquet Hall Rentals', 'htmlTitle': 'Find Meeting Space, Search for Banquet Hall Rentals', 'link': 'https://www.hotelplanner.com/Search/Meeting-Space.htm', 'displayLink': 'www.hotelplanner.com', 'snippet': 'Find Meeting Space, Search for Banquet Hall Rentals. Use the search box above to find hotel meeting spaces, banquet hall pricing and book function spaces.', 'htmlSnippet': 'Find Meeting Space, Search for Banquet Hall Rentals. Use the search box above to find hotel meeting spaces, banquet hall pricing and book function spaces.'}, {'title': 'Party Venues in Houston, TX - 329 Venues | Pricing | Availability', 'htmlTitle': 'Party Venues in Houston, TX - 329 Venues | Pricing | Availability', 'link': 'https://www.eventective.com/houston-tx/party-event-venues/?p=3', 'displayLink': 'www.eventective.com', 'snippet': 'Find and contact local Party Venues in Houston, TX with pricing and availability for your party even...",
+      "error": null
+    }
+  ],
+  "tb_132": [
+    {
+      "tool": "get_main_campaigns_for_vouchery_io",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Commerce.vouchery_io.api import get_main_campaigns error...\nHTTPSConnectionPool(host='vouchery-io.p.rapidapi.comhttps', port=443): Max retries exceeded with url: //preview.vouchery.io/api/v2.0/campaigns (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f16b6aefa60>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    },
+    {
+      "tool": "asdf_for_test_v2",
+      "args": {},
+      "output": "{}",
+      "error": null
+    },
+    {
+      "tool": "sortproductsmaster_for_tokopedia_super_api",
+      "args": {},
+      "output": "{'data': ['LOWEST_PRICE', 'HIGHEST_PRICE', 'RELEVANT', 'REVIEW', 'LATEST']}",
+      "error": null
+    },
+    {
+      "tool": "tcategoriesandsub_categories_for_sandbox_mktplace_eu_01_products",
+      "args": {
+        "action": "get_categories"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    },
+    {
+      "tool": "stofattributeandvalueoptions_for_sandbox_mktplace_eu_01_products",
+      "args": {
+        "action": "get_attributes"
+      },
+      "output": "[{'code': 'EMPTY_TOKEN', 'message': 'The token field is required'}, {'code': 'EMPTY_SECRET', 'message': 'The secret field is required'}, {'code': 'EMPTY_EMAIL', 'message': 'The email field is required'}, {'code': 'STATUS_DISABLED', 'message': 'The status is off'}]",
+      "error": null
+    }
+  ],
+  "tb_133": [
+    {
+      "tool": "get_info_for_jsmon",
+      "args": {
+        "site_id": "demo",
+        "session_id": "1380352501-B90e7Cppo2",
+        "user_id": "A1F57492-628D-93B4-8313-3D3143713A1E",
+        "callback_id": "_1380352523030",
+        "action_type": "1"
+      },
+      "output": "",
+      "error": "Function executing from my_tools.Commerce.jsmon.api import get_info error...\nHTTPSConnectionPool(host='jsmon.com', port=443): Max retries exceeded with url: /track/?session_id=1380352501-B90e7Cppo2&action_type=1&site_id=demo&callback_id=_1380352523030&user_id=A1F57492-628D-93B4-8313-3D3143713A1E (Caused by SSLError(CertificateError(\"hostname 'jsmon.com' doesn't match either of 'www.glacern.com', 'glacern.com'\")))"
+    },
+    {
+      "tool": "api_vcodes_api_php_siteid_siteid_for_free_coupon_codes",
+      "args": {
+        "siteid": "demo"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_134": [
+    {
+      "tool": "get_for_simple_file_storage",
+      "args": {
+        "file_id": "e2ab50b6-0252-468b-8e76-700f60926b05"
+      },
+      "output": "{'err': 'file does not exist'}",
+      "error": null
+    },
+    {
+      "tool": "labs_for_lab",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Storage.lab.api import labs error...\nHTTPSConnectionPool(host='lab2.p.rapidapi.comhttp', port=443): Max retries exceeded with url: //labs/lab (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdf89b0dde0>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+    },
+    {
+      "tool": "get_history_for_web_image_storage",
+      "args": {
+        "pagesize": 50,
+        "page": 2
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    },
+    {
+      "tool": "show_history_for_image_cdn",
+      "args": {
+        "pagesize": 50,
+        "page": 2
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_135": [
+    {
+      "tool": "check_for_cleantalk",
+      "args": {
+        "text": "This is a test text that may contain offensive language."
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_136": [
+    {
+      "tool": "fixtures_for_msport",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"{'success': True, 'result': [{'match_id': 4509410, 'league': {'id': 61, 'cc': 'INTERF', 'name': 'Friendly Internationals'}, 'home': {'id': 767, 'name': \\\"China Women's\\\"}, 'away': {'id': 768, 'name': \\\"Russia Women's\\\"}, 'tv': '', 'like': 0, 'date_time': '2023,07,04,16,00,0'}, {'match_id': 4421352, 'league': {'id': 1027, 'cc': 'AUS NPLQ', 'name': 'Australia Queensland National Premier Leagues'}, 'home': {'id': 451774, 'name': 'Gold Coast Knights'}, 'away': {'id': 10575, 'name': 'Redlands United FC'}, 'tv': '', 'like': 1, 'date_time': '2023,07,04,17,30,0'}, {'match_id': 4441730, 'league': {'id': 1236, 'cc': 'EST D2B', 'name': 'Estonia Esi Liiga B'}, 'home': {'id': 451754, 'name': 'Parnu JK'}, 'away': {'id': 21946, 'name': 'Laanemaa Haapsalu'}, 'tv': '', 'like': 1, 'date_time': '2023,07,04,18,00,0'}, {'match_id': 4511249, 'league': {'id': 61, 'cc': 'INTERF', 'name': 'Friendly Internationals'}, 'home': {'id': 1702, 'name': 'Democratic Rep Congo(U20)'}, 'away': {'id': 14674, 'name': 'Ce...",
+      "error": null
+    },
+    {
+      "tool": "match_for_msport",
+      "args": {
+        "is_id": "4511249"
+      },
+      "output": "{'success': True, 'result': {'league': {'id': '61', 'name': 'Friendly Internationals'}, 'home': {'id': '1702', 'name': 'Democratic Rep Congo(U20)'}, 'away': {'id': '14674', 'name': 'Central African Republic U20'}, 'events': [{'time': '36', 'type': 'goal', 'team': 'home', 'player': {'id': '0', 'name': 'Chris Mbede'}}], 'substitutes': []}}",
+      "error": null
+    },
+    {
+      "tool": "match_for_msport",
+      "args": {
+        "is_id": "4509410"
+      },
+      "output": "{'success': True, 'result': {'league': {'id': '61', 'name': 'Friendly Internationals'}, 'home': {'id': '767', 'name': \"China Women\\\\'s\"}, 'away': {'id': '768', 'name': \"Russia Women\\\\'s\"}, 'events': [{'time': '3', 'type': 'goal', 'team': 'home', 'player': {'id': '2019628', 'name': 'Zhang Linyan'}}, {'time': '45', 'type': 'goal', 'team': 'away', 'player': {'id': '0', 'name': 'Veronika Kuropatkina'}}, {'time': '54', 'type': 'goal', 'team': 'home', 'player': {'id': '0', 'name': ''}}], 'substitutes': []}}",
+      "error": null
+    },
+    {
+      "tool": "match_for_msport",
+      "args": {
+        "is_id": "4421352"
+      },
+      "output": "{'success': True, 'result': {'league': {'id': '1027', 'name': 'Australia Queensland National Premier Leagues'}, 'home': {'id': '451774', 'name': 'Gold Coast Knights'}, 'away': {'id': '10575', 'name': 'Redlands United FC'}, 'events': [], 'substitutes': []}}",
+      "error": null
+    }
+  ],
+  "tb_137": [
+    {
+      "tool": "cart_for_direct_wines",
+      "args": {},
+      "output": "{\"response\":{\"id\":\"o4762982880\",\"createdDate\":\"2023-06-24T02:44:00\",\"state\":\"INCOMPLETE\",\"numItems\":0,\"numLineItems\":0,\"numBottles\":0,\"profileId\":\"4814023126\",\"lineItems\":[],\"orderPriceInfo\":{\"pricingBreakdown\":[],\"total\":0.0,\"rawSubtotal\":0.0,\"shipping\":0.0,\"tax\":0.0,\"savings\":0.0,\"memberSavings\":0.0,\"discounted\":false},\"shippingDetails\":[],\"paymentDetails\":[{\"type\":\"creditCard\",\"new\":false,\"billingAddress\":{\"personalInfo\":{}},\"defaultPayment\":false,\"amount\":0.0,\"id\":\"pg4821986723\",\"existingCard\":false,\"masterPassCheckout\":false,\"methodType\":\"CreditCardDetails\",\"tokenValidity\":true}],\"hygieneIssues\":[],\"createdId\":1687574640000},\"statusMessage\":\"successful\",\"statusCode\":0}",
+      "error": null
+    },
+    {
+      "tool": "profile_for_direct_wines",
+      "args": {},
+      "output": "\"\"",
+      "error": null
+    },
+    {
+      "tool": "recommendations_for_direct_wines",
+      "args": {},
+      "output": "{\"response\":{\"itemListInfo\":{\"numberOfItems\":0,\"listName\":\"RecommendationsList\",\"totalItems\":0},\"userItems\":[]},\"statusMessage\":\"successful\",\"statusCode\":0}",
+      "error": null
+    }
+  ],
+  "tb_138": [
+    {
+      "tool": "current_air_quality_for_air_quality",
+      "args": {
+        "lon": "-118.2437",
+        "lat": "34.0522"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_139": [
+    {
+      "tool": "getrecentanimes_for_gogoanime_data_api",
+      "args": {
+        "pagenumber": 1
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'current_page': '1', 'data': [{'title': 'Elite Jack!!', 'page_link': 'https://gogoanime.cl/elite-jack-episode-6', 'episode': 'Episode 6', 'image': 'https://gogocdn.net/cover/elite-jack.png'}, {'title': 'Miko no Tsutome!', 'page_link': 'https://gogoanime.cl/miko-no-tsutome-episode-10', 'episode': 'Episode 10', 'image': 'https://gogocdn.net/cover/miko-no-tsutome.png'}, {'title': 'Break-Age', 'page_link': 'https://gogoanime.cl/break-age-episode-1', 'episode': 'Episode 1', 'image': 'https://gogocdn.net/cover/break-age.png'}, {'title': 'Okashi na Tensei', 'page_link': 'https://gogoanime.cl/okashi-na-tensei-episode-2', 'episode': 'Episode 2', 'image': 'https://gogocdn.net/cover/okashi-na-tensei-1688156495.png'}, {'title': 'Yumemiru Danshi wa Genjitsushugisha', 'page_link': 'https://gogoanime.cl/yumemiru-danshi-wa-genjitsushugisha-episode-1', 'episode': 'Episode 1', 'image': 'https://gogocdn.net/cover/yumemiru-danshi-wa-genjitsushugisha-1688158262.png'}, {'title': 'Mononogatari 2nd Season...",
+      "error": null
+    },
+    {
+      "tool": "getsinglepageinfo_for_gogoanime_data_api",
+      "args": {
+        "link": "https://gogoanime.cl/majutsushi-orphen-hagure-tabi-seiiki-hen-episode-8"
+      },
+      "output": "{'message': \"Endpoint '/https:/gogoanime.cl/majutsushi-orphen-hagure-tabi-seiiki-hen-episode-8' does not exist\"}",
+      "error": null
+    },
+    {
+      "tool": "getrecentanimes_for_gogoanime_data_api",
+      "args": {
+        "pagenumber": 1
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'current_page': '1', 'data': [{'title': 'Elite Jack!!', 'page_link': 'https://gogoanime.cl/elite-jack-episode-6', 'episode': 'Episode 6', 'image': 'https://gogocdn.net/cover/elite-jack.png'}, {'title': 'Miko no Tsutome!', 'page_link': 'https://gogoanime.cl/miko-no-tsutome-episode-10', 'episode': 'Episode 10', 'image': 'https://gogocdn.net/cover/miko-no-tsutome.png'}, {'title': 'Break-Age', 'page_link': 'https://gogoanime.cl/break-age-episode-1', 'episode': 'Episode 1', 'image': 'https://gogocdn.net/cover/break-age.png'}, {'title': 'Okashi na Tensei', 'page_link': 'https://gogoanime.cl/okashi-na-tensei-episode-2', 'episode': 'Episode 2', 'image': 'https://gogocdn.net/cover/okashi-na-tensei-1688156495.png'}, {'title': 'Yumemiru Danshi wa Genjitsushugisha', 'page_link': 'https://gogoanime.cl/yumemiru-danshi-wa-genjitsushugisha-episode-1', 'episode': 'Episode 1', 'image': 'https://gogocdn.net/cover/yumemiru-danshi-wa-genjitsushugisha-1688158262.png'}, {'title': 'Mononogatari 2nd Season...",
+      "error": null
+    }
+  ],
+  "tb_140": [
+    {
+      "tool": "billboard_global_excl_us_for_billboard",
+      "args": {
+        "date": "last month"
+      },
+      "output": "{'status': 'error', 'statusMessage': 'Wrong date or date format!'}",
+      "error": "Message error..."
+    },
+    {
+      "tool": "billboard_global_excl_us_for_billboard",
+      "args": {
+        "date": "2021-08-01"
+      },
+      "output": "{\"error\": \"\", \"response\": \"[{'artist': 'Ed Sheeran', 'title': 'Bad Habits', 'last_week': '1', 'rank': '1', 'award': False, 'image': 'https://charts-static.billboard.com/img/2021/07/ed-sheeran-w3r-bad-habits-i7l-180x180.jpg', 'peak_position': '1', 'weeks_on_chart': '5'}, {'artist': 'Maneskin', 'title': 'Beggin&#039;', 'last_week': '3', 'rank': '2', 'award': False, 'image': 'https://charts-static.billboard.com/img/2017/12/maneskin-fw5-180x180.jpg', 'peak_position': '2', 'weeks_on_chart': '8'}, {'artist': 'BTS', 'title': 'Permission To Dance', 'last_week': '2', 'rank': '3', 'award': False, 'image': 'https://charts-static.billboard.com/img/2021/07/bts-hm9-permission-to-dance-17f-180x180.jpg', 'peak_position': '1', 'weeks_on_chart': '3'}, {'artist': 'The Kid LAROI &amp; Justin Bieber', 'title': 'Stay', 'last_week': '5', 'rank': '4', 'award': True, 'image': 'https://charts-static.billboard.com/img/2021/07/the-kid-laroi-qev-stay-vsd-180x180.jpg', 'peak_position': '4', 'weeks_on_chart': '3'}, {'artist': 'Olivia Rodri...",
+      "error": null
+    },
+    {
+      "tool": "artist_100_for_billboard",
+      "args": {
+        "date": "last month"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_141": [
+    {
+      "tool": "get_all_games_for_free_nba",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_142": [
+    {
+      "tool": "companies_id_financials_for_german_company_data_v2",
+      "args": {
+        "is_id": "DEVFCLQFW054"
+      },
+      "output": "",
+      "error": "Timeout error...HTTPConnectionPool(host='47.251.13.204', port=8080): Read timed out. (read timeout=10)"
+    },
+    {
+      "tool": "companies_id_financials_exists_for_german_company_data_v2",
+      "args": {
+        "is_id": "DEVFCLQFW054"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_143": [
+    {
+      "tool": "search_product_for_tokopediaapi",
+      "args": {
+        "query": "<specific product name>",
+        "act": "search"
+      },
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_144": [
+    {
+      "tool": "date_and_time_of_last_update_for_wonderboyapi",
+      "args": {},
+      "output": "[{'lastDate': '30-06-2023', 'lastTime': '08:24:19'}]",
+      "error": null
+    },
+    {
+      "tool": "all_belgian_races_for_wonderboyapi",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_145": [
+    {
+      "tool": "get_random_fact_for_numbers",
+      "args": {
+        "type": "trivia",
+        "min": "1",
+        "max": "10"
+      },
+      "output": "{'text': 'the number of semicircular canals a human ear has', 'number': 3, 'found': True, 'type': 'trivia'}",
+      "error": null
+    },
+    {
+      "tool": "search_for_deezer",
+      "args": {
+        "q": "music quiz tracks"
+      },
+      "output": "",
+      "error": "request invalid, data error. status_code=500"
+    },
+    {
+      "tool": "get_date_fact_for_numbers",
+      "args": {
+        "month": "10",
+        "day": "25",
+        "json": "true"
+      },
+      "output": "{'text': 'the Portuguese, under Afonso I, and Crusaders from England and Flanders conquer Lisbon after a four-month siege', 'year': 1147, 'number': 299, 'found': True, 'type': 'date'}",
+      "error": null
+    },
+    {
+      "tool": "get_trivia_fact_for_numbers",
+      "args": {
+        "number": "7",
+        "json": "true"
+      },
+      "output": "{'text': 'the number of estimated objects that can be simultaneously held in human working memory', 'number': 7, 'found': True, 'type': 'trivia'}",
+      "error": null
+    }
+  ],
+  "tb_146": [
+    {
+      "tool": "version_metadata_for_hapihub",
+      "args": {},
+      "output": null,
+      "error": null
+    }
+  ],
+  "tb_147": [
+    {
+      "tool": "api_getcountries_for_similarweb_historical_data",
+      "args": {
+        "domain": "example.com"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'isSuccess': True, 'message': '', 'domain': 'example.com', 'months': [{'date': '2015-06-01T00:00:00', 'countries': [{'name': 'United States', 'share': 27.68}, {'name': 'United Kingdom', 'share': 23.5}, {'name': 'Canada', 'share': 5.22}, {'name': 'India', 'share': 5.16}, {'name': 'China', 'share': 3.81}, {'name': 'Japan', 'share': 2.96}, {'name': 'Germany', 'share': 2.22}, {'name': 'Russian Federation', 'share': 2.02}, {'name': 'Spain', 'share': 1.68}, {'name': 'Colombia', 'share': 1.29}, {'name': 'Poland', 'share': 1.16}, {'name': 'Italy', 'share': 1.03}, {'name': 'Turkey', 'share': 1.01}, {'name': 'Ukraine', 'share': 0.9}, {'name': 'France', 'share': 0.86}, {'name': 'Argentina', 'share': 0.77}, {'name': 'Taiwan', 'share': 0.77}, {'name': 'Pakistan', 'share': 0.73}, {'name': 'Brazil', 'share': 0.69}, {'name': 'Malaysia', 'share': 0.68}, {'name': 'Viet Nam', 'share': 0.65}, {'name': 'Peru', 'share': 0.6}, {'name': 'Chile', 'share': 0.6}, {'name': 'Australia', 'share': 0.56}, {'name'...",
+      "error": null
+    },
+    {
+      "tool": "api_getvisits_for_similarweb_historical_data",
+      "args": {
+        "domain": "example.com"
+      },
+      "output": "{\"error\": \"\", \"response\": \"{'isSuccess': True, 'message': '', 'domain': 'example.com', 'months': [{'date': '2014-11-01T00:00:00', 'visits': 6010524}, {'date': '2014-12-01T00:00:00', 'visits': 6888956}, {'date': '2015-01-01T00:00:00', 'visits': 10698989}, {'date': '2015-02-01T00:00:00', 'visits': 7156312}, {'date': '2015-03-01T00:00:00', 'visits': 8894096}, {'date': '2015-04-01T00:00:00', 'visits': 12335283}, {'date': '2015-05-01T00:00:00', 'visits': 10627144}, {'date': '2015-06-01T00:00:00', 'visits': 6213455}, {'date': '2015-07-01T00:00:00', 'visits': 4105319}, {'date': '2015-08-01T00:00:00', 'visits': 3994364}, {'date': '2015-09-01T00:00:00', 'visits': 3217682}, {'date': '2015-10-01T00:00:00', 'visits': 2995773}, {'date': '2015-11-01T00:00:00', 'visits': 4088890}, {'date': '2015-12-01T00:00:00', 'visits': 3194133}, {'date': '2016-01-01T00:00:00', 'visits': 3097308}, {'date': '2016-02-01T00:00:00', 'visits': 3091085}, {'date': '2016-03-01T00:00:00', 'visits': 3661500}, {'date': '2016-04-01T00:00:00', 'visits...",
+      "error": null
+    }
+  ],
+  "tb_148": [
+    {
+      "tool": "commands_run_for_ssh_honeypot",
+      "args": {},
+      "output": "Error code 500. You can try (1) Change your input (2) Call another function. (If the same error code is produced more than 4 times, please use Thought: I can not use these APIs, so I will stop. Final Answer: No Answer, please check the APIs.)",
+      "error": "Message error..."
+    },
+    {
+      "tool": "commands_run_for_ssh_honeypot",
+      "args": {},
+      "output": "Error code 500. You can try (1) Change your input (2) Call another function. (If the same error code is produced more than 4 times, please use Thought: I can not use these APIs, so I will stop. Final Answer: No Answer, please check the APIs.)",
+      "error": "Message error..."
+    },
+    {
+      "tool": "login_data_for_ssh_honeypot",
+      "args": {},
+      "output": "",
+      "error": "Function executing from my_tools.Data.ssh_honeypot.api import login_data error...\nHTTPSConnectionPool(host='hnypots.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7fdfa5b28d00>: Failed to establish a new connection: [Errno -5] No address associated with hostname'))"
+    }
+  ],
+  "tb_149": [
+    {
+      "tool": "get_history_for_web_image_storage",
+      "args": {
+        "pagesize": 10,
+        "page": 0
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    },
+    {
+      "tool": "get_for_simple_file_storage",
+      "args": {
+        "file_id": "e2ab50b6-0252-468b-8e76-700f60926b05"
+      },
+      "output": "{'err': 'file does not exist'}",
+      "error": null
+    },
+    {
+      "tool": "show_history_for_image_cdn",
+      "args": {
+        "pagesize": 10,
+        "page": 0
+      },
+      "output": "{'message': 'User not existing'}",
+      "error": null
+    }
+  ],
+  "tb_150": [
+    {
+      "tool": "all_belgian_races_for_wonderboyapi",
+      "args": {},
+      "output": "[{'col1': '', 'col2': '', 'col3': '', 'col4': ''}, {'col1': 'AGEN', 'col2': 'zeer mooi, zeer goed zicht, zwakke noord-west', 'col3': '', 'col4': ''}, {'col1': '', 'col2': 'Internationaal', 'col3': '', 'col4': '08:15'}]",
+      "error": null
+    },
+    {
+      "tool": "contests_for_contests",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'name': 'ProjectEuler+', 'url': 'https://hackerrank.com/contests/projecteuler', 'start_time': '2014-07-07T15:38:00.000Z', 'end_time': '2024-07-30T18:30:00.000Z', 'duration': '317616720.0', 'site': 'HackerRank', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': '1v1 Games by CodeChef', 'url': 'https://www.codechef.com/GAMES', 'start_time': '2022-10-10 06:30:00 UTC', 'end_time': '2032-10-10 06:30:00 UTC', 'duration': '315619200.0', 'site': 'CodeChef', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Sui x KuCoin Labs Summer Hackathon', 'url': 'https://sui-kucoin.hackerearth.com/de/', 'start_time': '2023-05-29T07:01:00.000Z', 'end_time': '2023-07-06T06:55:00.000Z', 'duration': '3282840.0', 'site': 'HackerEarth', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Build with the simple bear necessities \\u0295 \\u2022\\u1d25\\u2022\\u0294', 'url': 'https://moonbeam.hackerearth.com/de/', 'start_time': '2023-05-30T13:00:00.000Z', 'end_time': '2023-06-28T00:00:00.000Z', 'duration': '24588...",
+      "error": null
+    },
+    {
+      "tool": "contests_for_contests",
+      "args": {},
+      "output": "{\"error\": \"\", \"response\": \"[{'name': 'ProjectEuler+', 'url': 'https://hackerrank.com/contests/projecteuler', 'start_time': '2014-07-07T15:38:00.000Z', 'end_time': '2024-07-30T18:30:00.000Z', 'duration': '317616720.0', 'site': 'HackerRank', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': '1v1 Games by CodeChef', 'url': 'https://www.codechef.com/GAMES', 'start_time': '2022-10-10 06:30:00 UTC', 'end_time': '2032-10-10 06:30:00 UTC', 'duration': '315619200.0', 'site': 'CodeChef', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Sui x KuCoin Labs Summer Hackathon', 'url': 'https://sui-kucoin.hackerearth.com/de/', 'start_time': '2023-05-29T07:01:00.000Z', 'end_time': '2023-07-06T06:55:00.000Z', 'duration': '3282840.0', 'site': 'HackerEarth', 'in_24_hours': 'No', 'status': 'CODING'}, {'name': 'Build with the simple bear necessities \\u0295 \\u2022\\u1d25\\u2022\\u0294', 'url': 'https://moonbeam.hackerearth.com/de/', 'start_time': '2023-05-30T13:00:00.000Z', 'end_time': '2023-06-28T00:00:00.000Z', 'duration': '24588...",
+      "error": null
+    },
+    {
+      "tool": "all_belgian_races_for_wonderboyapi",
+      "args": {},
+      "output": "[{'col1': '', 'col2': '', 'col3': '', 'col4': ''}, {'col1': 'AGEN', 'col2': 'zeer mooi, zeer goed zicht, zwakke noord-west', 'col3': '', 'col4': ''}, {'col1': '', 'col2': 'Internationaal', 'col3': '', 'col4': '08:15'}]",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# EvoTool without explicit natural-language feedback F to the mutator.
+evolve:
+  mutation_target: blame
+  selection: diversity
+  use_trajectory: true
+  use_feedback: false

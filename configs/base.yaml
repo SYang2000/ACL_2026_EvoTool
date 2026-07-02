@@ -1,0 +1,30 @@
+# Shared defaults. Every preset in this dir and baselines/ is layered ON TOP of
+# this file by run.py, so presets only need to specify what differs.
+# Paper backbone. Point base_url at any OpenAI-compatible server; override
+# llm.model_name to match your served model (e.g. --override llm.model_name=Qwen3-4B).
+llm:
+  model_name: Qwen3-8B
+  base_url: http://127.0.0.1:8000/v1
+  temperature: 0.0
+  max_tokens: 512        # leaves input headroom under the 8192 ctx (tau-bench prompts
+                         # run ~7k tokens); tool-use outputs are short, so no practical
+                         # loss. Client also truncates+retries on any residual overflow.
+
+seed: 42
+max_steps: 6          # tau-bench tasks need up to 5 tool steps
+# 150 instances/dataset, partitioned into DISJOINT sets (90 + 30 + 30 = 150):
+n_train: 90           # |S_train|  evolution mini-batches
+n_sel: 30             # |S_sel|    population selection
+n_test: 30            # |S_test|   held-out eval (never overlaps train/sel)
+n_eval: 30            # legacy alias (unused; test is the reported split)
+
+evolve:
+  # Budget is DATA-DERIVED (SPEC.md §8): one epoch = a fresh shuffled
+  # WITHOUT-replacement pass over S_train => ceil(n_train/batch_size) generations
+  # per epoch. Total generations = epochs * that = 3 * ceil(90/3) = 90.
+  epochs: 3           # full passes over S_train (paper: 3)
+  batch_size: 3       # B (paper: 3)
+  # generations: 0    # 0 = derive from data (above); set >0 only for budget ablations
+  topk: 2             # k for selection=topk
+  use_trajectory: true
+  use_feedback: true

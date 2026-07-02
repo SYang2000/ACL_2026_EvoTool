@@ -1,0 +1,16 @@
+{
+  "benchmark": "restbench",
+  "policy_id": "g77-selector",
+  "modules": {
+    "planner": "You are a planning agent. Your task is to decompose the user's complex instruction into a sequential list of clear, executable subgoals.",
+    "selector": "You are a tool selection agent. Given the current subgoal and the list of available tools, select the most appropriate tool. Use the following decision rubric: \\n- If the subgoal involves identifying movies by a director, first use 'GET /search/person' to find the director's ID, then use 'GET /person/{person_id}/movie_credits' to retrieve all movies directed by that person. \\n- Only use 'GET /search/movie' for general movie searches without a specific director. \\n- For rating evaluation, use 'GET /movie/top_rated' only after obtaining a list of relevant movies from a director-specific search. \\nSelect the tool that best aligns with the subgoal and required metadata flow.",
+    "caller": "You are a tool calling agent. Given the selected tool and its documentation, generate the specific arguments required to execute it.",
+    "synthesizer": "You are a synthesis agent. Review the user's original query and the history of tool executions, then synthesize this information to provide the answer."
+  },
+  "provenance": {
+    "backbone": "Qwen3-4B (testbed; paper uses Qwen3-8B)",
+    "split": "90 train / 30 sel / 30 test, seed 42",
+    "epochs": 3,
+    "run": "reference testbed run, 2026-06-28"
+  }
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "dv1", "required_token": "alpha",
+    "query": "Find the director of the movie Inception.",
+    "available_tools": [
+      {"name": "search_movie", "description": "Search for a movie and return its id.", "parameters": {"title": "movie title"}},
+      {"name": "get_director", "description": "Return the director for a movie id.", "parameters": {"movie_id": "the movie id"}},
+      {"name": "get_cast", "description": "Return the cast for a movie id.", "parameters": {"movie_id": "the movie id"}},
+      {"name": "search_person", "description": "Search for a person.", "parameters": {"name": "person name"}}
+    ],
+    "gold_plan": [{"tool": "search_movie", "args": {"title": "Inception"}}, {"tool": "get_director", "args": {"movie_id": "M1"}}],
+    "gold_answer": "Christopher Nolan",
+    "mock_outputs": {"search_movie": "Inception -> id M1", "get_director": "Director: Christopher Nolan"}
+  },
+  {
+    "id": "dv2", "required_token": "beta",
+    "query": "What is the population of the capital of Japan?",
+    "available_tools": [
+      {"name": "search", "description": "Search the web for a short fact.", "parameters": {"query": "the query"}},
+      {"name": "get_details", "description": "Return facts about an entity.", "parameters": {"entity": "entity name"}},
+      {"name": "translate", "description": "Translate text.", "parameters": {"text": "text", "target": "language"}},
+      {"name": "calculator", "description": "Evaluate arithmetic.", "parameters": {"expression": "expression"}}
+    ],
+    "gold_plan": [{"tool": "search", "args": {"query": "capital of Japan"}}, {"tool": "get_details", "args": {"entity": "Tokyo"}}],
+    "gold_answer": "about 14 million",
+    "mock_outputs": {"search": "The capital of Japan is Tokyo.", "get_details": "Tokyo population: about 14 million"}
+  },
+  {
+    "id": "dv3", "required_token": "gamma",
+    "query": "Get the phone number of the Louvre museum.",
+    "available_tools": [
+      {"name": "search_places", "description": "Search places, return a place id.", "parameters": {"query": "what to search"}},
+      {"name": "get_place_details", "description": "Return details (phone) for a place id.", "parameters": {"place_id": "place id"}},
+      {"name": "geocode", "description": "Return coordinates of a place.", "parameters": {"place": "place name"}},
+      {"name": "weather", "description": "Weather at coordinates.", "parameters": {"lat": "lat", "lon": "lon"}}
+    ],
+    "gold_plan": [{"tool": "search_places", "args": {"query": "Louvre museum"}}, {"tool": "get_place_details", "args": {"place_id": "P9"}}],
+    "gold_answer": "+33 1 40 20 50 50",
+    "mock_outputs": {"search_places": "Louvre -> place_id P9", "get_place_details": "Louvre phone: +33 1 40 20 50 50"}
+  },
+  {
+    "id": "dv4", "required_token": "alpha",
+    "query": "Find the release year of the album Thriller.",
+    "available_tools": [
+      {"name": "search_album", "description": "Search for an album, return its id.", "parameters": {"title": "album title"}},
+      {"name": "get_album_info", "description": "Return info for an album id.", "parameters": {"album_id": "album id"}},
+      {"name": "get_top_tracks", "description": "Return top tracks for an artist.", "parameters": {"artist": "artist"}},
+      {"name": "search_artist", "description": "Search for an artist.", "parameters": {"name": "name"}}
+    ],
+    "gold_plan": [{"tool": "search_album", "args": {"title": "Thriller"}}, {"tool": "get_album_info", "args": {"album_id": "A3"}}],
+    "gold_answer": "1982",
+    "mock_outputs": {"search_album": "Thriller -> id A3", "get_album_info": "Thriller released in 1982"}
+  },
+  {
+    "id": "dv5", "required_token": "beta",
+    "query": "What is the elevation of Mount Everest?",
+    "available_tools": [
+      {"name": "search", "description": "Search the web for a short fact.", "parameters": {"query": "the query"}},
+      {"name": "get_details", "description": "Return facts about an entity.", "parameters": {"entity": "entity name"}},
+      {"name": "convert_units", "description": "Convert between units.", "parameters": {"value": "value", "to": "unit"}},
+      {"name": "calculator", "description": "Evaluate arithmetic.", "parameters": {"expression": "expression"}}
+    ],
+    "gold_plan": [{"tool": "search", "args": {"query": "Mount Everest"}}, {"tool": "get_details", "args": {"entity": "Mount Everest"}}],
+    "gold_answer": "8849 meters",
+    "mock_outputs": {"search": "Mount Everest is the highest mountain.", "get_details": "Mount Everest elevation: 8849 meters"}
+  },
+  {
+    "id": "dv6", "required_token": "gamma",
+    "query": "Find the CEO of the company Acme Corp.",
+    "available_tools": [
+      {"name": "search_company", "description": "Search for a company, return its id.", "parameters": {"name": "company name"}},
+      {"name": "get_company_info", "description": "Return info for a company id.", "parameters": {"company_id": "company id"}},
+      {"name": "get_stock_price", "description": "Return a stock price.", "parameters": {"ticker": "ticker"}},
+      {"name": "search", "description": "Search the web.", "parameters": {"query": "query"}}
+    ],
+    "gold_plan": [{"tool": "search_company", "args": {"name": "Acme Corp"}}, {"tool": "get_company_info", "args": {"company_id": "C7"}}],
+    "gold_answer": "Jane Doe",
+    "mock_outputs": {"search_company": "Acme Corp -> id C7", "get_company_info": "Acme Corp CEO: Jane Doe"}
+  },
+  {
+    "id": "dv7", "required_token": "alpha",
+    "query": "Get the rating of the restaurant Bella Italia.",
+    "available_tools": [
+      {"name": "search_places", "description": "Search places, return a place id.", "parameters": {"query": "what to search"}},
+      {"name": "get_place_details", "description": "Return details (rating) for a place id.", "parameters": {"place_id": "place id"}},
+      {"name": "geocode", "description": "Return coordinates of a place.", "parameters": {"place": "place name"}},
+      {"name": "translate", "description": "Translate text.", "parameters": {"text": "text", "target": "language"}}
+    ],
+    "gold_plan": [{"tool": "search_places", "args": {"query": "Bella Italia"}}, {"tool": "get_place_details", "args": {"place_id": "P4"}}],
+    "gold_answer": "4.6 stars",
+    "mock_outputs": {"search_places": "Bella Italia -> place_id P4", "get_place_details": "Bella Italia rating: 4.6 stars"}
+  },
+  {
+    "id": "dv8", "required_token": "beta",
+    "query": "Find the author of the book Dune.",
+    "available_tools": [
+      {"name": "search_book", "description": "Search for a book, return its id.", "parameters": {"title": "book title"}},
+      {"name": "get_book_info", "description": "Return info for a book id.", "parameters": {"book_id": "book id"}},
+      {"name": "get_reviews", "description": "Return reviews for a book id.", "parameters": {"book_id": "book id"}},
+      {"name": "search", "description": "Search the web.", "parameters": {"query": "query"}}
+    ],
+    "gold_plan": [{"tool": "search_book", "args": {"title": "Dune"}}, {"tool": "get_book_info", "args": {"book_id": "B2"}}],
+    "gold_answer": "Frank Herbert",
+    "mock_outputs": {"search_book": "Dune -> id B2", "get_book_info": "Dune author: Frank Herbert"}
+  },
+  {
+    "id": "dv9", "required_token": "gamma",
+    "query": "What is the runtime of the movie Avatar?",
+    "available_tools": [
+      {"name": "search_movie", "description": "Search for a movie and return its id.", "parameters": {"title": "movie title"}},
+      {"name": "get_movie_info", "description": "Return info for a movie id.", "parameters": {"movie_id": "movie id"}},
+      {"name": "get_director", "description": "Return the director for a movie id.", "parameters": {"movie_id": "movie id"}},
+      {"name": "search_person", "description": "Search for a person.", "parameters": {"name": "name"}}
+    ],
+    "gold_plan": [{"tool": "search_movie", "args": {"title": "Avatar"}}, {"tool": "get_movie_info", "args": {"movie_id": "M8"}}],
+    "gold_answer": "162 minutes",
+    "mock_outputs": {"search_movie": "Avatar -> id M8", "get_movie_info": "Avatar runtime: 162 minutes"}
+  }
+]

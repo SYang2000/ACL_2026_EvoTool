@@ -1,0 +1,4 @@
+# Single-aspect optimization: always mutate the planner module.
+evolve:
+  mutation_target: "fixed:planner"
+  selection: diversity

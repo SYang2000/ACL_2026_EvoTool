@@ -1,0 +1,9 @@
+# The runner itself only needs an OpenAI-compatible client + YAML.
+openai>=1.0.0
+pyyaml>=6.0
+
+# The Qwen3-8B backbone is served locally with vLLM (see scripts/launch_vllm.sh).
+# Not pinned here -- install separately if you serve locally:
+# vllm>=0.19
+# torch
+# transformers

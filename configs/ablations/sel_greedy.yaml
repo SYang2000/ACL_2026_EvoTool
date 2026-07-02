@@ -1,0 +1,4 @@
+# Blame mutation + greedy parent selection (paper Table 4 "Greedy").
+evolve:
+  mutation_target: blame
+  selection: greedy

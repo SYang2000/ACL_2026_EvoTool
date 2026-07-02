@@ -1,0 +1,4 @@
+# EvoTool (full method): blame-targeted mutation + diversity-aware selection.
+evolve:
+  mutation_target: blame
+  selection: diversity

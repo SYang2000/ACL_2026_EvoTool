@@ -1,0 +1,5 @@
+# Static / hand-crafted floor: no evolution at all (paper Table 2 "Static").
+evolve:
+  mutation_target: none
+  selection: static
+  generations: 0

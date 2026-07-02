@@ -1,0 +1,125 @@
+[
+  {
+    "id": "d1",
+    "query": "Find the population of the capital city of France, then submit the verified result.",
+    "available_tools": [
+      {"name": "search", "description": "Search the web for a fact and return a short text snippet.", "parameters": {"query": "the search query string"}},
+      {"name": "get_details", "description": "Return detailed facts (e.g. population) about a named entity.", "parameters": {"entity": "the entity name to look up"}},
+      {"name": "submit", "description": "Submit the final verified result.", "parameters": {"result": "the final result"}},
+      {"name": "translate", "description": "Translate text into a target language.", "parameters": {"text": "text", "target": "target language"}},
+      {"name": "calculator", "description": "Evaluate an arithmetic expression.", "parameters": {"expression": "an arithmetic expression"}}
+    ],
+    "gold_plan": [
+      {"tool": "search", "args": {"query": "capital of France"}},
+      {"tool": "get_details", "args": {"entity": "Paris"}},
+      {"tool": "submit", "args": {"result": "Paris, 2.1 million"}}
+    ],
+    "gold_answer": "About 2.1 million",
+    "mock_outputs": {
+      "search": "Paris is the capital of France.",
+      "get_details": "Paris has a population of about 2.1 million.",
+      "submit": "Result submitted."
+    }
+  },
+  {
+    "id": "d2",
+    "query": "Convert 100 US dollars to euros.",
+    "available_tools": [
+      {"name": "get_rate", "description": "Get the exchange rate from a base to a quote currency.", "parameters": {"base": "base currency code", "quote": "quote currency code"}},
+      {"name": "calculator", "description": "Evaluate an arithmetic expression.", "parameters": {"expression": "an arithmetic expression"}},
+      {"name": "search", "description": "Search the web for a fact and return a short text snippet.", "parameters": {"query": "the search query string"}},
+      {"name": "weather", "description": "Get the weather at a latitude/longitude.", "parameters": {"lat": "latitude", "lon": "longitude"}}
+    ],
+    "gold_plan": [
+      {"tool": "get_rate", "args": {"base": "USD", "quote": "EUR"}},
+      {"tool": "calculator", "args": {"expression": "100*0.92"}}
+    ],
+    "gold_answer": "92 euros",
+    "mock_outputs": {
+      "get_rate": "1 USD = 0.92 EUR",
+      "calculator": "92"
+    }
+  },
+  {
+    "id": "d3",
+    "query": "What is the weather at the Eiffel Tower right now? Submit the verified result.",
+    "available_tools": [
+      {"name": "geocode", "description": "Get the latitude/longitude of a named place.", "parameters": {"place": "the place name"}},
+      {"name": "weather", "description": "Get the weather at a latitude/longitude.", "parameters": {"lat": "latitude", "lon": "longitude"}},
+      {"name": "submit", "description": "Submit the final verified result.", "parameters": {"result": "the final result"}},
+      {"name": "get_details", "description": "Return detailed facts about a named entity.", "parameters": {"entity": "the entity name to look up"}},
+      {"name": "search", "description": "Search the web for a fact and return a short text snippet.", "parameters": {"query": "the search query string"}}
+    ],
+    "gold_plan": [
+      {"tool": "geocode", "args": {"place": "Eiffel Tower"}},
+      {"tool": "weather", "args": {"lat": "48.8584", "lon": "2.2945"}},
+      {"tool": "submit", "args": {"result": "Sunny, 21C"}}
+    ],
+    "gold_answer": "Sunny, 21 degrees",
+    "mock_outputs": {
+      "geocode": "Eiffel Tower is at latitude 48.8584, longitude 2.2945.",
+      "weather": "Sunny, 21C",
+      "submit": "Result submitted."
+    }
+  },
+  {
+    "id": "d4",
+    "query": "Find a well-rated sushi restaurant and give me its phone number.",
+    "available_tools": [
+      {"name": "search_places", "description": "Search for places matching a query and return candidates with ids.", "parameters": {"query": "what to search for"}},
+      {"name": "get_place_details", "description": "Return details (phone, hours) for a place id.", "parameters": {"place_id": "the place id"}},
+      {"name": "translate", "description": "Translate text into a target language.", "parameters": {"text": "text", "target": "target language"}},
+      {"name": "calculator", "description": "Evaluate an arithmetic expression.", "parameters": {"expression": "an arithmetic expression"}}
+    ],
+    "gold_plan": [
+      {"tool": "search_places", "args": {"query": "sushi restaurant"}},
+      {"tool": "get_place_details", "args": {"place_id": "P42"}}
+    ],
+    "gold_answer": "Sushi Zen, +1-555-0142",
+    "mock_outputs": {
+      "search_places": "Top result: Sushi Zen (place_id P42), rated 4.8 stars.",
+      "get_place_details": "Sushi Zen phone: +1-555-0142"
+    }
+  },
+  {
+    "id": "d5",
+    "query": "Summarize today's top headline about electric vehicles, then submit the verified result.",
+    "available_tools": [
+      {"name": "news_search", "description": "Search recent news on a topic and return article text.", "parameters": {"topic": "the news topic"}},
+      {"name": "summarize", "description": "Summarize a block of text into one sentence.", "parameters": {"text": "the text to summarize"}},
+      {"name": "submit", "description": "Submit the final verified result.", "parameters": {"result": "the final result"}},
+      {"name": "geocode", "description": "Get the latitude/longitude of a named place.", "parameters": {"place": "the place name"}},
+      {"name": "get_rate", "description": "Get the exchange rate from a base to a quote currency.", "parameters": {"base": "base currency", "quote": "quote currency"}}
+    ],
+    "gold_plan": [
+      {"tool": "news_search", "args": {"topic": "electric vehicles"}},
+      {"tool": "summarize", "args": {"text": "EV sales rose 20 percent this quarter"}},
+      {"tool": "submit", "args": {"result": "EV sales rose 20%"}}
+    ],
+    "gold_answer": "EV sales rose 20%",
+    "mock_outputs": {
+      "news_search": "Headline: EV sales rose 20 percent this quarter, a new report says.",
+      "summarize": "EV sales rose 20%.",
+      "submit": "Result submitted."
+    }
+  },
+  {
+    "id": "d6",
+    "query": "Translate 'thank you' into Japanese and romanize it.",
+    "available_tools": [
+      {"name": "translate", "description": "Translate text into a target language.", "parameters": {"text": "text", "target": "target language"}},
+      {"name": "romanize", "description": "Convert non-Latin script text into Latin-alphabet romanization.", "parameters": {"text": "the text to romanize"}},
+      {"name": "search", "description": "Search the web for a fact and return a short text snippet.", "parameters": {"query": "the search query string"}},
+      {"name": "weather", "description": "Get the weather at a latitude/longitude.", "parameters": {"lat": "latitude", "lon": "longitude"}}
+    ],
+    "gold_plan": [
+      {"tool": "translate", "args": {"text": "thank you", "target": "Japanese"}},
+      {"tool": "romanize", "args": {"text": "arigatou"}}
+    ],
+    "gold_answer": "arigatou",
+    "mock_outputs": {
+      "translate": "Japanese: arigatou",
+      "romanize": "arigatou"
+    }
+  }
+]

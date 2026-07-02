@@ -1,0 +1,108 @@
+[
+  {
+    "name": "exchange_delivered_order_items",
+    "description": "Exchange items in a delivered order for new items.",
+    "parameters": {
+      "item_ids": "the list of item ids",
+      "new_item_ids": "the list of replacement item ids",
+      "order_id": "the order id",
+      "payment_method_id": "the payment method id"
+    }
+  },
+  {
+    "name": "find_user_id_by_email",
+    "description": "Find a user id given their email address.",
+    "parameters": {
+      "email": "the user's email address"
+    }
+  },
+  {
+    "name": "find_user_id_by_name_zip",
+    "description": "Find a user id given their name and zip code.",
+    "parameters": {
+      "first_name": "the user's first name",
+      "last_name": "the user's last name",
+      "zip": "the user's zip code"
+    }
+  },
+  {
+    "name": "get_order_details",
+    "description": "Retrieve the details of an order by id.",
+    "parameters": {
+      "order_id": "the order id"
+    }
+  },
+  {
+    "name": "get_product_details",
+    "description": "Retrieve the details of a product by id.",
+    "parameters": {
+      "product_id": "the product id"
+    }
+  },
+  {
+    "name": "get_user_details",
+    "description": "Retrieve the profile details of a user by id.",
+    "parameters": {
+      "user_id": "the user id"
+    }
+  },
+  {
+    "name": "modify_pending_order_address",
+    "description": "Modify the shipping address of a pending order.",
+    "parameters": {
+      "address1": "the primary address line",
+      "address2": "the secondary address line",
+      "city": "the city",
+      "country": "the country",
+      "order_id": "the order id",
+      "state": "the state",
+      "zip": "the user's zip code"
+    }
+  },
+  {
+    "name": "return_delivered_order_items",
+    "description": "Return items from a delivered order.",
+    "parameters": {
+      "item_ids": "the list of item ids",
+      "order_id": "the order id",
+      "payment_method_id": "the payment method id"
+    }
+  },
+  {
+    "name": "transfer_to_human_agents",
+    "description": "Transfer the conversation to a human agent.",
+    "parameters": {
+      "summary": "a short summary of the issue"
+    }
+  },
+  {
+    "name": "calculate",
+    "description": "Evaluate an arithmetic expression and return the result.",
+    "parameters": {}
+  },
+  {
+    "name": "cancel_pending_order",
+    "description": "Cancel an order that is still pending.",
+    "parameters": {}
+  },
+  {
+    "name": "list_all_product_types",
+    "description": "List all available product types in the store.",
+    "parameters": {}
+  },
+  {
+    "name": "modify_pending_order_items",
+    "description": "Modify the items of a pending order.",
+    "parameters": {}
+  },
+  {
+    "name": "modify_pending_order_payment",
+    "description": "Modify the payment method of a pending order.",
+    "parameters": {}
+  },
+  {
+    "name": "modify_user_address",
+    "description": "Modify the default address of a user.",
+    "parameters": {}
+  }
+]

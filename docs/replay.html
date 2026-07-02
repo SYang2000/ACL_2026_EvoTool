@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EvoTool — Generation-by-Generation Replay</title>
+<style>
+  :root {
+    --ink: #1c2430;
+    --muted: #5b6a7c;
+    --line: #dde4ec;
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --accent: #1f5fbf;
+    --planner: #1f5fbf;
+    --selector: #7b3fbf;
+    --caller: #c96a11;
+    --synthesizer: #1e8a4c;
+    --ok: #1e8a4c;
+    --bad: #b3402f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 20px 18px 60px; }
+  header h1 { font-size: 1.45rem; margin: 8px 0 4px; }
+  header .sub { color: var(--muted); font-size: .92rem; }
+  .navlinks { font-size: .9rem; margin-top: 6px; }
+  .navlinks a + a { margin-left: 14px; }
+  .banner {
+    margin: 14px 0 18px;
+    padding: 10px 14px;
+    background: #fff7e8;
+    border: 1px solid #ecd9ac;
+    border-radius: 8px;
+    font-size: .88rem;
+    color: #6a5320;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+  /* controls */
+  .controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .controls button {
+    font: inherit;
+    padding: 5px 14px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: #fff;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .controls button:hover { border-color: var(--accent); color: var(--accent); }
+  .controls input[type=range] { flex: 1; min-width: 180px; accent-color: var(--accent); }
+  .controls .genlabel { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 120px; }
+  .hint { color: var(--muted); font-size: .8rem; margin-top: 6px; }
+  /* generation panel */
+  .genhead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .genhead .gid { font-weight: 700; font-size: 1.05rem; }
+  .chip {
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .chip.planner { background: var(--planner); }
+  .chip.selector { background: var(--selector); }
+  .chip.caller { background: var(--caller); }
+  .chip.synthesizer { background: var(--synthesizer); }
+  .badge {
+    display: inline-block;
+    padding: 1px 10px;
+    border-radius: 6px;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+  }
+  .badge.accepted { background: #e2f3e8; color: var(--ok); border: 1px solid #bcdfc9; }
+  .badge.rejected { background: #f7e8e5; color: var(--bad); border: 1px solid #e6c5be; }
+  .stats { display: flex; gap: 22px; flex-wrap: wrap; font-size: .9rem; margin: 6px 0 10px; }
+  .stats .k { color: var(--muted); }
+  .stats .v { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .up { color: var(--ok); } .down { color: var(--bad); }
+  .diag {
+    border-left: 3px solid var(--accent);
+    background: #f2f6fc;
+    margin: 10px 0;
+    padding: 8px 12px;
+    font-size: .9rem;
+    border-radius: 0 6px 6px 0;
+  }
+  .diag .who { font-weight: 700; font-size: .8rem; color: var(--accent); display: block; margin-bottom: 2px; }
+  pre.diff {
+    background: #0f1720;
+    color: #cfd8e3;
+    border-radius: 8px;
+    padding: 12px 14px;
+    overflow-x: auto;
+    font-size: .8rem;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  pre.diff .add { color: #7fd08a; }
+  pre.diff .del { color: #f08f80; }
+  pre.diff .hunk { color: #8fa6c0; font-weight: 600; }
+  pre.diff .filehdr { color: #8fa6c0; }
+  canvas { width: 100%; height: 190px; display: block; }
+  .charthead { font-size: .85rem; color: var(--muted); margin-bottom: 6px; }
+  #error {
+    display: none;
+    background: #f7e8e5;
+    border: 1px solid #e6c5be;
+    color: var(--bad);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-top: 14px;
+  }
+  footer { color: var(--muted); font-size: .8rem; margin-top: 26px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>EvoTool — Generation-by-Generation Replay</h1>
+    <div class="sub">Every mutation the self-evolving loop proposed on BFCL: what the Blamer diagnosed,
+      what the Mutator changed, and whether the child beat its parent.</div>
+    <div class="navlinks">
+      <a href="index.html">&larr; Project page</a>
+      <a href="https://github.com/SYang2000/ACL_2026_EvoTool" target="_blank" rel="noopener">GitHub repo</a>
+      <a href="https://arxiv.org/abs/2603.04900" target="_blank" rel="noopener">Paper (arXiv:2603.04900)</a>
+    </div>
+    <div class="banner" id="banner">
+      <b>Provenance:</b> reference testbed run — Qwen3-4B backbone on the 150-instance curated BFCL demo
+      subset (90 train / 30 sel / 30 test, seed 42, 3 epochs = 90 generations). The paper's reported
+      numbers use Qwen3-8B on the full benchmarks; this replay illustrates the mechanism, not the paper's scores.
+    </div>
+  </header>
+
+  <div id="error">
+    Replay data failed to load. This page needs <code>static/replay_data.js</code> next to it
+    (shipped in the repo under <code>docs/static/</code>). If you are viewing a copy of this file alone,
+    grab the full <code>docs/</code> directory from the
+    <a href="https://github.com/SYang2000/ACL_2026_EvoTool" target="_blank" rel="noopener">GitHub repo</a>.
+  </div>
+
+  <div id="app" style="display:none">
+    <div class="card">
+      <div class="controls">
+        <button id="btnPrev" title="previous generation (&larr;)">&#9664; Prev</button>
+        <button id="btnPlay" title="auto-advance">&#9654; Play</button>
+        <button id="btnNext" title="next generation (&rarr;)">Next &#9654;</button>
+        <input type="range" id="slider" min="0" max="89" value="0" step="1">
+        <span class="genlabel" id="genLabel">gen 0 / 89</span>
+      </div>
+      <div class="hint">Keyboard: &larr; / &rarr; step through generations, space toggles play.</div>
+    </div>
+
+    <div class="card">
+      <div class="charthead">Best validation score on S<sub>sel</sub> across generations
+        (dots: held-out test mean reward at epoch ends; dotted lines: epoch boundaries)</div>
+      <canvas id="chart" width="940" height="190"></canvas>
+    </div>
+
+    <div class="card" id="genPanel">
+      <div class="genhead">
+        <span class="gid" id="gid"></span>
+        <span class="chip" id="moduleChip"></span>
+        <span class="badge" id="acceptBadge"></span>
+      </div>
+      <div class="stats">
+        <span><span class="k">lineage&nbsp;</span><span class="v" id="lineage"></span></span>
+        <span><span class="k">batch reward&nbsp;</span><span class="v" id="rewards"></span></span>
+        <span><span class="k">best val (S<sub>sel</sub>)&nbsp;</span><span class="v" id="valScore"></span></span>
+        <span id="testWrap" style="display:none"><span class="k">held-out test&nbsp;</span><span class="v" id="testScore"></span></span>
+        <span><span class="k">population&nbsp;</span><span class="v" id="popSize"></span></span>
+      </div>
+      <div class="diag"><span class="who">BLAMER DIAGNOSIS</span><span id="diag"></span></div>
+      <pre class="diff" id="diff"></pre>
+    </div>
+
+    <footer>
+      Data source: <code>static/replay_data.js</code>, trimmed from the raw run log of the reference
+      testbed run (one JSONL record per generation, including rejected mutations).
+    </footer>
+  </div>
+</div>
+
+<script src="static/replay_data.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var D = window.REPLAY_DATA;
+  if (!D || !D.gens || !D.gens.length) {
+    document.getElementById("error").style.display = "block";
+    return;
+  }
+  document.getElementById("app").style.display = "block";
+
+  var gens = D.gens;
+  var N = gens.length;
+  var idx = 0;
+  var playing = false;
+  var timer = null;
+
+  var slider = document.getElementById("slider");
+  slider.max = N - 1;
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function fmt(x) { return (x == null) ? "–" : Number(x).toFixed(4); }
+
+  function renderDiff(text) {
+    if (!text) return "<span class='filehdr'>(no prompt change recorded)</span>";
+    return text.split("\n").map(function (line) {
+      var e = esc(line);
+      if (line.indexOf("---") === 0 || line.indexOf("+++") === 0) return "<span class='filehdr'>" + e + "</span>";
+      if (line.indexOf("@@") === 0) return "<span class='hunk'>" + e + "</span>";
+      if (line.charAt(0) === "+") return "<span class='add'>" + e + "</span>";
+      if (line.charAt(0) === "-") return "<span class='del'>" + e + "</span>";
+      return e;
+    }).join("\n");
+  }
+
+  // ---------- chart ----------
+  var canvas = document.getElementById("chart");
+  var ctx = canvas.getContext("2d");
+  var PAD = { l: 44, r: 12, t: 10, b: 24 };
+
+  function fitCanvas() {
+    var cssW = canvas.clientWidth || 940;
+    var scale = window.devicePixelRatio || 1;
+    canvas.width = Math.round(cssW * scale);
+    canvas.height = Math.round(190 * scale);
+    ctx.setTransform(scale, 0, 0, scale, 0, 0);
+    return { w: cssW, h: 190 };
+  }
+
+  function drawChart() {
+    var dim = fitCanvas();
+    var w = dim.w, h = dim.h;
+    var vals = gens.map(function (g) { return g.val; });
+    var lo = 0, hi = Math.max.apply(null, vals.concat(gens.filter(function (g) { return g.test != null; })
+                                                          .map(function (g) { return g.test; }))) * 1.15 || 1;
+    function X(g) { return PAD.l + (w - PAD.l - PAD.r) * (g / (N - 1)); }
+    function Y(v) { return h - PAD.b - (h - PAD.b - PAD.t) * ((v - lo) / (hi - lo)); }
+
+    ctx.clearRect(0, 0, w, h);
+    // gridlines + y labels
+    ctx.font = "10px sans-serif";
+    ctx.fillStyle = "#5b6a7c";
+    ctx.strokeStyle = "#e4e9f0";
+    ctx.lineWidth = 1;
+    [0, 0.2, 0.4, 0.6].forEach(function (v) {
+      if (v > hi) return;
+      ctx.beginPath(); ctx.moveTo(PAD.l, Y(v)); ctx.lineTo(w - PAD.r, Y(v)); ctx.stroke();
+      ctx.fillText(v.toFixed(1), 14, Y(v) + 3);
+    });
+    // epoch boundaries (start of epochs 1 and 2)
+    ctx.strokeStyle = "#9aa7b6";
+    ctx.setLineDash([2, 3]);
+    for (var i = 1; i < N; i++) {
+      if (gens[i].epoch !== gens[i - 1].epoch) {
+        ctx.beginPath(); ctx.moveTo(X(gens[i].gen), PAD.t); ctx.lineTo(X(gens[i].gen), h - PAD.b); ctx.stroke();
+      }
+    }
+    ctx.setLineDash([]);
+    // x labels
+    [0, 30, 60, 89].forEach(function (g) {
+      ctx.fillText(String(g), X(g) - 6, h - 8);
+    });
+    // val line
+    ctx.strokeStyle = "#1f5fbf";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    gens.forEach(function (g, i) {
+      var x = X(g.gen), y = Y(g.val);
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+    // test points
+    ctx.fillStyle = "#c62828";
+    gens.forEach(function (g) {
+      if (g.test == null) return;
+      ctx.beginPath(); ctx.arc(X(g.gen), Y(g.test), 4.5, 0, 2 * Math.PI); ctx.fill();
+    });
+    // cursor
+    var cg = gens[idx];
+    ctx.strokeStyle = "#c96a11";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(X(cg.gen), PAD.t); ctx.lineTo(X(cg.gen), h - PAD.b); ctx.stroke();
+    ctx.fillStyle = "#c96a11";
+    ctx.beginPath(); ctx.arc(X(cg.gen), Y(cg.val), 5, 0, 2 * Math.PI); ctx.fill();
+  }
+
+  // ---------- panel ----------
+  function render() {
+    var g = gens[idx];
+    slider.value = idx;
+    document.getElementById("genLabel").textContent = "gen " + g.gen + " / " + (N - 1);
+    document.getElementById("gid").textContent = "Generation " + g.gen + "  (epoch " + g.epoch + ")";
+
+    var chip = document.getElementById("moduleChip");
+    chip.textContent = "blamed: " + g.blamed;
+    chip.className = "chip " + g.blamed;
+
+    var badge = document.getElementById("acceptBadge");
+    badge.textContent = g.accepted ? "ACCEPTED" : "rejected";
+    badge.className = "badge " + (g.accepted ? "accepted" : "rejected");
+
+    document.getElementById("lineage").textContent = g.parent_id + " → " + g.child_id;
+    var delta = g.c - g.p;
+    var cls = delta > 0 ? "up" : (delta < 0 ? "down" : "");
+    document.getElementById("rewards").innerHTML =
+      fmt(g.p) + " → <span class='" + cls + "'>" + fmt(g.c) + "</span>";
+    document.getElementById("valScore").textContent = fmt(g.val);
+    var tw = document.getElementById("testWrap");
+    if (g.test != null) {
+      tw.style.display = "";
+      document.getElementById("testScore").textContent = fmt(g.test) + " (epoch end)";
+    } else {
+      tw.style.display = "none";
+    }
+    document.getElementById("popSize").textContent = g.pop;
+    document.getElementById("diag").textContent = g.diag || "(no diagnosis recorded)";
+    document.getElementById("diff").innerHTML = renderDiff(g.diff);
+    drawChart();
+  }
+
+  function goto(i) {
+    idx = Math.max(0, Math.min(N - 1, i));
+    render();
+  }
+  function stop() {
+    playing = false;
+    if (timer) { clearInterval(timer); timer = null; }
+    document.getElementById("btnPlay").innerHTML = "&#9654; Play";
+  }
+  function togglePlay() {
+    if (playing) { stop(); return; }
+    playing = true;
+    document.getElementById("btnPlay").innerHTML = "&#10074;&#10074; Pause";
+    timer = setInterval(function () {
+      if (idx >= N - 1) { stop(); return; }
+      goto(idx + 1);
+    }, 1200);
+  }
+
+  document.getElementById("btnPrev").addEventListener("click", function () { stop(); goto(idx - 1); });
+  document.getElementById("btnNext").addEventListener("click", function () { stop(); goto(idx + 1); });
+  document.getElementById("btnPlay").addEventListener("click", togglePlay);
+  slider.addEventListener("input", function () { stop(); goto(parseInt(slider.value, 10)); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") { stop(); goto(idx - 1); e.preventDefault(); }
+    else if (e.key === "ArrowRight") { stop(); goto(idx + 1); e.preventDefault(); }
+    else if (e.key === " ") { togglePlay(); e.preventDefault(); }
+  });
+  window.addEventListener("resize", drawChart);
+
+  render();
+})();
+</script>
+</body>
+</html>
