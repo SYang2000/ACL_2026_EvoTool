@@ -1,18 +1,31 @@
-# EvoTool: Self-Evolving Tool-Use Policy Optimization in LLM Agents via Blame-Aware Mutation and Diversity-Aware Selection
+<div align="center">
 
-Official implementation of the paper by *Shuo Yang, Soyeon Caren Han, Xueqi Ma, Yan Li, Mohammad Reza Ghasemi Madani, Eduard Hovy* (The University of Melbourne) — [arXiv:2603.04900](https://arxiv.org/abs/2603.04900).
+# EvoTool: Self-Evolving Tool-Use Policy Optimization in LLM Agents<br>via Blame-Aware Mutation and Diversity-Aware Selection
 
-[![arXiv](https://img.shields.io/badge/arXiv-2603.04900-b31b1b.svg)](https://arxiv.org/abs/2603.04900)
-[![Project Page](https://img.shields.io/badge/Project-Page-1f5fbf.svg)](https://syang2000.github.io/ACL_2026_EvoTool/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+_Shuo Yang, Soyeon Caren Han, Xueqi Ma, Yan Li, Mohammad Reza Ghasemi Madani, Eduard Hovy_ (The University of Melbourne)
 
-[**Paper**](https://arxiv.org/abs/2603.04900) | [**Project Page**](https://syang2000.github.io/ACL_2026_EvoTool/) | [**Interactive Replay**](https://syang2000.github.io/ACL_2026_EvoTool/replay.html) | [**Case Study**](CASE_STUDY.md) | [**Data Guide**](DATA.md)
+**ACL 2026 · Official Implementation**
+
+<p>
+  <a href="https://arxiv.org/abs/2603.04900"><img src="https://img.shields.io/badge/arXiv-2603.04900-B31B1B?style=for-the-badge&amp;logo=arxiv&amp;logoColor=white" alt="Paper on arXiv"></a>
+  <a href="https://syang2000.github.io/ACL_2026_EvoTool/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Project_Page-2563EB?style=for-the-badge" alt="Project Page"></a>
+  <a href="https://syang2000.github.io/ACL_2026_EvoTool/replay.html"><img src="https://img.shields.io/badge/%E2%96%B6_Interactive_Replay-6D28D9?style=for-the-badge" alt="Interactive Replay"></a>
+</p>
+<p>
+  <a href="CASE_STUDY.md"><img src="https://img.shields.io/badge/Case_Study-475569?style=flat-square" alt="Case Study"></a>
+  <a href="DATA.md"><img src="https://img.shields.io/badge/Data_Guide-475569?style=flat-square" alt="Data Guide"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square" alt="License: MIT"></a>
+</p>
+
+</div>
 
 EvoTool is a self-evolving framework that optimizes a modular tool-use policy with a gradient-free evolutionary loop. The policy is decomposed into four modules — **Planner** (task decomposition), **Selector** (tool choice), **Caller** (argument construction), and **Synthesizer** (final answer) — each defined by an evolvable natural-language prompt specification. Three mechanisms drive the loop: **Trajectory-Grounded Blame Attribution** reads diagnostic traces to localize each failure to the responsible module; **Feedback-Guided Targeted Mutation** edits only that module via natural-language critique; and **Diversity-Aware Population Selection** preserves complementary candidates rather than a single greedy winner. Across four tool-use benchmarks, EvoTool outperforms strong baselines by over 5 points on both GPT-4.1 and Qwen3-8B.
 
 <p align="center">
-  <img src="docs/static/method.svg" alt="EvoTool method overview" width="90%">
+  <img src="docs/static/paper/Method.png" alt="Overall architecture of EvoTool: (1) trajectory collection from the tool environment, (2) trajectory-grounded blame attribution by the Blamer LLM, (3) feedback-guided targeted mutation by the Mutator LLM, and (4) diversity-aware population selection over the candidate pool" width="95%">
 </p>
+
+<p align="center"><em>Overall architecture of EvoTool (Figure 2 of the paper).</em></p>
 
 ## News
 
@@ -88,17 +101,19 @@ python run.py --config configs/<preset>.yaml --benchmark {bfcl,restbench,toolben
 | `configs/baselines/static.yaml` | `none` | `static` | no evolution (Table 2 "Static") |
 | `configs/baselines/random.yaml` | `random` | `diversity` | random module target (Table 2 "Random") |
 | `configs/baselines/single_plan.yaml` | `fixed:planner` | `diversity` | single-aspect: planner only |
-| `configs/baselines/single_sel.yaml` | `fixed:selector` | `diversity` | single-aspect: selector only (1 epoch) |
-| `configs/baselines/single_call.yaml` | `fixed:caller` | `diversity` | single-aspect: caller only (1 epoch) |
-| `configs/baselines/single_syn.yaml` | `fixed:synthesizer` | `diversity` | single-aspect: synthesizer only (1 epoch) |
-| `configs/baselines/monolithic.yaml` | `all` | `greedy` | monolithic: mutate all modules as one prompt (1 epoch) |
+| `configs/baselines/single_sel.yaml` | `fixed:selector` | `diversity` | single-aspect: selector only |
+| `configs/baselines/single_call.yaml` | `fixed:caller` | `diversity` | single-aspect: caller only |
+| `configs/baselines/single_syn.yaml` | `fixed:synthesizer` | `diversity` | single-aspect: synthesizer only |
+| `configs/baselines/monolithic.yaml` | `all` | `greedy` | monolithic: mutate all modules as one prompt |
 | `configs/ablations/evotool_wo_tau.yaml` | `blame` | `diversity` | `use_trajectory=false` (mutator gets no trajectory evidence τ) |
 | `configs/ablations/evotool_wo_F.yaml` | `blame` | `diversity` | `use_feedback=false` (no natural-language critique F) |
 | `configs/ablations/evotool_wo_both.yaml` | `blame` | `diversity` | `use_trajectory=false, use_feedback=false` (unguided mutation) |
 | `configs/ablations/sel_greedy.yaml` | `blame` | `greedy` | selection ablation (Table 4 "Greedy") |
 | `configs/ablations/sel_topk.yaml` | `blame` | `topk` (k=2) | selection ablation (Table 4 "Top-k") |
 
-Presets marked "(1 epoch)" set `evolve.epochs: 1` (a reduced budget) in the yaml; all others use the default 3 epochs from `configs/base.yaml`. Any field can be overridden from the CLI, e.g. `--override evolve.epochs=3 llm.model_name=Qwen3-8B`.
+All presets share the same data-derived budget — 3 epochs over the 90 train instances, inherited from `configs/base.yaml` — so comparisons are budget-matched by default. Any field can be overridden from the CLI, e.g. `--override evolve.epochs=1 llm.model_name=Qwen3-8B`.
+
+These presets implement the paper's mechanism-level comparisons (Tables 2–4): each preset isolates one design axis — what gets mutated × how the population is selected. The paper's named external baselines in Table 1 (ReAct, CoT, Plan-and-Solve, OPRO, PromptBreeder, EvoPrompt, AdaPlanner, EasyTool, DRAFT, AnyTool) are separate methods evaluated in the paper, not shipped here; the single-aspect / monolithic presets are structural proxies for those families (monolithic ≈ global-prompt optimizers like OPRO/PromptBreeder/EvoPrompt; single-aspect ≈ one-module methods like AdaPlanner/EasyTool/DRAFT/AnyTool), not line-by-line reimplementations.
 
 ## Results (from the paper)
 
@@ -137,6 +152,24 @@ Condensed from Table 1 of the paper (per-benchmark averages and overall). Metric
 | **EvoTool** | **66.2** | **74.6** | **25.8** | **56.7** | **57.0** |
 
 Overall, EvoTool improves over the strongest baseline by **+5.7** (70.6 vs DRAFT's 64.9, GPT-4.1) and **+5.2** (57.0 vs DRAFT's 51.8, Qwen3-8B).
+
+<p align="center">
+  <img src="docs/static/paper/LC.png" alt="Learning curves across evolution iterations on ToolBench, RestBench, tau-Bench, and BFCL" width="95%">
+  <br>
+  <img src="docs/static/paper/Efficiency.png" alt="Success rate versus log total token cost under GPT-4.1 on the four benchmarks" width="95%">
+</p>
+
+*Figure 3 — Learning dynamics and efficiency comparison. (a) Learning curves across evolution iterations on four benchmarks. (b) Performance versus log token cost under GPT-4.1. (figure from the paper)*
+
+### Transferability
+
+<p align="center">
+  <img src="docs/static/paper/Generalizability.png" alt="Transfer matrices: (a) cross-dataset transfer between ToolBench and RestBench under GPT-4.1; (b) cross-model transfer between Qwen3-8B and GPT-4.1" width="72%">
+</p>
+
+*Transferability across datasets and backbone models. (a) Cross-dataset transfer between ToolBench and RestBench. (b) Cross-model transfer between Qwen3-8B and GPT-4.1. (figure from the paper)*
+
+Evolved policies transfer beyond the setting they were evolved in: a Qwen3-8B-evolved policy remains effective on GPT-4.1, beating the baseline by **+4.7** points, while a GPT-4.1-evolved policy transfers back to Qwen3-8B by a significant **+12.7** points.
 
 ## Reference artifacts
 

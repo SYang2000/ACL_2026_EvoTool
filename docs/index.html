@@ -7,24 +7,41 @@
 <meta name="description" content="EvoTool optimizes a modular tool-use policy (Planner, Selector, Caller, Synthesizer) via blame-aware mutation and diversity-aware selection — gradient-free, over 5 points above strong baselines on four benchmarks.">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="static/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
+<!-- ================= Sticky section nav (shown after scrolling past the hero) ================= -->
+<nav class="topnav" id="topnav" aria-label="Page sections">
+  <div class="topnav-inner">
+    <a class="topnav-brand" href="#top">EvoTool</a>
+    <div class="topnav-links">
+      <a href="#abstract">Abstract</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+      <a href="#ablations">Ablations</a>
+      <a href="#efficiency">Efficiency &amp; Transfer</a>
+      <a href="#case-study">Case Study</a>
+      <a href="#bibtex">BibTeX</a>
+    </div>
+  </div>
+</nav>
+
 <!-- ================= Hero ================= -->
-<header class="hero">
+<header class="hero" id="top">
   <div class="container">
     <h1><span class="hero-name">EvoTool</span>: Self-Evolving Tool-Use Policy Optimization in LLM&nbsp;Agents via Blame-Aware Mutation and Diversity-Aware Selection</h1>
     <p class="authors">
-      Shuo Yang<sup>1</sup>, Soyeon Caren Han<sup>1</sup>, Xueqi Ma<sup>1</sup>,
-      Yan Li<sup>1</sup>, Mohammad Reza Ghasemi Madani<sup>1</sup>, Eduard Hovy<sup>1</sup>
+      Shuo Yang, Soyeon Caren Han, Xueqi Ma,
+      Yan Li, Mohammad Reza Ghasemi Madani, Eduard Hovy
     </p>
-    <p class="affiliation"><sup>1</sup>School of Computing and Information Systems, The University of Melbourne</p>
-    <p class="venue">ACL 2026</p>
-    <nav class="button-row">
-      <a class="btn" href="https://arxiv.org/abs/2603.04900" target="_blank" rel="noopener">&#128196; arXiv</a>
-      <a class="btn" href="https://github.com/SYang2000/ACL_2026_EvoTool" target="_blank" rel="noopener">&#128187; Code</a>
-      <a class="btn btn-accent" href="replay.html">&#128257; Interactive Replay</a>
-      <a class="btn" href="#bibtex">&#128218; BibTeX</a>
+    <p class="affiliation">School of Computing and Information Systems, The University of Melbourne</p>
+    <p class="venue"><span class="venue-chip">ACL 2026</span></p>
+    <nav class="button-row" aria-label="Paper links">
+      <a class="btn" href="https://arxiv.org/abs/2603.04900" target="_blank" rel="noopener"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>arXiv</a>
+      <a class="btn" href="https://github.com/SYang2000/ACL_2026_EvoTool" target="_blank" rel="noopener"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Code</a>
+      <a class="btn btn-outline" href="replay.html"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><polygon points="7 4 20 12 7 20 7 4"/></svg>Interactive Replay</a>
+      <a class="btn btn-ghost" href="#bibtex"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>BibTeX</a>
     </nav>
   </div>
 </header>
@@ -34,7 +51,7 @@
 <!-- ================= Metric callouts ================= -->
 <section class="metrics">
   <div class="container">
-    <div class="metric-grid">
+    <div class="metric-grid reveal stagger">
       <div class="metric-card">
         <div class="metric-value">+5.7</div>
         <div class="metric-label">Overall over the strongest baseline</div>
@@ -58,7 +75,7 @@
 <section id="abstract">
   <div class="container">
     <h2>Abstract</h2>
-    <p class="abstract-text">
+    <p class="abstract-text reveal">
       LLM-based agents depend on effective tool-use policies to solve complex tasks, yet optimizing
       these policies remains challenging due to delayed supervision and the difficulty of credit
       assignment in long-horizon trajectories. Existing optimization approaches tend to be either
@@ -74,6 +91,12 @@
       outperforms strong baselines by over 5 points on both GPT-4.1 and Qwen3-8B, while achieving
       superior efficiency and transferability.
     </p>
+
+    <figure class="paper-figure figure-narrow reveal">
+      <img src="static/paper/Intro1.png" alt="Three-panel comparison: (A) monolithic optimization applies one global update across Planner, Selector, Caller, and Synthesizer and still fails; (B) single-aspect optimization applies a local update to one fixed module and still fails; (C) EvoTool detects the blamed module (Selector), mutates only it, and succeeds.">
+      <figcaption><span class="fig-tag">Figure 1:</span> Limitations of monolithic and single-aspect tool-use
+        policy optimization, and how EvoTool enables targeted, blame-aware policy updates.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -81,16 +104,16 @@
 <section id="method" class="section-alt">
   <div class="container">
     <h2>Method</h2>
-    <div class="method-figure">
-      <img src="static/method.svg" alt="EvoTool pipeline: a user query flows through Planner, Selector, Caller, tool execution, and Synthesizer to an answer. Below, the self-evolving loop: the rollout trajectory feeds Blame Attribution, which localizes the faulty module; Targeted Mutation edits exactly one module to produce a child policy; Diversity-Aware Selection keeps complementary winners and samples the next parent.">
-      <p class="figure-caption">
-        A user query flows through the four-module tool-use policy to an answer. Each generation,
-        the rollout trajectory is diagnosed, exactly one blamed module&#8217;s prompt is rewritten, and
-        the population keeps complementary candidates.
-      </p>
-    </div>
+    <figure class="paper-figure reveal">
+      <img src="static/paper/Method.png" alt="EvoTool architecture: (1) trajectory collection — the modular tool-use policy agent (Planner, Selector, Caller, Synthesizer) interacts with the tool environment and records an episode; (2) the Blamer LLM performs trajectory-grounded blame attribution over the four modules; (3) the Mutator LLM applies feedback-guided targeted mutation to the blamed module; (4) diversity-aware population selection updates probabilities, identifies instance-wise winners, and retains complementary candidates in the population pool.">
+      <figcaption><span class="fig-tag">Figure 2:</span> Overall architecture of EvoTool. EvoTool optimizes a
+        modular tool-use policy through a self-evolving loop consisting of (1) trajectory collection from the
+        tool environment, (2) trajectory-grounded blame attribution to identify the responsible module,
+        (3) feedback-guided targeted mutation to update that module using natural language feedback, and
+        (4) diversity-aware population selection over candidate policies to retain complementary candidates.</figcaption>
+    </figure>
 
-    <div class="mech-grid">
+    <div class="mech-grid reveal stagger">
       <div class="mech-card">
         <span class="mech-num">1</span>
         <h3>Trajectory-Grounded Blame Attribution</h3>
@@ -121,7 +144,7 @@
       </div>
     </div>
 
-    <p class="gradient-free">
+    <p class="gradient-free reveal">
       <strong>Gradient-free by design:</strong> only the four module prompt specifications evolve —
       the LLM weights stay frozen.
     </p>
@@ -137,7 +160,7 @@
       against prompting, prompt-evolution, and tool-use-specific baselines, with two backbones.
     </p>
 
-    <div class="table-wrap">
+    <div class="table-wrap reveal">
       <table class="results">
         <caption>GPT-4.1 backbone</caption>
         <thead>
@@ -159,7 +182,7 @@
       </table>
     </div>
 
-    <div class="table-wrap">
+    <div class="table-wrap reveal">
       <table class="results">
         <caption>Qwen3-8B backbone</caption>
         <thead>
@@ -181,7 +204,7 @@
       </table>
     </div>
 
-    <p class="table-note">
+    <p class="table-note reveal">
       Benchmark-level averages; per-subset numbers (ToolBench G1/G2/G3, RestBench TMDB/Spotify,
       &#964;-Bench Retail/Airline, BFCL Single/Multi) are reported in the paper.
       Metrics — ToolBench: Pass Rate &#183; RestBench: Success Rate &#183; &#964;-Bench: Pass@1 &#183; BFCL: Accuracy.
@@ -194,7 +217,7 @@
   <div class="container">
     <h2>Ablations</h2>
 
-    <div class="ablation-block">
+    <div class="ablation-block reveal">
       <div class="table-wrap">
         <table class="results">
           <caption>Where to mutate: blame attribution (Qwen3-8B)</caption>
@@ -216,7 +239,7 @@
       <p class="takeaway">Blame-aware targeting beats random, single-module, and monolithic mutation.</p>
     </div>
 
-    <div class="ablation-block">
+    <div class="ablation-block reveal">
       <div class="table-wrap">
         <table class="results">
           <caption>What guides the mutation (Success Rate; benchmark context in the paper)</caption>
@@ -234,7 +257,7 @@
       <p class="takeaway">Both the trajectory &#964; and the feedback F matter: removing them costs &#8722;4.4 / &#8722;9.4 / &#8722;11.8 points.</p>
     </div>
 
-    <div class="ablation-block">
+    <div class="ablation-block reveal">
       <div class="table-wrap">
         <table class="results">
           <caption>How to select survivors (Qwen3-8B)</caption>
@@ -251,6 +274,20 @@
       </div>
       <p class="takeaway">Diversity-aware selection &gt; top-k &gt; greedy &gt; static.</p>
     </div>
+
+    <div class="ablation-block reveal">
+      <h3 class="block-title">Blame-driven error progression</h3>
+      <p class="block-intro">
+        Why does blame-aware targeting win? Decomposing errors by module over iterations shows targeted
+        mutation fixing the most correctable failures first: on ToolBench the total error rate falls from
+        77.6% to 20.2%, driven early by Caller/Selector fixes, while on &#964;-Bench the residual errors stay
+        Planner-heavy, reflecting its long-horizon demands.
+      </p>
+      <figure class="paper-figure figure-medium">
+        <img src="static/paper/Bar_Plot.png" alt="Stacked bar charts of module-level error rates (Caller, Selector, Synthesizer, Planner) with a total-error line over eight evolution iterations: (a) ToolBench, total error falling from 77.6% to 20.2%; (b) tau-Bench, total error falling from 87.6% to 33.3%.">
+        <figcaption>Module-level error progression across evolution iterations diagnosed by the Blamer LLM.</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -258,27 +295,43 @@
 <section id="efficiency">
   <div class="container">
     <h2>Efficiency &amp; Transferability</h2>
-    <div class="two-col">
-      <div class="info-card">
-        <h3>Superior efficiency</h3>
-        <p>
-          EvoTool achieves its gains with superior efficiency: the paper compares methods by
-          performance versus (log) token cost — Figure 3(b) — and EvoTool sits on the favorable side
-          of that trade-off. See the paper for the full analysis.
-        </p>
+
+    <figure class="paper-figure reveal">
+      <div class="figure-stack">
+        <img src="static/paper/LC.png" alt="Panel (a): learning curves of average score versus evolution iteration on ToolBench, RestBench, tau-Bench, and BFCL — EvoTool climbs above DRAFT, EvoPrompt, OPRO, AdaPlanner, and the static ReAct line on all four.">
+        <img src="static/paper/Efficiency.png" alt="Panel (b): success rate versus log total token cost under GPT-4.1 on the same four benchmarks — EvoTool occupies the upper-left (higher performance at lower cost) relative to DRAFT, EvoPrompt, OPRO, AdaPlanner, and ReAct.">
       </div>
-      <div class="info-card">
-        <h3>Evolved policies transfer</h3>
-        <p>
-          <strong>Across datasets</strong> (GPT-4.1): a policy evolved on ToolBench transfers
-          strongly to RestBench, and the same pattern holds in the reverse direction.
-        </p>
-        <p>
-          <strong>Across models:</strong> a Qwen3-8B-evolved policy remains effective on GPT-4.1,
-          beating the baseline by 4.7 points, while a GPT-4.1-evolved policy transfers back to
-          Qwen3-8B by a significant 12.7 points.
-        </p>
-      </div>
+      <figcaption><span class="fig-tag">Figure 3:</span> Learning dynamics and efficiency comparison.
+        (a) Learning curves across evolution iterations on four benchmarks. (b) Performance versus
+        log token cost under GPT-4.1.</figcaption>
+    </figure>
+
+    <div class="info-card info-card-solo reveal">
+      <h3>Superior efficiency</h3>
+      <p>
+        EvoTool achieves its gains with superior efficiency: comparing methods by performance versus
+        (log) token cost — Figure 3(b) above — EvoTool sits on the favorable side of that trade-off.
+        See the paper for the full analysis.
+      </p>
+    </div>
+
+    <figure class="paper-figure figure-medium reveal">
+      <img src="static/paper/Generalizability.png" alt="Two transfer matrices with zero-shot reference rows: (a) dataset transferability between ToolBench and RestBench under GPT-4.1, with in-domain and transfer cells all above the reference; (b) model transferability between Qwen3-8B and GPT-4.1, with transfer gains of +4.7 and +12.7 over the reference.">
+      <figcaption>Transferability across datasets and backbone models. (a) Cross-dataset transfer between
+        ToolBench and RestBench. (b) Cross-model transfer between Qwen3-8B and GPT-4.1.</figcaption>
+    </figure>
+
+    <div class="info-card info-card-solo reveal">
+      <h3>Evolved policies transfer</h3>
+      <p>
+        <strong>Across datasets</strong> (GPT-4.1): a policy evolved on ToolBench transfers
+        strongly to RestBench, and the same pattern holds in the reverse direction.
+      </p>
+      <p>
+        <strong>Across models:</strong> a Qwen3-8B-evolved policy remains effective on GPT-4.1,
+        beating the baseline by 4.7 points, while a GPT-4.1-evolved policy transfers back to
+        Qwen3-8B by a significant 12.7 points.
+      </p>
     </div>
   </div>
 </section>
@@ -288,18 +341,18 @@
   <div class="container">
     <h2>Case Study &amp; Interactive Replay</h2>
     <span class="band-label">Reference testbed run — Qwen3-4B backbone on curated 150-instance demo subsets; not the paper&#8217;s evaluation</span>
-    <div class="case-figure">
+    <div class="case-figure reveal">
       <img src="static/case_curve.png" alt="Learning curve of a reference EvoTool testbed run: held-out score rising over generations as targeted mutations are accepted.">
     </div>
-    <p class="case-text">
+    <p class="case-text reveal">
       The curve shows EvoTool&#8217;s loop at work on a small controllable testbed: blame attribution
       localizes each failure to one module, targeted mutations accumulate module-by-module fixes,
       and the held-out score rises in steps as stronger policies take over. In the interactive replay you can
       step through every generation — which module was blamed, the exact prompt edit, and whether
       the child was accepted.
     </p>
-    <div class="case-actions">
-      <a class="btn btn-accent" href="replay.html">&#128257; Open the Interactive Replay</a>
+    <div class="case-actions reveal">
+      <a class="btn btn-accent" href="replay.html"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><polygon points="7 4 20 12 7 20 7 4"/></svg>Open the Interactive Replay</a>
       <a class="aux-link" href="https://github.com/SYang2000/ACL_2026_EvoTool/blob/main/CASE_STUDY.md" target="_blank" rel="noopener">Read the full case study (CASE_STUDY.md) &#8594;</a>
     </div>
   </div>
@@ -309,7 +362,7 @@
 <section id="bibtex">
   <div class="container">
     <h2>BibTeX</h2>
-    <div class="bibtex-box">
+    <div class="bibtex-box reveal">
       <button class="copy-btn" id="copy-btn" type="button">Copy</button>
       <pre id="bibtex-text">@misc{yang2026evotool,
   title   = {EvoTool: Self-Evolving Tool-Use Policy Optimization in LLM Agents via Blame-Aware Mutation and Diversity-Aware Selection},
@@ -333,6 +386,93 @@
 </footer>
 
 <script>
+/* Sticky section nav: slides in once the hero has scrolled out of view. */
+(function () {
+  var hero = document.getElementById('top');
+  var nav = document.getElementById('topnav');
+  if (!hero || !nav || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    nav.classList.toggle('visible', !entries[0].isIntersecting);
+  }, { rootMargin: '-56px 0px 0px 0px' });
+  io.observe(hero);
+})();
+
+/* Scroll-reveal: fade/lift sections in as they enter the viewport.
+   Elements are only hidden when <html> carries the .js class (added in <head>),
+   so content stays visible with JS disabled; reduced-motion is handled in CSS. */
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  var i;
+  if (!('IntersectionObserver' in window)) {
+    for (i = 0; i < els.length; i++) els[i].classList.add('revealed');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) {
+        en.target.classList.add('revealed');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+  for (i = 0; i < els.length; i++) io.observe(els[i]);
+})();
+
+/* Lightbox: click (or Enter/Space) on a paper figure opens it enlarged; ESC / click closes. */
+(function () {
+  var imgs = document.querySelectorAll('figure.paper-figure img, .case-figure img');
+  if (!imgs.length) return;
+  var overlay = null, big = null, lastFocus = null;
+
+  function build() {
+    overlay = document.createElement('div');
+    overlay.className = 'lightbox';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Enlarged figure');
+    big = document.createElement('img');
+    var closeBtn = document.createElement('button');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.type = 'button';
+    closeBtn.setAttribute('aria-label', 'Close enlarged figure');
+    closeBtn.innerHTML = '&#215;';
+    overlay.appendChild(big);
+    overlay.appendChild(closeBtn);
+    overlay.addEventListener('click', close);
+    document.body.appendChild(overlay);
+  }
+  function open(img) {
+    if (!overlay) build();
+    lastFocus = img;
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt || '';
+    overlay.classList.add('open');
+    document.body.classList.add('no-scroll');
+    overlay.querySelector('.lightbox-close').focus();
+  }
+  function close() {
+    if (!overlay || !overlay.classList.contains('open')) return;
+    overlay.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' || e.key === 'Esc') close();
+  });
+  Array.prototype.forEach.call(imgs, function (img) {
+    img.setAttribute('tabindex', '0');
+    img.setAttribute('role', 'button');
+    img.addEventListener('click', function () { open(img); });
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        open(img);
+      }
+    });
+  });
+})();
+
+/* BibTeX copy button. */
 (function () {
   var btn = document.getElementById('copy-btn');
   var pre = document.getElementById('bibtex-text');

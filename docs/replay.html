@@ -121,6 +121,13 @@
   pre.diff .filehdr { color: #8fa6c0; }
   canvas { width: 100%; height: 190px; display: block; }
   .charthead { font-size: .85rem; color: var(--muted); margin-bottom: 6px; }
+  .infonote {
+    margin: -4px 0 16px;
+    padding: 6px 14px;
+    border-left: 3px solid var(--line);
+    color: var(--muted);
+    font-size: .84rem;
+  }
   #error {
     display: none;
     background: #f7e8e5;
@@ -158,6 +165,7 @@
     <a href="https://github.com/SYang2000/ACL_2026_EvoTool" target="_blank" rel="noopener">GitHub repo</a>.
   </div>
 
+  <noscript><p style="max-width:720px;margin:24px auto;padding:12px 16px;background:#fef3c7;border:1px solid #d97706;border-radius:8px;font-size:14px">This interactive replay requires JavaScript. The same run is documented statically in <a href="https://github.com/SYang2000/ACL_2026_EvoTool/blob/main/CASE_STUDY.md">CASE_STUDY.md</a>.</p></noscript>
   <div id="app" style="display:none">
     <div class="card">
       <div class="controls">
@@ -174,6 +182,14 @@
       <div class="charthead">Best validation score on S<sub>sel</sub> across generations
         (dots: held-out test mean reward at epoch ends; dotted lines: epoch boundaries)</div>
       <canvas id="chart" width="940" height="190"></canvas>
+    </div>
+
+    <div class="infonote">
+      <b>Why is the parent so often <code>init</code>?</b> Diversity-aware selection retains every policy
+      that wins at least one selection instance — including the initial policy — and parents are sampled
+      proportional to instance wins, so <code>init</code> keeps being re-selected as long as it still wins
+      instances. Deep chains form when an evolved policy overtakes it (e.g. the deployed
+      <code>g48-planner</code> lineage).
     </div>
 
     <div class="card" id="genPanel">

@@ -2,4 +2,3 @@
 evolve:
   mutation_target: "fixed:caller"
   selection: diversity
-  epochs: 1            # reduced budget: 1 epoch = 30 generations

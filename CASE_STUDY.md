@@ -81,14 +81,14 @@ Batch reward 0.1429 → 0.3762; **val rose 0.4423 → 0.5149** — the best sele
 
 ## Outcome
 
-| | held-out success (30 test instances) |
-|---|---|
-| Static (hand-written `init` policy, no evolution) | 30.0 |
-| **EvoTool (deployed `g48-planner`)** | **50.0** |
+| | held-out mean reward | held-out success |
+|---|---|---|
+| Static (hand-written `init` policy, no evolution) | 0.327 | 30.0 |
+| **EvoTool (deployed `g48-planner`)** | **0.480** | **50.0** |
 
-*Reference testbed run (Qwen3-4B, 150-instance curated subsets, 3 epochs); demo-subset numbers, not comparable to the paper's.*
+*30 held-out test instances; reference testbed run (Qwen3-4B, 150-instance curated subsets, 3 epochs); demo-subset numbers, not comparable to the paper's.*
 
-The learning curve below is generated from the same run log — the blue line is the would-be-deployed policy's selection score (its three jumps are exactly the chain edits at generations 3, 17, and 48; the gen-11 edit was accepted without moving it), the gray line the noisy 3-instance batch reward, and the red points the held-out test mean reward probed once per epoch (0.4597 → 0.4805 → 0.4805):
+The learning curve below tracks the deployed-so-far policy across all 90 generations — the blue line is its selection score (its three jumps are exactly the chain edits at generations 3, 17, and 48; the gen-11 edit was accepted without moving it), and the red line its held-out test mean reward, which rises 0.327 (`init`) → 0.456 (gen 3) → 0.460 (gen 17) → 0.480 (deployed `g48-planner`), with test success climbing 30% → 50% (dashed). (The red curve is a per-generation recomputation of the deployed policy on the held-out split — the run log itself probes test only at epoch ends; the recomputed values match those probes, 0.4597 → 0.4805 → 0.4805, to within ~0.01 vLLM serving noise.)
 
 ![EvoTool on BFCL — learning curve](docs/static/case_curve.png)
 
