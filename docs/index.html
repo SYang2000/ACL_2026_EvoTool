@@ -18,10 +18,10 @@
     <div class="topnav-links">
       <a href="#abstract">Abstract</a>
       <a href="#method">Method</a>
+      <a href="#case-study">Case Study</a>
       <a href="#results">Results</a>
       <a href="#ablations">Ablations</a>
       <a href="#efficiency">Efficiency &amp; Transfer</a>
-      <a href="#case-study">Case Study</a>
       <a href="#bibtex">BibTeX</a>
     </div>
   </div>
@@ -160,6 +160,28 @@
       <strong>Gradient-free by design:</strong> only the four module prompt specifications evolve —
       the LLM weights stay frozen.
     </p>
+  </div>
+</section>
+
+<!-- ================= Case study & replay ================= -->
+<section id="case-study" class="section-alt">
+  <div class="container">
+    <h2>Case Study &amp; Interactive Replay</h2>
+    <span class="band-label">Reference testbed run — Qwen3-4B backbone on curated 150-instance demo subsets</span>
+    <div class="case-figure reveal">
+      <img src="static/case_curve.png" alt="Learning curve of a reference EvoTool testbed run: held-out score rising over generations as targeted mutations are accepted.">
+    </div>
+    <p class="case-text reveal">
+      The curve shows EvoTool&#8217;s loop at work on a small controllable testbed: blame attribution
+      localizes each failure to one module, targeted mutations accumulate module-by-module fixes,
+      and the held-out score rises in steps as stronger policies take over. In the interactive replay you can
+      step through every generation — which module was blamed, the exact prompt edit, and whether
+      the child was accepted.
+    </p>
+    <div class="case-actions reveal">
+      <a class="btn btn-accent" href="replay.html"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><polygon points="7 4 20 12 7 20 7 4"/></svg>Open the Interactive Replay</a>
+      <a class="aux-link" href="https://github.com/SYang2000/ACL_2026_EvoTool/blob/main/CASE_STUDY.md" target="_blank" rel="noopener">Read the full case study (CASE_STUDY.md) &#8594;</a>
+    </div>
   </div>
 </section>
 
@@ -335,28 +357,6 @@
         beating the baseline by 4.7 points, while a GPT-4.1-evolved policy transfers back to
         Qwen3-8B by a significant 12.7 points.
       </p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= Case study & replay ================= -->
-<section id="case-study" class="section-alt">
-  <div class="container">
-    <h2>Case Study &amp; Interactive Replay</h2>
-    <span class="band-label">Reference testbed run — Qwen3-4B backbone on curated 150-instance demo subsets; not the paper&#8217;s evaluation</span>
-    <div class="case-figure reveal">
-      <img src="static/case_curve.png" alt="Learning curve of a reference EvoTool testbed run: held-out score rising over generations as targeted mutations are accepted.">
-    </div>
-    <p class="case-text reveal">
-      The curve shows EvoTool&#8217;s loop at work on a small controllable testbed: blame attribution
-      localizes each failure to one module, targeted mutations accumulate module-by-module fixes,
-      and the held-out score rises in steps as stronger policies take over. In the interactive replay you can
-      step through every generation — which module was blamed, the exact prompt edit, and whether
-      the child was accepted.
-    </p>
-    <div class="case-actions reveal">
-      <a class="btn btn-accent" href="replay.html"><svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor" stroke="none"><polygon points="7 4 20 12 7 20 7 4"/></svg>Open the Interactive Replay</a>
-      <a class="aux-link" href="https://github.com/SYang2000/ACL_2026_EvoTool/blob/main/CASE_STUDY.md" target="_blank" rel="noopener">Read the full case study (CASE_STUDY.md) &#8594;</a>
     </div>
   </div>
 </section>
