@@ -340,15 +340,15 @@ html.js .reveal.stagger.revealed > :nth-child(3) {
   color: var(--muted);
 }
 
-/* ---------- Teaser (the architecture figure under the hero) ---------- */
-
-.teaser { padding: 40px 0 44px; }
-.teaser .container { max-width: 1220px; }
-.teaser figure.paper-figure { margin-top: 0; }
-
-/* showcase treatment for the architecture figure */
+/* ---------- Showcase (the architecture figure inside Method) ---------- */
+/* Breaks out of the 960px column, centered on the viewport — width/margin only,
+   no transform (transform belongs to the .reveal animation). */
+figure.paper-figure.figure-hero {
+  width: min(1160px, calc(100vw - 48px));
+  margin-left: calc((100% - min(1160px, calc(100vw - 48px))) / 2);
+}
 figure.paper-figure.figure-hero img {
-  max-width: 1160px;
+  max-width: 100%;
   padding: 14px;
   border-radius: 18px;
   border-color: #e2e8f0;
@@ -359,6 +359,22 @@ figure.paper-figure.figure-hero img:hover {
   border-color: #c4b5fd;
 }
 figure.paper-figure.figure-hero figcaption { max-width: 900px; }
+
+/* ---------- Figure 1 beside the abstract ---------- */
+.abstract-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.62fr;
+  gap: 30px;
+  align-items: center;
+}
+.abstract-grid .abstract-card { max-width: none; margin: 0; }
+figure.paper-figure.figure-side { margin: 0; }
+figure.paper-figure.figure-side img { max-width: 100%; padding: 8px; }
+figure.paper-figure.figure-side figcaption { font-size: 0.8rem; margin-top: 10px; }
+@media (max-width: 880px) {
+  .abstract-grid { grid-template-columns: 1fr; }
+  figure.paper-figure.figure-side img { max-width: 420px; }
+}
 
 /* ---------- Abstract ---------- */
 

@@ -71,41 +71,34 @@
   </div>
 </section>
 
-<!-- ================= Teaser (Figure 2 — the architecture) ================= -->
-<section class="teaser section-alt" aria-label="Architecture overview">
-  <div class="container">
-    <figure class="paper-figure figure-hero reveal">
-      <img src="static/paper/Method.png" alt="EvoTool architecture: (1) trajectory collection — the modular tool-use policy agent (Planner, Selector, Caller, Synthesizer) interacts with the tool environment and records an episode; (2) the Blamer LLM performs trajectory-grounded blame attribution over the four modules; (3) the Mutator LLM applies feedback-guided targeted mutation to the blamed module; (4) diversity-aware population selection updates probabilities, identifies instance-wise winners, and retains complementary candidates in the population pool.">
-      <figcaption><span class="fig-tag">Figure 2:</span> Overall architecture of EvoTool. EvoTool optimizes a
-        modular tool-use policy through a self-evolving loop consisting of (1) trajectory collection from the
-        tool environment, (2) trajectory-grounded blame attribution to identify the responsible module,
-        (3) feedback-guided targeted mutation to update that module using natural language feedback, and
-        (4) diversity-aware population selection over candidate policies to retain complementary candidates.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<!-- ================= Abstract ================= -->
+<!-- ================= Abstract (text + Figure 1 side by side) ================= -->
 <section id="abstract">
   <div class="container">
     <h2>Abstract</h2>
-    <div class="abstract-card reveal">
-      <p class="abstract-text">
-        LLM-based agents depend on effective tool-use policies to solve complex tasks, yet optimizing
-        these policies remains challenging due to delayed supervision and the difficulty of credit
-        assignment in long-horizon trajectories. Existing optimization approaches tend to be either
-        monolithic, which are prone to entangling behaviors, or single-aspect, which ignore
-        cross-module error propagation. To address these limitations, we propose EvoTool, a
-        self-evolving framework that optimizes a modular tool-use policy via a gradient-free
-        evolutionary paradigm. EvoTool decomposes agent&#8217;s tool-use policy into four modules, including
-        Planner, Selector, Caller, and Synthesizer, and iteratively improves them in a self-improving
-        loop through three novel mechanisms. Trajectory-Grounded Blame Attribution uses diagnostic
-        traces to localize failures to a specific module. Feedback-Guided Targeted Mutation then edits
-        only that module via natural-language critique. Diversity-Aware Population Selection preserves
-        complementary candidates to ensure solution diversity. Across four benchmarks, EvoTool
-        outperforms strong baselines by over 5 points on both GPT-4.1 and Qwen3-8B, while achieving
-        superior efficiency and transferability.
-      </p>
+    <div class="abstract-grid reveal">
+      <div class="abstract-card">
+        <p class="abstract-text">
+          LLM-based agents depend on effective tool-use policies to solve complex tasks, yet optimizing
+          these policies remains challenging due to delayed supervision and the difficulty of credit
+          assignment in long-horizon trajectories. Existing optimization approaches tend to be either
+          monolithic, which are prone to entangling behaviors, or single-aspect, which ignore
+          cross-module error propagation. To address these limitations, we propose EvoTool, a
+          self-evolving framework that optimizes a modular tool-use policy via a gradient-free
+          evolutionary paradigm. EvoTool decomposes agent&#8217;s tool-use policy into four modules, including
+          Planner, Selector, Caller, and Synthesizer, and iteratively improves them in a self-improving
+          loop through three novel mechanisms. Trajectory-Grounded Blame Attribution uses diagnostic
+          traces to localize failures to a specific module. Feedback-Guided Targeted Mutation then edits
+          only that module via natural-language critique. Diversity-Aware Population Selection preserves
+          complementary candidates to ensure solution diversity. Across four benchmarks, EvoTool
+          outperforms strong baselines by over 5 points on both GPT-4.1 and Qwen3-8B, while achieving
+          superior efficiency and transferability.
+        </p>
+      </div>
+      <figure class="paper-figure figure-side">
+        <img src="static/paper/Intro1.png" alt="Three-panel comparison: (A) monolithic optimization applies one global update across Planner, Selector, Caller, and Synthesizer and still fails; (B) single-aspect optimization applies a local update to one fixed module and still fails; (C) EvoTool detects the blamed module (Selector), mutates only it, and succeeds.">
+        <figcaption><span class="fig-tag">Figure 1:</span> Monolithic and single-aspect optimization fail;
+          EvoTool's blame-aware targeted update succeeds.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -114,10 +107,13 @@
 <section id="method" class="section-alt">
   <div class="container">
     <h2>Method</h2>
-    <figure class="paper-figure figure-narrow reveal">
-      <img src="static/paper/Intro1.png" alt="Three-panel comparison: (A) monolithic optimization applies one global update across Planner, Selector, Caller, and Synthesizer and still fails; (B) single-aspect optimization applies a local update to one fixed module and still fails; (C) EvoTool detects the blamed module (Selector), mutates only it, and succeeds.">
-      <figcaption><span class="fig-tag">Figure 1:</span> Limitations of monolithic and single-aspect tool-use
-        policy optimization, and how EvoTool enables targeted, blame-aware policy updates.</figcaption>
+    <figure class="paper-figure figure-hero reveal">
+      <img src="static/paper/Method.png" alt="EvoTool architecture: (1) trajectory collection — the modular tool-use policy agent (Planner, Selector, Caller, Synthesizer) interacts with the tool environment and records an episode; (2) the Blamer LLM performs trajectory-grounded blame attribution over the four modules; (3) the Mutator LLM applies feedback-guided targeted mutation to the blamed module; (4) diversity-aware population selection updates probabilities, identifies instance-wise winners, and retains complementary candidates in the population pool.">
+      <figcaption><span class="fig-tag">Figure 2:</span> Overall architecture of EvoTool. EvoTool optimizes a
+        modular tool-use policy through a self-evolving loop consisting of (1) trajectory collection from the
+        tool environment, (2) trajectory-grounded blame attribution to identify the responsible module,
+        (3) feedback-guided targeted mutation to update that module using natural language feedback, and
+        (4) diversity-aware population selection over candidate policies to retain complementary candidates.</figcaption>
     </figure>
 
     <div class="mech-grid reveal stagger">
@@ -216,6 +212,16 @@
       &#964;-Bench Retail/Airline, BFCL Single/Multi) are reported in the paper.
       Metrics — ToolBench: Pass Rate &#183; RestBench: Success Rate &#183; &#964;-Bench: Pass@1 &#183; BFCL: Accuracy.
     </p>
+
+    <figure class="paper-figure figure-hero reveal">
+      <div class="figure-stack">
+        <img src="static/paper/LC.png" alt="Panel (a): learning curves of average score versus evolution iteration on ToolBench, RestBench, tau-Bench, and BFCL — EvoTool climbs above DRAFT, EvoPrompt, OPRO, AdaPlanner, and the static ReAct line on all four.">
+        <img src="static/paper/Efficiency.png" alt="Panel (b): success rate versus log total token cost under GPT-4.1 on the same four benchmarks — EvoTool occupies the upper-left (higher performance at lower cost) relative to DRAFT, EvoPrompt, OPRO, AdaPlanner, and ReAct.">
+      </div>
+      <figcaption><span class="fig-tag">Figure 3:</span> Learning dynamics and efficiency comparison.
+        (a) Learning curves across evolution iterations on four benchmarks. (b) Performance versus
+        log token cost under GPT-4.1.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -303,21 +309,11 @@
   <div class="container">
     <h2>Efficiency &amp; Transferability</h2>
 
-    <figure class="paper-figure reveal">
-      <div class="figure-stack">
-        <img src="static/paper/LC.png" alt="Panel (a): learning curves of average score versus evolution iteration on ToolBench, RestBench, tau-Bench, and BFCL — EvoTool climbs above DRAFT, EvoPrompt, OPRO, AdaPlanner, and the static ReAct line on all four.">
-        <img src="static/paper/Efficiency.png" alt="Panel (b): success rate versus log total token cost under GPT-4.1 on the same four benchmarks — EvoTool occupies the upper-left (higher performance at lower cost) relative to DRAFT, EvoPrompt, OPRO, AdaPlanner, and ReAct.">
-      </div>
-      <figcaption><span class="fig-tag">Figure 3:</span> Learning dynamics and efficiency comparison.
-        (a) Learning curves across evolution iterations on four benchmarks. (b) Performance versus
-        log token cost under GPT-4.1.</figcaption>
-    </figure>
-
     <div class="info-card info-card-solo reveal">
       <h3>Superior efficiency</h3>
       <p>
         EvoTool achieves its gains with superior efficiency: comparing methods by performance versus
-        (log) token cost — Figure 3(b) above — EvoTool sits on the favorable side of that trade-off.
+        (log) token cost — Figure 3(b) in Main Results above — EvoTool sits on the favorable side of that trade-off.
         See the paper for the full analysis.
       </p>
     </div>
