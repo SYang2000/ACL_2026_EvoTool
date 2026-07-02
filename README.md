@@ -54,14 +54,14 @@ MODEL=Qwen/Qwen3-8B bash scripts/launch_vllm.sh
 
 ## Quick Start / Demo
 
-`data/` ships small demo subsets so the evolution loop runs out of the box; the paper's evaluation uses the full official benchmarks below (build instructions, splits, and the data schema: [DATA.md](DATA.md)).
+`data/` ships small demo subsets (150 instances per benchmark; τ-bench is built locally in one command) so the evolution loop runs out of the box — build instructions, splits, and the data schema are in [DATA.md](DATA.md). The paper evaluates on the four full official benchmarks:
 
-| Benchmark | Demo subset in `data/` | Official source |
-|---|---|---|
-| BFCL | 150 instances | [ShishirPatil/gorilla](https://github.com/ShishirPatil/gorilla) |
-| RestBench | 150 instances | [Yifan-Song793/RestGPT](https://github.com/Yifan-Song793/RestGPT) |
-| ToolBench | 150 instances + recorded API responses | [OpenBMB/ToolBench](https://github.com/OpenBMB/ToolBench) |
-| τ-bench | — (one-command build, see [DATA.md](DATA.md)) | [sierra-research/tau-bench](https://github.com/sierra-research/tau-bench) |
+| Benchmark | Official source | Evaluation subsets | Metric |
+|---|---|---|---|
+| ToolBench | [OpenBMB/ToolBench](https://github.com/OpenBMB/ToolBench) | G1 / G2 / G3 | Pass Rate |
+| RestBench | [Yifan-Song793/RestGPT](https://github.com/Yifan-Song793/RestGPT) | TMDB / Spotify | Success Rate |
+| τ-bench | [sierra-research/tau-bench](https://github.com/sierra-research/tau-bench) | Retail / Airline | Pass@1 |
+| BFCL | [ShishirPatil/gorilla](https://github.com/ShishirPatil/gorilla) | Single / Multi-turn | Accuracy |
 
 Tool calls never hit live APIs — a deterministic offline executor replays or mocks every response.
 
