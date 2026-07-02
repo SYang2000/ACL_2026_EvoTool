@@ -54,10 +54,16 @@ MODEL=Qwen/Qwen3-8B bash scripts/launch_vllm.sh
 
 ## Quick Start / Demo
 
-The repo bundles small curated demo subsets for **BFCL**, **RestBench**, and **ToolBench** (150 instances each, plus a couple of tiny toy sets for smoke tests), so the evolution loop runs out of the box; `data/taubench` is not bundled — build it from the official tau-bench repo in one command. Exact contents, splits, and the data schema are documented in [DATA.md](DATA.md). Tool calls never hit live APIs: a deterministic offline executor replays recorded responses or mocks them from the official API schemas.
+`data/` ships small demo subsets so the evolution loop runs out of the box; the paper's evaluation uses the full official benchmarks below (build instructions, splits, and the data schema: [DATA.md](DATA.md)).
 
-> [!IMPORTANT]
-> The bundled datasets are **small curated demo subsets** meant to verify the evolution loop end-to-end. They are **not** the official evaluation sets, and results on them **will not match the paper's numbers**. The paper's experiments use Qwen3-8B (and GPT-4.1) on the full official benchmarks — see [DATA.md](DATA.md) for how to build those from source.
+| Benchmark | Demo subset in `data/` | Official source |
+|---|---|---|
+| BFCL | 150 instances | [ShishirPatil/gorilla](https://github.com/ShishirPatil/gorilla) |
+| RestBench | 150 instances | [Yifan-Song793/RestGPT](https://github.com/Yifan-Song793/RestGPT) |
+| ToolBench | 150 instances + recorded API responses | [OpenBMB/ToolBench](https://github.com/OpenBMB/ToolBench) |
+| τ-bench | — (one-command build, see [DATA.md](DATA.md)) | [sierra-research/tau-bench](https://github.com/sierra-research/tau-bench) |
+
+Tool calls never hit live APIs — a deterministic offline executor replays or mocks every response.
 
 **1. Smoke run (~35 s).** With a server running (here: served name `Qwen3-4B`; substitute yours):
 
