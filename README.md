@@ -11,6 +11,7 @@ The University of Melbourne
 
 <p>
   <a href="https://aclanthology.org/2026.acl-long.2016/"><img src="https://img.shields.io/badge/ACL_2026-Paper-B31B1B?style=for-the-badge" alt="Paper (ACL 2026)"></a>
+  <a href="https://huggingface.co/papers/2603.04900"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-FFD21E?style=for-the-badge" alt="Paper on Hugging Face"></a>
   <a href="https://syang2000.github.io/ACL_2026_EvoTool/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_Project_Page-2563EB?style=for-the-badge" alt="Project Page"></a>
   <a href="https://syang2000.github.io/ACL_2026_EvoTool/replay.html"><img src="https://img.shields.io/badge/%E2%96%B6_Interactive_Replay-6D28D9?style=for-the-badge" alt="Interactive Replay"></a>
 </p>
