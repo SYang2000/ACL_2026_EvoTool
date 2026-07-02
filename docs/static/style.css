@@ -360,7 +360,11 @@ figure.paper-figure.figure-hero img:hover {
 }
 figure.paper-figure.figure-hero figcaption { max-width: 900px; }
 
-/* ---------- Figure 1 beside the abstract ---------- */
+/* ---------- Figure 3 band (between abstract and method) ---------- */
+.fig3-band { padding: 40px 0; }
+.fig3-band figure.paper-figure { margin-top: 0; }
+
+/* ---------- Figure 1 beside the abstract (unused fallback) ---------- */
 .abstract-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.62fr;
