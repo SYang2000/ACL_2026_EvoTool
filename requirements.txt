@@ -7,3 +7,5 @@ pyyaml>=6.0
 # vllm>=0.19
 # torch
 # transformers
+
+# Rebuilding the ToolBench dataset additionally needs: huggingface_hub (see DATA.md).
