@@ -8,4 +8,4 @@ pyyaml>=6.0
 # torch
 # transformers
 
-# Rebuilding the ToolBench dataset additionally needs: huggingface_hub (see DATA.md).
+# Rebuilding the ToolBench dataset additionally needs: huggingface_hub.

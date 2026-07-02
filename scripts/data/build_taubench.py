@@ -102,7 +102,7 @@ def main():
     args = ap.parse_args()
     if not args.tau_repo or not os.path.isdir(args.tau_repo):
         ap.error("point --tau-repo (or the TAU_BENCH_REPO env var) at a clone of "
-                 "https://github.com/sierra-research/tau-bench (see DATA.md)")
+                 "https://github.com/sierra-research/tau-bench")
     RETAIL = os.path.join(args.tau_repo, "tau_bench", "envs", "retail")
 
     tools = load_template_tools()

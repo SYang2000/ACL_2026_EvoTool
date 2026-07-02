@@ -16,7 +16,6 @@ The University of Melbourne
 </p>
 <p>
   <a href="CASE_STUDY.md"><img src="https://img.shields.io/badge/Case_Study-475569?style=flat-square" alt="Case Study"></a>
-  <a href="DATA.md"><img src="https://img.shields.io/badge/Data_Guide-475569?style=flat-square" alt="Data Guide"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-2EA44F?style=flat-square" alt="License: MIT"></a>
 </p>
 
@@ -54,7 +53,7 @@ MODEL=Qwen/Qwen3-8B bash scripts/launch_vllm.sh
 
 ## Quick Start / Demo
 
-`data/` ships small demo subsets (150 instances per benchmark; τ-bench is built locally in one command) so the evolution loop runs out of the box — build instructions, splits, and the data schema are in [DATA.md](DATA.md). The paper evaluates on the four full official benchmarks:
+`data/` ships small demo subsets (150 instances per benchmark; τ-bench is built locally in one command, below) so the evolution loop runs out of the box. The paper evaluates on the four full official benchmarks:
 
 | Benchmark | Official source | Evaluation subsets | Metric |
 |---|---|---|---|
@@ -64,6 +63,19 @@ MODEL=Qwen/Qwen3-8B bash scripts/launch_vllm.sh
 | BFCL | [ShishirPatil/gorilla](https://github.com/ShishirPatil/gorilla) | Single / Multi-turn | Accuracy |
 
 Tool calls never hit live APIs — a deterministic offline executor replays or mocks every response.
+
+<details>
+<summary>τ-bench demo subset (one-time local build)</summary>
+
+```bash
+git clone https://github.com/sierra-research/tau-bench /path/to/tau-bench
+python scripts/data/build_taubench.py --tau-repo /path/to/tau-bench          # -> data/taubench/samples.json
+python scripts/data/build_taubench_outputs.py --tau-repo /path/to/tau-bench  # -> required_outputs.json sidecar
+```
+
+The other demo subsets are bundled; every `scripts/data/build_*.py` can also rebuild its dataset from the official source (see each script's `--help`).
+
+</details>
 
 **1. Smoke run (~35 s).** With a server running (here: served name `Qwen3-4B`; substitute yours):
 
@@ -172,7 +184,7 @@ To see the mechanism at work on real run logs:
 ```
 run.py                  # single entry point (--config, --benchmark, --override, --out)
 configs/                # base.yaml (shared defaults) + evotool.yaml
-data/                   # curated demo subsets (see DATA.md)
+data/                   # bundled demo subsets
 scripts/
   launch_vllm.sh        # OpenAI-compatible vLLM server for the backbone
   data/build_*.py       # rebuild each dataset from its official source
@@ -187,10 +199,6 @@ evolved_policies/       # evolved Θ* prompt specs per benchmark (reference arti
 SPEC.md                 # implementation specification (rollout, reward, logging contracts)
 docs/                   # project page, replay.html, static assets
 ```
-
-## Data
-
-See [DATA.md](DATA.md) for the unified instance schema, what is bundled vs. built locally, and how to rebuild every dataset from the official sources.
 
 ## Citation
 

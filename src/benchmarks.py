@@ -93,8 +93,8 @@ def load_instances(benchmark: str, data_path: str) -> list[dict]:
     path = os.path.join(data_path, benchmark, "samples.json")
     if not os.path.exists(path):
         raise FileNotFoundError(
-            f"data/{benchmark} is not bundled with this repo - see DATA.md for how to "
-            f"build it from the official sources"
+            f"data/{benchmark} is not bundled with this repo - build it with "
+            f"scripts/data/build_{benchmark}.py (see README.md, Quick Start)"
         )
     with open(path, "r") as f:
         raw = json.load(f)

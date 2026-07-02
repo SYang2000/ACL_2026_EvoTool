@@ -1,7 +1,7 @@
 """Reproducible converter: BFCL v4 real tasks -> 150-instance samples.json.
 
 Source (real data, no fabrication) — gorilla Berkeley-Function-Call-Leaderboard
-v4 checkout (pass --bfcl-raw; see DATA.md). Questions live under `bfcl_eval/data`
+v4 checkout (pass --bfcl-raw). Questions live under `bfcl_eval/data`
 and the matching ground truth under its `possible_answer/` subdirectory.
 
   questions     : <bfcl-raw>/BFCL_v4_<cat>.json
@@ -126,11 +126,11 @@ def main():
     args = ap.parse_args()
     if not args.bfcl_raw or not os.path.isdir(args.bfcl_raw):
         ap.error("point --bfcl-raw (or the BFCL_RAW_DIR env var) at the bfcl_eval/data dir of a "
-                 "clone of https://github.com/ShishirPatil/gorilla (see DATA.md)")
+                 "clone of https://github.com/ShishirPatil/gorilla")
     BFCL_RAW = args.bfcl_raw
     BFCL_GT = args.bfcl_gt or os.path.join(BFCL_RAW, "possible_answer")
     if not os.path.isdir(BFCL_GT):
-        ap.error(f"ground-truth dir not found: {BFCL_GT} (see DATA.md)")
+        ap.error(f"ground-truth dir not found: {BFCL_GT}")
 
     selected = []
     kept_per_cat = {}
