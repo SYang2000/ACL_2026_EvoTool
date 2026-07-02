@@ -54,17 +54,7 @@ MODEL=Qwen/Qwen3-8B bash scripts/launch_vllm.sh
 
 ## Quick Start / Demo
 
-**What ships in `data/`.** The repo bundles curated demo subsets so the full evolution loop runs out of the box:
-
-| Dataset | Instances | Split (seed 42) | Purpose |
-|---|---|---|---|
-| `data/bfcl` | 150 | 90 train / 30 selection / 30 held-out test | demo subset of BFCL |
-| `data/restbench` | 150 | 90 / 30 / 30 | demo subset of RestBench (TMDB + Spotify) |
-| `data/toolbench` | 150 (+ recorded API responses) | 90 / 30 / 30 | demo subset of ToolBench |
-| `data/dummy` | 6 | toy | smoke tests |
-| `data/diverse` | 9 | toy | smoke tests (selection-diversity sanity) |
-
-`data/taubench` is **not** bundled — build it from the official tau-bench repo in one command (see [DATA.md](DATA.md)). Tool calls never hit live APIs: a deterministic offline executor replays recorded responses (ToolBench), runs a real vendored retail DB (tau-bench), mocks typed REST responses from the OAS shape (RestBench), or does AST matching with no execution (BFCL, the official paradigm).
+The repo bundles small curated demo subsets for **BFCL**, **RestBench**, and **ToolBench** (150 instances each, plus a couple of tiny toy sets for smoke tests), so the evolution loop runs out of the box; `data/taubench` is not bundled — build it from the official tau-bench repo in one command. Exact contents, splits, and the data schema are documented in [DATA.md](DATA.md). Tool calls never hit live APIs: a deterministic offline executor replays recorded responses or mocks them from the official API schemas.
 
 > [!IMPORTANT]
 > The bundled datasets are **small curated demo subsets** meant to verify the evolution loop end-to-end. They are **not** the official evaluation sets, and results on them **will not match the paper's numbers**. The paper's experiments use Qwen3-8B (and GPT-4.1) on the full official benchmarks — see [DATA.md](DATA.md) for how to build those from source.
