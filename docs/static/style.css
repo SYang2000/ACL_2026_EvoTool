@@ -424,6 +424,8 @@ figure.paper-figure img:hover { box-shadow: var(--card-shadow-lift); border-colo
 html.js figure.paper-figure img,
 html.js .case-figure img { cursor: zoom-in; }
 figure.paper-figure.figure-narrow img { max-width: 560px; }
+figure.paper-figure.figure-small img { max-width: 380px; padding: 6px; }
+figure.paper-figure.figure-small figcaption { font-size: 0.8rem; max-width: 460px; }
 figure.paper-figure.figure-medium img { max-width: 680px; }
 figure.paper-figure .figure-stack img + img { margin-top: 14px; }
 figure.paper-figure figcaption {
