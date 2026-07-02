@@ -264,6 +264,28 @@ html.js .topnav { display: block; }
   color: var(--ink);
   border-color: var(--border);
 }
+/* Interactive Replay — the standout button (our differentiator) */
+.btn-replay {
+  background: linear-gradient(115deg, #7c3aed 10%, #4f46e5 90%);
+  border-color: transparent;
+  color: #ffffff;
+  padding: 11px 26px;
+  box-shadow: 0 6px 20px rgba(109, 40, 217, 0.35);
+}
+.btn-replay:hover {
+  background: linear-gradient(115deg, #6d28d9 10%, #4338ca 90%);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(109, 40, 217, 0.48);
+}
+@keyframes replay-glow {
+  0%, 100% { box-shadow: 0 6px 20px rgba(109, 40, 217, 0.35); }
+  50%      { box-shadow: 0 6px 28px rgba(109, 40, 217, 0.58); }
+}
+html.js .btn-replay { animation: replay-glow 2.8s ease-in-out infinite; }
+html.js .btn-replay:hover { animation: none; }
+
 .btn-ghost:hover {
   background: #ffffff;
   border-color: #cbd5e1;
