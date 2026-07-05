@@ -164,6 +164,14 @@ Overall, EvoTool improves over the strongest baseline by **+5.7** (70.6 vs DRAFT
 
 *Figure 3 — Learning dynamics and efficiency comparison. (a) Learning curves across evolution iterations on four benchmarks. (b) Performance versus log token cost under GPT-4.1. (figure from the paper)*
 
+### How the evolutionary search unfolds
+
+<p align="center">
+  <img src="docs/static/genealogy.png" alt="Illustrative genealogy tree of EvoTool's evolutionary search: from a seed population, coloured edges mark which module each accepted mutation edited; grey boxes are gate-rejected children, red dashed boxes are candidates discarded by diversity selection, green boxes survive in the final population, and the highlighted path ends at the gold returned policy." width="95%">
+</p>
+
+*An illustrative genealogy of the search process behind the learning curves above (scores are illustrative, not from a specific run; [PDF version](docs/static/genealogy.pdf)). Each generation samples one parent (∝ win frequency) and mutates exactly one module (edge colour); the gate keeps a child only if it beats its parent (grey = gate-rejected). Diversity-aware selection drops population members that win no held-out instance (red); green candidates survive in the final population, and the highlighted lineage ends at the returned policy (gold).*
+
 ### Transferability
 
 <p align="center">

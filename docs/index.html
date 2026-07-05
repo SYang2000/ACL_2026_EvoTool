@@ -110,6 +110,16 @@
         (a) Learning curves across evolution iterations on four benchmarks. (b) Performance versus
         log token cost under GPT-4.1.</figcaption>
     </figure>
+    <figure class="paper-figure reveal">
+      <img src="static/genealogy.png" alt="Illustrative genealogy tree of EvoTool's evolutionary search: from a seed population, coloured edges mark which module each accepted mutation edited; grey boxes are gate-rejected children, red dashed boxes are candidates discarded by diversity selection, green boxes survive in the final population, and the highlighted path ends at the gold returned policy.">
+      <figcaption><span class="fig-tag">Search process:</span> An illustrative genealogy of the evolutionary
+        search behind these curves (scores are illustrative, not from a specific run —
+        <a href="static/genealogy.pdf">PDF</a>). Each generation samples one parent (&propto; win frequency)
+        and mutates exactly one module (edge colour); the gate keeps a child only if it beats its parent
+        (grey = gate-rejected), and diversity-aware selection drops population members that win no held-out
+        instance (red). Green candidates survive in the final population; the highlighted lineage ends at
+        the returned policy (gold).</figcaption>
+    </figure>
   </div>
 </section>
 
