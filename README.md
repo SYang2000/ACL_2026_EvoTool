@@ -57,7 +57,7 @@ MODEL=Qwen/Qwen3-8B bash scripts/launch_vllm.sh
 
 ## Quick Start / Demo
 
-`data/` ships small demo subsets (150 instances per benchmark; τ-bench is built locally in one command, below) so the evolution loop runs out of the box. The paper evaluates on the four full official benchmarks:
+`data/` ships small demo subsets (150 instances per benchmark; τ-bench is built locally in one command, below) so the evolution loop runs out of the box. **The paper evaluates on the four full official benchmarks**:
 
 | Benchmark | Official source | Evaluation subsets | Metric |
 |---|---|---|---|
